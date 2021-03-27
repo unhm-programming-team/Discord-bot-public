@@ -2,7 +2,7 @@ import requests
 
 
 def get_prod():
-    response = requests.get("http://127.0.0.1:5005/production")
+    response = requests.get("http://34.68.101.38:5005/production")
     return response.content.decode("utf-8")
 
 
