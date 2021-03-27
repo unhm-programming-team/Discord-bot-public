@@ -11,6 +11,7 @@ from discord.ext import commands
 from our_packages.key_manager import get_test
 from our_packages.key_manager import get_prod
 
+# i made this comment to test the auto update feature, please remove this later
 
 testing = False # changes weather or not the bot runs on the testing token
 case_insensitivity = True # changes weather or not the bot is insensitive to case
