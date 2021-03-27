@@ -18,7 +18,7 @@ bot = Popen(['python3.7','bot.py'])
 def update():
     global bot
     bot.terminate()
-    os.system('sudo git pull https://brobbins2001:5b0c213a170ec92e01d85381c05f55dc51342c5b@github.com/unhm-programming-team/Discord-bot')
+    os.system('sudo git pull')
     f = open("pip_update.txt", "r")
     for each in f.readlines():
         os.system(f'pip3 install {each}')

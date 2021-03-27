@@ -21,6 +21,8 @@ testing_token = get_test()
 if not testing:
     production_token = get_prod()
 
+print(production_token)
+
 # list of cogs, used later to load cogs
 cog_list = ["fun_cog", "utility_cog", "vote_cog"]
 
