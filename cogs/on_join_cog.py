@@ -14,7 +14,7 @@ def make_sequence(seq):
     if isinstance(seq, Sequence) and not isinstance(seq, str):
         return seq
     else:
-        return seq
+        return (seq,)
 
 
 def message_check(channel=None, author=None, content=None, ignore_bot=True, lower=True):
