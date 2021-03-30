@@ -7,12 +7,13 @@ Updated: 3/21/2021
 """
 
 from discord.ext import commands
-
+import discord
 from our_packages.key_manager import get_test
 from our_packages.key_manager import get_prod
 
-# i made this comment to test the auto update feature, please remove this later
 
+intents = discord.Intents.default()
+intents.members = True
 testing = False # changes weather or not the bot runs on the testing token
 case_insensitivity = True # changes weather or not the bot is insensitive to case
 
@@ -22,17 +23,18 @@ testing_token = get_test()
 if not testing:
     production_token = get_prod()
 
-print(production_token)
 
 # list of cogs, used later to load cogs
-cog_list = ["fun_cog", "utility_cog", "vote_cog"]
+cog_list = ["fun_cog", "utility_cog", "vote_cog", "on_join_cog"]
 
 if testing:
-    client = commands.Bot(command_prefix="?", case_insensitive=case_insensitivity)  # sets the prefix used to call testing bot commands
+    client = commands.Bot(command_prefix="?", case_insensitive=case_insensitivity, intents=intents)  # sets the prefix used to call testing bot commands
 else:
-    client = commands.Bot(command_prefix="!", case_insensitive=case_insensitivity)  # sets the prefix used to call bot commands
+    client = commands.Bot(command_prefix="!", case_insensitive=case_insensitivity, intents=intents)  # sets the prefix used to call bot commands
 
 
+for cog_item in cog_list:  # iterated through cog_list and loads them
+    client.load_extension(f"cogs.{cog_item}")  # loads cogs from cogs folder
 
 @client.event
 async def on_ready():
@@ -42,8 +44,7 @@ async def on_ready():
     print('Bot is ready') # prints in the console when the bot is running
 
 
-for cog_item in cog_list:  # iterated through cog_list and loads them
-    client.load_extension("cogs." + cog_item)  # loads cogs from cogs folder
+
 
 
 # runs the bot using the bots token
