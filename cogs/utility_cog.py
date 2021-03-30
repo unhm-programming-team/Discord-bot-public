@@ -85,7 +85,7 @@ class UtilityCog(commands.Cog):
                 f"```Here Is the weather info for {lat}, {lon}:\n    Weather: {weather}\n    Temp: {temp}f\n    Feels like: {feels_like}f\n    Humidity: {humidity}```")
     @commands.command(pass_context=True)
     @commands.has_permissions(manage_messages=True)
-    async def clear(ctx):
+    async def clear(self, ctx):
         """
         Clears all messages in a channel.
         """
