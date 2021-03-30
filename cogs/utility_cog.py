@@ -83,7 +83,20 @@ class UtilityCog(commands.Cog):
             humidity = format(res['main']['humidity'], '.2f')
             await ctx.send(
                 f"```Here Is the weather info for {lat}, {lon}:\n    Weather: {weather}\n    Temp: {temp}f\n    Feels like: {feels_like}f\n    Humidity: {humidity}```")
-
+    @commands.command(pass_context=True)
+    @commands.has_permissions(manage_messages=True)
+    async def clear(ctx):
+        """
+        Clears all messages in a channel.
+        """
+        # define empty list to accumulate messages in
+        mgs = []
+        # accumulate messages
+        async for x in ctx.channel.history():
+            mgs.append(x)
+        # delete all messages
+        for m in mgs:
+            await m.delete()
     @commands.command(pass_context=True)
     async def covid19(self, ctx):
         """
