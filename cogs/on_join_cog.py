@@ -104,6 +104,16 @@ class OnJoinCog(commands.Cog):
         print(user)
         await self.on_member_join(user)
 
+    @commands.command(pass_context=True)
+    async def get_registered(self, ctx):
+        with open('members.txt', 'r') as file:
+            lines = file.readlines()
+        message_str = ""
+        for line in lines:
+            message_str += f"{line}\n"
+        await ctx.send(f"```{message_str}"
+                       f"```")
+
 
 def setup(client):
     client.add_cog(OnJoinCog(client))
