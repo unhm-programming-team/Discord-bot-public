@@ -58,8 +58,8 @@ class OnJoinCog(commands.Cog):
             return False
         else:
             await member.send(
-                "Are you a student or faculty who intends to be an active part of the club? (Y/N) (Answer No"
-                "if you are here to collaborate with the club on events, and are not a faculty member. Otherwise"
+                "Are you a student who intends to be a member, or faculty who intends to be an active part of the club? (Y/N) (Answer No"
+                "if you are here to collaborate with the club on events, or some other non-member position, and are not a faculty member. Otherwise"
                 "answer yes)")
             self.ask_purpose(member)
 
