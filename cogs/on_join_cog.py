@@ -99,7 +99,7 @@ class OnJoinCog(commands.Cog):
             file.write(f"Name: {name} Github: {github} , {mem_or_fac}, Campus: {campus}\n")
 
     @commands.command(pass_context=True)
-    async def test_reg(self, ctx):
+    async def manual_reg(self, ctx):
         user = ctx.message.author
         print(user)
         await self.on_member_join(user)
