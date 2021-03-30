@@ -43,6 +43,26 @@ class OnJoinCog(commands.Cog):
     def __init__(self, client):
         self.client = client
 
+    async def ask_purpose(self,member ):
+        await member.send("Are you a student or faculty who intends to be an active part of the club? (Y/N) (Answer No"
+                          "if you are here to collaborate with the club on events, and are not a faculty member. Otherwise"
+                          "answer yes)")
+        response = await self.client.wait_for('message', check=message_check(member.dm_channel))
+        response = response.content
+        response.upper()
+        if "Y" in response:
+            return True
+        if "N" in response:
+            role = discord.utils.get(member.guild.roles, name="non-member")
+            await member.add_roles(role)
+            return False
+        else:
+            await member.send(
+                "Are you a student or faculty who intends to be an active part of the club? (Y/N) (Answer No"
+                "if you are here to collaborate with the club on events, and are not a faculty member. Otherwise"
+                "answer yes)")
+            self.ask_purpose(member)
+
     async def ask_faculty(self, member):
         await member.send("Are you a faculty member? (Y/N)")
         response = await self.client.wait_for('message', check=message_check(member.dm_channel))
@@ -59,10 +79,12 @@ class OnJoinCog(commands.Cog):
         else:
             await member.send("invalid response")
             await self.ask_faculty(member)
+
     async def ask_github(self, member):
         await member.send("Please respond with your github username!")
         response = await self.client.wait_for('message', check=message_check(member.dm_channel))
         return response.content
+
     async def ask_name(self, member):
         await member.send("Please respond with your first name as you would like it to appear on the server!")
         response = await self.client.wait_for('message', check=message_check(member.dm_channel))
@@ -88,15 +110,17 @@ class OnJoinCog(commands.Cog):
     async def on_member_join(self, member):
         await member.send("Welcome to the UNHM programming club! I need to ask you a few questions to assign your"
                           "discord roles first!")
-        name = await self.ask_name(member)
-        mem_or_fac = await self.ask_faculty(member)
-        if mem_or_fac != "faculty":
-            campus = await self.ask_campus(member)
-        else:
-            campus = "N/A"
-        github = await self.ask_github(member)
-        with open('members.txt', 'a') as file:
-            file.write(f"Name: {name} Github: {github} , {mem_or_fac}, Campus: {campus}\n")
+        if self.ask_purpose(member):
+            name = await self.ask_name(member)
+            mem_or_fac = await self.ask_faculty(member)
+            if mem_or_fac != "faculty":
+                campus = await self.ask_campus(member)
+            else:
+                campus = "N/A"
+            github = await self.ask_github(member)
+            with open('members.txt', 'a') as file:
+                file.write(f"Name: {name} Github: {github} , {mem_or_fac}, Campus: {campus}\n")
+        await member.send("Thank you for completing registration!")
 
     @commands.command(pass_context=True)
     async def manual_reg(self, ctx):
