@@ -59,7 +59,10 @@ class OnJoinCog(commands.Cog):
         else:
             await member.send("invalid response")
             await self.ask_faculty(member)
-
+    async def ask_github(self, member):
+        await member.send("Please respond with your github username!")
+        response = await self.client.wait_for('message', check=message_check(member.dm_channel))
+        return response.content
     async def ask_name(self, member):
         await member.send("Please respond with your first name as you would like it to appear on the server!")
         response = await self.client.wait_for('message', check=message_check(member.dm_channel))
@@ -91,8 +94,9 @@ class OnJoinCog(commands.Cog):
             campus = await self.ask_campus(member)
         else:
             campus = "N/A"
+        github = await self.ask_github(member)
         with open('members.txt', 'a') as file:
-            file.write(f"{name} {mem_or_fac} {campus}\n")
+            file.write(f"Name: {name} Github: {github} , {mem_or_fac}, Campus: {campus}\n")
 
     @commands.command(pass_context=True)
     async def test_reg(self, ctx):
