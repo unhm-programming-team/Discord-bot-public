@@ -6,7 +6,7 @@ TODO: comment this spaghetti
 from discord.ext import commands
 from collections.abc import Sequence
 import discord
-
+import requests
 
 def make_sequence(seq):
     if seq is None:
@@ -111,8 +111,8 @@ class OnJoinCog(commands.Cog):
         await member.send("Welcome to the UNHM programming club! I need to ask you a few questions to assign your"
                           "discord roles first!")
         purpose = await self.ask_purpose(member)
+        name = await self.ask_name(member)
         if purpose:
-            name = await self.ask_name(member)
             mem_or_fac = await self.ask_faculty(member)
             if mem_or_fac != "faculty":
                 campus = await self.ask_campus(member)
@@ -121,6 +121,9 @@ class OnJoinCog(commands.Cog):
             github = await self.ask_github(member)
             with open('members.txt', 'a') as file:
                 file.write(f"Name: {name} Github: {github} , {mem_or_fac}, Campus: {campus}\n")
+            requests.post("https://discord.com/api/webhooks/826631969701625906/vfIcKFbeLnBdJD1hFS6tsuPrCWArDb4sv38O8piWgccRLqIxdovE6rsUyDn5Rw4JRsJE", json={"New Member": {"name": name, "role": mem_or_fac, "github": github, "campus": campus}})
+        else:
+            requests.post("https://discord.com/api/webhooks/826631969701625906/vfIcKFbeLnBdJD1hFS6tsuPrCWArDb4sv38O8piWgccRLqIxdovE6rsUyDn5Rw4JRsJE", json={"New non-member": {"name":name}})
         await member.send("Thank you for completing registration!")
 
     @commands.command(pass_context=True)
