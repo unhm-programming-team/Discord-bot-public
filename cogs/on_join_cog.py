@@ -61,7 +61,7 @@ class OnJoinCog(commands.Cog):
                 "Are you a student who intends to be a member, or faculty who intends to be an active part of the club? (Y/N) (Answer No"
                 "if you are here to collaborate with the club on events, or some other non-member position, and are not a faculty member. Otherwise"
                 "answer yes)")
-            self.ask_purpose(member)
+            await self.ask_purpose(member)
 
     async def ask_faculty(self, member):
         await member.send("Are you a faculty member? (Y/N)")
@@ -110,7 +110,8 @@ class OnJoinCog(commands.Cog):
     async def on_member_join(self, member):
         await member.send("Welcome to the UNHM programming club! I need to ask you a few questions to assign your"
                           "discord roles first!")
-        if self.ask_purpose(member):
+        purpose = await self.ask_purpose(member)
+        if purpose:
             name = await self.ask_name(member)
             mem_or_fac = await self.ask_faculty(member)
             if mem_or_fac != "faculty":
