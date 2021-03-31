@@ -7,6 +7,7 @@ from discord.ext import commands
 from collections.abc import Sequence
 import discord
 import requests
+import json
 
 def make_sequence(seq):
     if seq is None:
@@ -121,9 +122,47 @@ class OnJoinCog(commands.Cog):
             github = await self.ask_github(member)
             with open('members.txt', 'a') as file:
                 file.write(f"Name: {name} Github: {github} , {mem_or_fac}, Campus: {campus}\n")
-            requests.post("https://discord.com/api/webhooks/826631969701625906/vfIcKFbeLnBdJD1hFS6tsuPrCWArDb4sv38O8piWgccRLqIxdovE6rsUyDn5Rw4JRsJE", json={"New Member": {"name": name, "role": mem_or_fac, "github": github, "campus": campus}})
+            embed = {
+                "description": f"Name: {name}\nRole: {mem_or_fac}\nCampus: {campus}\nGithub: {github}",
+                "title": "New Member"
+            }
+
+            data = {
+                "content": f"New Member!",
+                "username": "New Member Bot",
+                "embeds": [
+                    embed
+                ],
+            }
+
+            result = requests.post("https://discord.com/api/webhooks/826631969701625906/vfIcKFbeLnBdJD1hFS6tsuPrCWArDb4sv38O8piWgccRLqIxdovE6rsUyDn5Rw4JRsJE", json=data)
+            try:
+                result.raise_for_status()
+            except requests.exceptions.HTTPError as err:
+                print(err)
+            else:
+                print("Payload delivered successfully, code {}.".format(result.status_code))
         else:
-            requests.post("https://discord.com/api/webhooks/826631969701625906/vfIcKFbeLnBdJD1hFS6tsuPrCWArDb4sv38O8piWgccRLqIxdovE6rsUyDn5Rw4JRsJE", json={"New non-member": {"name":name}})
+            embed = {
+                "description": f"Name: {name}",
+                "title": "New Non-Member"
+            }
+
+            data = {
+                "content": f"New Non-Member Info",
+                "username": "New Non-Member Bot",
+                "embeds": [
+                    embed
+                ],
+            }
+
+            result = requests.post("https://discord.com/api/webhooks/826631969701625906/vfIcKFbeLnBdJD1hFS6tsuPrCWArDb4sv38O8piWgccRLqIxdovE6rsUyDn5Rw4JRsJE", json=data)
+            try:
+                result.raise_for_status()
+            except requests.exceptions.HTTPError as err:
+                print(err)
+            else:
+                print("Payload delivered successfully, code {}.".format(result.status_code))
         await member.send("Thank you for completing registration!")
 
     @commands.command(pass_context=True)
