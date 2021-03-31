@@ -45,8 +45,8 @@ class OnJoinCog(commands.Cog):
 
     async def ask_purpose(self,member ):
         await member.send("Are you a student or faculty who intends to be an active part of the club? (Y/N) (Answer No "
-                          "if you are here to collaborate with the club on events, and are not a faculty member. Otherwise"
-                          "answer yes)")
+                          "if you are here to collaborate with the club on events, and are not a faculty member. "
+                          "Otherwise answer yes)")
         response = await self.client.wait_for('message', check=message_check(member.dm_channel))
         response = response.content
         response.upper()
