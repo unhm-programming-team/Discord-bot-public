@@ -19,7 +19,15 @@ Repository for the UNHM programming club discord bot
     * add the name of the module to the text file pip_update
     * if multiple modules are added seperate them via newline
 
+### Testing Prerequisites:
+     
+    1. There is a file named "keys.txt" that must be downloaded and placed in the folder you are holding the testing bot in
+       it can be found pinned in the "bot testing" channel in the discord or by contacting Bryan.
+       The file has been included in the .gitignore so Github will automaticly ignore this file
+       when pushing as including it would create a security vulnerability. 
+
 ### Current Code Testing Procedures:
+    
         * please check that the testing bot is currently offline before beginning
     1. change the variable 'testing' in bot.py to True
         * this changed the token to use the testing bot on the server
