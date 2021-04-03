@@ -10,6 +10,8 @@ import xkcd
 from our_packages.api_manager import getrequest
 import random
 from discord.ext import commands  # required for method and cog decoration
+from our_packages.json_manager import count_command, get_count, easter_egg_animal_lover
+import discord
 
 
 class FunCog(commands.Cog):
@@ -81,6 +83,10 @@ class FunCog(commands.Cog):
 
         dog_img = res["message"]  # access element of res containing picture of dog
         await ctx.send(dog_img)
+        await count_command(ctx.author.id, "dog")
+        await easter_egg_animal_lover(ctx.author)
+
+
 
     @commands.command(pass_context=True)
     async def cat(self, ctx):
@@ -93,6 +99,8 @@ class FunCog(commands.Cog):
         res = res[0]
         cat_img = res["url"]
         await ctx.send(cat_img)
+        await count_command(ctx.author.id, "cat")
+        await easter_egg_animal_lover(ctx.author)
 
 
 def setup(client):

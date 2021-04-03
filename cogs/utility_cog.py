@@ -16,12 +16,14 @@ class UtilityCog(commands.Cog):
     def __init__(self, client):
         self.client = client
 
+
     @commands.command(pass_context=True)
     async def randrange(self, ctx, start, end):
         """
         gets a rnadom number in range
         :return: result of coin flip
         """
+
         flip = random.randint(int(start), int(end))
         await ctx.send(flip)
 

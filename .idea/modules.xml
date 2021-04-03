@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Discord-bot-public.iml" filepath="$PROJECT_DIR$/.idea/Discord-bot-public.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../DiscordWebhook tutorial/.idea/DiscordWebhook tutorial.iml" filepath="$PROJECT_DIR$/../DiscordWebhook tutorial/.idea/DiscordWebhook tutorial.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dungeonbot/.idea/dungeonbot.iml" filepath="$PROJECT_DIR$/../dungeonbot/.idea/dungeonbot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../idea-generator/.idea/idea-generator.iml" filepath="$PROJECT_DIR$/../idea-generator/.idea/idea-generator.iml" />
     </modules>
   </component>
 </project>
