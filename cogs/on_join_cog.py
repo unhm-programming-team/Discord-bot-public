@@ -53,7 +53,7 @@ class OnJoinCog(commands.Cog):
                           "Otherwise answer yes)")
         response = await self.client.wait_for('message', check=message_check(member.dm_channel))
         response = response.content
-        response.upper()
+        response = response.upper()
         if "Y" in response:
             return True
         if "N" in response:
@@ -74,7 +74,7 @@ class OnJoinCog(commands.Cog):
         await member.send("Are you a faculty member? (Y/N)")
         response = await self.client.wait_for('message', check=message_check(member.dm_channel))
         response = response.content
-        response.upper()
+        response = response.upper()
         if 'Y' in response:
             role = discord.utils.get(member.guild.roles, name="Faculty")
             await member.add_roles(role)
@@ -125,7 +125,7 @@ class OnJoinCog(commands.Cog):
         await member.send("Are you a UNH Manchester, or UNH Durham student? (UNHM/UNHD)")
         response = await self.client.wait_for('message', check=message_check(member.dm_channel))
         response = response.content
-        response.upper()
+        response = response.upper()
         if "UNHM" in response:
             role = discord.utils.get(member.guild.roles, name="UNHM students")
             await member.add_roles(role)
@@ -149,7 +149,7 @@ We have yet to have anyone come close to running afoul of these rules - this is 
 Please reply with "Agree" if you agree with these rules''')
         response = await self.client.wait_for('message', check=message_check(member.dm_channel))
         response = response.content
-        response.upper()
+        response = response.upper()
         if "Agree" in response:
             pass
         else:
@@ -166,7 +166,7 @@ Please reply with "Agree" if you agree with these rules''')
             await member.send("Warning this will clear all your roles, do you want to proceed? (Y/N)")
             response = await self.client.wait_for('message', check=message_check(member.dm_channel))
             response = response.content
-            response.upper()
+            response = response.upper()
             if "N" in response:
                 return 200
         await self.send_rules(member)
