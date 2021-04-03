@@ -86,6 +86,18 @@ class OnJoinCog(commands.Cog):
             await member.send("invalid response")
             await self.ask_faculty(member)
 
+    async def rem_roles(self, member):
+        """
+        Remove all member roles that we can
+        :param member:
+        :return:
+        """
+        for role in member.guild.roles:
+            try:
+                await member.remove_roles(role)
+            except:
+                pass
+
     async def ask_github(self, member):
         """
         Request github username
@@ -121,13 +133,33 @@ class OnJoinCog(commands.Cog):
             await member.send("Invalid response!")
             await self.ask_campus(member)
 
+    async def send_rules(self, member):
+        await member.send('''Welcome to the Programming Club!/n/n
+
+Make sure to follow our conduct rules on club communication channels:/n
+- No harassment or sexualized speech /n
+- No talking about politics except in specific off-topic spaces/n
+- No discrimination /n
+- No bullying and mocking, including and especially about someone being an inexperienced programmer/n
+
+We have yet to have anyone come close to running afoul of these rules - this is a welcoming and inclusive space for programmers of all backgrounds and skill levels. Help us keep it that way!/n
+Please reply with "Agree" if you agree with these rules''')
+        response = await self.client.wait_for('message', check=message_check(member.dm_channel))
+        response = response.content
+        response.upper()
+        if "Agree" in response:
+            pass
+        else:
+            await member.send("Invalid response!")
+            await self.send_rules(member)
+
     @commands.Cog.listener()
     async def on_member_join(self, member):
         """
         Runs on member join, asks them various questions about their position in the club
         """
-        await member.send("Welcome to the UNHM programming club! I need to ask you a few questions to assign your"
-                          "discord roles first!") # send welcoming message
+        await self.send_rules(member)
+        await self.rem_roles(member)
         purpose = await self.ask_purpose(member) #ask their purpose, non-member/member
         name = await self.ask_name(member) # ask for name
         if purpose: # if they are a member
