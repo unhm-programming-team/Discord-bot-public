@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d8c0a637-202c-4875-944f-1a457e9002a0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/command_count.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/our_packages/json_manager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Discord-bot-public.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Discord-bot-public.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cogs/fun_cog.py" beforeDir="false" afterPath="$PROJECT_DIR$/cogs/fun_cog.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cogs/utility_cog.py" beforeDir="false" afterPath="$PROJECT_DIR$/cogs/utility_cog.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/keys.txt" beforeDir="false" afterPath="$PROJECT_DIR$/keys.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/members.txt" beforeDir="false" afterPath="$PROJECT_DIR$/members.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../idea-generator/flask_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/../idea-generator/flask_api.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,14 +22,32 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/our_packages/json_manager.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="37" column="35" lean-forward="true" selection-start-line="37" selection-start-column="35" selection-end-line="37" selection-end-column="35" />
+            <state relative-caret-position="272">
+              <caret line="24" column="20" lean-forward="true" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="8" selection-start-column="8" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/keys.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="127" selection-start-column="127" selection-end-column="127" />
             </state>
           </provider>
         </entry>
@@ -99,30 +108,6 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cogs/utility_cog.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="25" selection-start-line="25" selection-end-line="25" />
-              <folding>
-                <element signature="e#156#188#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/our_packages/key_manager.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="7" column="27" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="27" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -143,7 +128,6 @@
         <option value="$PROJECT_DIR$/members.txt" />
         <option value="$PROJECT_DIR$/our_packages/key_manager.py" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/keys.txt" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/../dungeonbot/bot.py" />
         <option value="$PROJECT_DIR$/../dungeonbot/cogs/utility_cog.py" />
@@ -155,13 +139,15 @@
         <option value="$PROJECT_DIR$/cogs/fun_cog.py" />
         <option value="$PROJECT_DIR$/bot.py" />
         <option value="$PROJECT_DIR$/our_packages/json_manager.py" />
+        <option value="$PROJECT_DIR$/keys.txt" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="106" />
+    <option name="x" value="66" />
+    <option name="y" value="23" />
     <option name="width" value="1614" />
-    <option name="height" value="1050" />
+    <option name="height" value="1027" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -255,18 +241,18 @@
       <workItem from="1617128456492" duration="9716000" />
       <workItem from="1617153794598" duration="4019000" />
       <workItem from="1617194523690" duration="1843000" />
-      <workItem from="1617327019719" duration="14458000" />
+      <workItem from="1617327019719" duration="14568000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31442000" />
+    <option name="totallyTimeSpent" value="31552000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="106" y="0" width="1614" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25636134" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25636134" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -280,7 +266,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50111526" side_tool="true" weight="0.32985386" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49888477" visible="true" weight="0.21607515" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49888477" visible="true" weight="0.21607515" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -343,13 +329,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="8" selection-start-column="8" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/our_packages/api_manager.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -409,13 +388,6 @@
           <folding>
             <element signature="e#156#188#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keys.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="124" selection-start-column="124" selection-end-column="124" />
         </state>
       </provider>
     </entry>
@@ -492,11 +464,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/our_packages/json_manager.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="37" column="35" lean-forward="true" selection-start-line="37" selection-start-column="35" selection-end-line="37" selection-end-column="35" />
+        <state relative-caret-position="272">
+          <caret line="24" column="20" lean-forward="true" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="8" selection-start-column="8" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keys.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="127" selection-start-column="127" selection-end-column="127" />
         </state>
       </provider>
     </entry>
