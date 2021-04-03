@@ -150,7 +150,7 @@ Please reply with "Agree" if you agree with these rules''')
         response = await self.client.wait_for('message', check=message_check(member.dm_channel))
         response = response.content
         response = response.upper()
-        if "Agree" in response:
+        if "AGREE" in response:
             pass
         else:
             await member.send("Invalid response!")
