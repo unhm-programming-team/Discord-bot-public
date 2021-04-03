@@ -7,6 +7,7 @@ from collections.abc import Sequence
 import discord
 import requests
 import json
+from our_packages.json_manager import count_command, get_count, easter_egg_animal_lover
 
 def make_sequence(seq):
     if seq is None:
@@ -92,7 +93,9 @@ class OnJoinCog(commands.Cog):
         :param member:
         :return:
         """
-        for role in member.guild.roles:
+        available_roles = ['Faculty', 'Club Member', 'UNHM students', 'non-member']
+        for r in available_roles:
+            role = discord.utils.get(member.guild.roles, name=r)
             try:
                 await member.remove_roles(role)
             except:
@@ -158,6 +161,14 @@ Please reply with "Agree" if you agree with these rules''')
         """
         Runs on member join, asks them various questions about their position in the club
         """
+        times_registered = await get_count(member.id, "registration")
+        if times_registered > 0:
+            await member.send("Warning this will clear all your roles, do you want to proceed? (Y/N)")
+            response = await self.client.wait_for('message', check=message_check(member.dm_channel))
+            response = response.content
+            response.upper()
+            if "N" in response:
+                return 200
         await self.send_rules(member)
         await self.rem_roles(member)
         purpose = await self.ask_purpose(member) #ask their purpose, non-member/member
@@ -214,6 +225,7 @@ Please reply with "Agree" if you agree with these rules''')
             else:
                 print("Payload delivered successfully, code {}.".format(result.status_code))
         await member.send("Thank you for completing registration!") # tell them registration is complete
+        await count_command(member.id, "registration")
 
     @commands.command(pass_context=True)
     async def manual_reg(self, ctx):

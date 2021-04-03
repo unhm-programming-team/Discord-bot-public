@@ -14,7 +14,7 @@ from our_packages.key_manager import get_prod
 
 intents = discord.Intents.default()
 intents.members = True
-testing = False  # changes weather or not the bot runs on the testing token
+testing = True  # changes weather or not the bot runs on the testing token
 case_insensitivity = True  # changes weather or not the bot is insensitive to case
 
 # defines the testing and production token

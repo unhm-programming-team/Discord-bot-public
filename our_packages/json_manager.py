@@ -36,7 +36,7 @@ async def get_count(user, command):
 
 async def easter_egg_animal_lover(user):
     animal_call_count = await get_count(user.id, "dog") + await get_count(user.id, "cat")
-    if animal_call_count >= 75:
+    if animal_call_count >= 50:
         role = discord.utils.get(user.guild.roles, name="Animal Lover")
         if role not in user.roles:
             await user.add_roles(role)
