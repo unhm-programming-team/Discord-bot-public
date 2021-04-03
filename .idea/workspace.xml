@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d8c0a637-202c-4875-944f-1a457e9002a0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../idea-generator/flask_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/../idea-generator/flask_api.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -52,11 +51,11 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="8" lean-forward="true" selection-start-column="8" selection-end-column="8" />
+            <state relative-caret-position="45">
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
@@ -70,7 +69,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cogs/on_join_cog.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="431">
@@ -78,6 +77,15 @@
               <folding>
                 <element signature="e#108#140#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/keys.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="130" selection-start-column="130" selection-end-column="130" />
             </state>
           </provider>
         </entry>
@@ -95,15 +103,6 @@
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/command_count.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="122" lean-forward="true" selection-start-column="122" selection-end-column="122" />
             </state>
           </provider>
         </entry>
@@ -135,11 +134,11 @@
         <option value="$PROJECT_DIR$/cogs/utility_cog.py" />
         <option value="$PROJECT_DIR$/command_count.txt" />
         <option value="$PROJECT_DIR$/cogs/fun_cog.py" />
-        <option value="$PROJECT_DIR$/keys.txt" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/our_packages/json_manager.py" />
         <option value="$PROJECT_DIR$/cogs/on_join_cog.py" />
         <option value="$PROJECT_DIR$/bot.py" />
+        <option value="$PROJECT_DIR$/keys.txt" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -240,17 +239,18 @@
       <workItem from="1617128456492" duration="9716000" />
       <workItem from="1617153794598" duration="4019000" />
       <workItem from="1617194523690" duration="1843000" />
-      <workItem from="1617327019719" duration="16079000" />
+      <workItem from="1617327019719" duration="16325000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33063000" />
+    <option name="totallyTimeSpent" value="33309000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="212" y="35" width="1614" height="1027" extended-state="0" />
+    <frame x="737" y="0" width="1614" height="1027" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25636134" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25636134" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -264,7 +264,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50111526" side_tool="true" weight="0.32985386" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49888477" visible="true" weight="0.22139038" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49888477" visible="true" weight="0.22139038" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -413,13 +413,6 @@
     <entry file="file://$PROJECT_DIR$/members.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/keys.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="127" selection-start-column="127" selection-end-column="127" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/our_packages/key_manager.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -437,13 +430,6 @@
             <caret line="4" selection-start-line="4" selection-end-line="4" selection-end-column="12" />
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="8" lean-forward="true" selection-start-column="8" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -481,6 +467,20 @@
           <folding>
             <element signature="e#108#140#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keys.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="130" selection-start-column="130" selection-end-column="130" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
