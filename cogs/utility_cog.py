@@ -48,7 +48,7 @@ class UtilityCog(commands.Cog):
         :return: weather at lat,lon
         """
         if not lon:  # in the case of only zip code provided
-            response = requests.get(f"https://www.zipcodeapi.com/rest/KMUZlsPVA7wg4jOjiNrNytGrqlsvwbXmD2TDsud6Ay0CyJAWsFP68gD9MQpmUae9/info.json/{lat}/degrees")
+            response = requests.get(f"https://www.zipcodeapi.com/rest/3zsGNFbsiyugtCBBSMg3egFK5vfJXb4LCYiY7EGskMb9LhUS8xEzlvmDJJi6Ikc9/info.json/{lat}/degrees")
             res = json.loads(response.content)
             if "error_code" in res.keys():
                 await ctx.send("Invalid zip code!")
