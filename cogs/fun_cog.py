@@ -10,7 +10,7 @@ import xkcd
 from our_packages.api_manager import getrequest
 import random
 from discord.ext import commands  # required for method and cog decoration
-from our_packages.json_manager import count_command, get_count, easter_egg_animal_lover, get_balance, add_to_balance
+from our_packages.json_manager import count_command, get_count, easter_egg_animal_lover, get_balance, add_to_balance, get_stocks, add_stock, rem_stock
 import requests
 import time
 import asyncio
@@ -22,7 +22,7 @@ class FunCog(commands.Cog):
         self.client = client
 
     @commands.command(pass_context=True)
-    async def papertrade(self,ctx,stock, money, duration):
+    async def paperbuy(self,ctx,stock, money):
         """
         Used for trading fake money on stocks!
         :param ctx:
@@ -33,25 +33,42 @@ class FunCog(commands.Cog):
         """
         money = float(money)
         if await get_balance(ctx.author) >= money:
-            duration = int(duration)
             price = requests.get(f"https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol={stock}&apikey=B7FK59YY2XQ03FES")
             price = float(price.json()["Global Quote"]["05. price"])
             num_of_stocks = money/price
-            await ctx.send(f"{num_of_stocks} stocks of {stock} purchased for ${money}, at a price of ${price} per stock,"
-                           f"selling in {duration} seconds")
-            await asyncio.sleep(duration)
-            price = requests.get(f"https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol={stock}&apikey=B7FK59YY2XQ03FES")
-            price = float(price.json()["Global Quote"]["05. price"])
-            gain_loss = num_of_stocks * price
-            money = gain_loss - money
-            if money >= 0:
-                await ctx.send(f"@{ctx.author.name} you made ${money} on your {stock} trade! Sold at ${price} per stock")
-            if money < 0:
-                await ctx.send(f"@{ctx.author.name} you lost ${money * -1} on your {stock} trade! "
-                               f"Sold at ${price} per stock")
-            await add_to_balance(ctx.author, money)
+            await ctx.send(f"{num_of_stocks} stocks of {stock} purchased for ${money}, at a price of ${price} per stock.")
+
+            await add_to_balance(ctx.author, -1 * money)
+            await add_stock(ctx.author,stock,num_of_stocks)
         else:
             await ctx.send(f"Your balance is too low! It is currently ${await get_balance(ctx.author)}")
+
+    @commands.command(pass_context=True)
+    async def papersell(self,ctx,stock,amt):
+        amount_of_stock = await get_stocks(ctx.author)
+        amount_of_stock = amount_of_stock[stock]
+        if amount_of_stock >= float(amt):
+            price = requests.get(
+                f"https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol={stock}&apikey=B7FK59YY2XQ03FES")
+            price = float(price.json()["Global Quote"]["05. price"])
+            gain_loss = float(amt) * price
+            await ctx.send(f"@{ctx.author.name} you sold {amt} shares of {stock} for ${gain_loss}")
+            await add_to_balance(ctx.author, gain_loss)
+            await rem_stock(ctx.author, stock, float(amt))
+        else:
+            await ctx.send(f"You are not currently holding that much stock! You have {amount_of_stock} stocks in {stock}")
+
+    @commands.command(pass_context=True)
+    async def portfolio(self,ctx):
+        amount_of_stock = await get_stocks(ctx.author)
+        message = "You are currently Holding:```"
+        for stock in amount_of_stock.keys():
+            message += f"{amount_of_stock[stock]} shares of {stock}\n"
+        message += "```"
+        await ctx.send(message)
+
+
+
 
     @commands.command(pass_context=True)
     async def balance(self, ctx):

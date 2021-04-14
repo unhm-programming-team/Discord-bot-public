@@ -21,6 +21,66 @@ async def count_command(user, command):
         json.dump(loaded_data, file2)
 
 
+async def get_stocks(user):
+    user = str(user.id)
+    with open('command_count.txt', 'r') as file:
+        line = str(file.readline())
+
+    loaded_data = json.loads(line)
+
+    if user not in loaded_data.keys():
+        loaded_data[user] = {}
+    if "stocks" not in loaded_data[user].keys():
+        loaded_data[user]["stocks"] = {}
+    stocks = loaded_data[user]["stocks"]
+
+    with open('command_count.txt', 'w+') as file2:
+        print(loaded_data)
+        file2.truncate()
+        json.dump(loaded_data, file2)
+
+    return stocks
+
+async def add_stock(user, stock, amt):
+    user = str(user.id)
+    with open('command_count.txt', 'r') as file:
+        line = str(file.readline())
+
+    loaded_data = json.loads(line)
+
+    if user not in loaded_data.keys():
+        loaded_data[user] = {}
+    if "stocks" not in loaded_data[user].keys():
+        loaded_data[user]["stocks"] = {}
+    if stock not in loaded_data[user]["stocks"]:
+        loaded_data[user]["stocks"][stock] = 0
+    loaded_data[user]["stocks"][stock] += amt
+
+    with open('command_count.txt', 'w+') as file2:
+        print(loaded_data)
+        file2.truncate()
+        json.dump(loaded_data, file2)
+
+async def rem_stock(user,stock,amt):
+    user = str(user.id)
+    with open('command_count.txt', 'r') as file:
+        line = str(file.readline())
+
+    loaded_data = json.loads(line)
+
+    if user not in loaded_data.keys():
+        loaded_data[user] = {}
+    if "stocks" not in loaded_data[user].keys():
+        loaded_data[user]["stocks"] = {}
+
+    loaded_data[user]["stocks"][stock] -= amt
+
+    with open('command_count.txt', 'w+') as file2:
+        print(loaded_data)
+        file2.truncate()
+        json.dump(loaded_data, file2)
+
+
 async def get_balance(user):
     user = str(user.id)
     with open('command_count.txt', 'r') as file:
@@ -32,6 +92,12 @@ async def get_balance(user):
         loaded_data[user] = {}
     if "balance" not in loaded_data[user].keys():
         loaded_data[user]["balance"] = 1000
+
+    with open('command_count.txt', 'w+') as file2:
+        print(loaded_data)
+        file2.truncate()
+        json.dump(loaded_data, file2)
+
     return loaded_data[user]["balance"]
 
 
