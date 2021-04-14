@@ -100,6 +100,25 @@ async def get_balance(user):
 
     return loaded_data[user]["balance"]
 
+async def check_stocks(user):
+    with open('command_count.txt', 'r') as file:
+        line = str(file.readline())
+
+    loaded_data = json.loads(line)
+
+    if user not in loaded_data.keys():
+        loaded_data[user] = {}
+    if "stocks" not in loaded_data[user].keys():
+        loaded_data[user]["stocks"] = {}
+        return False
+    amt_of_stock = 0.0
+    for stock in loaded_data[user]["stocks"].keys():
+        amt_of_stock += loaded_data[user]["stocks"][stock]
+    if amt_of_stock == 0:
+        return False
+    else:
+        return True
+
 
 async def add_to_balance(user, balance):
     user = str(user.id)
@@ -115,7 +134,8 @@ async def add_to_balance(user, balance):
 
     loaded_data[user]["balance"] += balance
     if 100 >= loaded_data[user]["balance"]:
-        loaded_data[user]["balance"] += 500
+        if not await check_stocks(user):
+            loaded_data[user]["balance"] += 500
 
     with open('command_count.txt', 'w+') as file2:
         print(loaded_data)
