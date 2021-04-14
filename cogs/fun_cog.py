@@ -38,8 +38,8 @@ class FunCog(commands.Cog):
             num_of_stocks = money/price
             await ctx.send(f"{num_of_stocks} stocks of {stock} purchased for ${money}, at a price of ${price} per stock.")
 
+            await add_stock(ctx.author, stock, num_of_stocks)
             await add_to_balance(ctx.author, -1 * money)
-            await add_stock(ctx.author,stock,num_of_stocks)
         else:
             await ctx.send(f"Your balance is too low! It is currently ${await get_balance(ctx.author)}")
 
@@ -53,8 +53,8 @@ class FunCog(commands.Cog):
             price = float(price.json()["Global Quote"]["05. price"])
             gain_loss = float(amt) * price
             await ctx.send(f"@{ctx.author.name} you sold {amt} shares of {stock} for ${gain_loss}")
-            await add_to_balance(ctx.author, gain_loss)
             await rem_stock(ctx.author, stock, float(amt))
+            await add_to_balance(ctx.author, gain_loss)
         else:
             await ctx.send(f"You are not currently holding that much stock! You have {amount_of_stock} stocks in {stock}")
 

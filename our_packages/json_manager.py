@@ -1,6 +1,7 @@
 import json
 import discord
 
+## this spaghetti really needs some docstrings
 
 async def count_command(user, command):
     user = str(user)
