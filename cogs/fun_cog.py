@@ -34,9 +34,9 @@ class FunCog(commands.Cog):
         money = float(money)
         if await get_balance(ctx.author) >= money:
             price = requests.get(f"https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol={stock}&interval=1min&apikey=B7FK59YY2XQ03FES")
-            price = float(price.json()["Time Series (1min)"][price.json().keys()[0]]["4. close"])
+            price = float(price.json()["Time Series (1min)"][list(price.json()["Time Series (1min)"].keys())[0]]["4. close"])
             num_of_stocks = money/price
-            await ctx.send(f"{num_of_stocks} stocks of {stock} purchased for ${money}, at a price of ${price} per stock.")
+            await ctx.send(f"{num_of_stocks} stocks of {stock} purchased for ${money}, at a price of ${price} per share.")
 
             await add_stock(ctx.author, stock, num_of_stocks)
             await add_to_balance(ctx.author, -1 * money)
@@ -50,9 +50,9 @@ class FunCog(commands.Cog):
         if amount_of_stock >= float(amt):
             price = requests.get(
                 f"https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol={stock}&interval=1min&apikey=B7FK59YY2XQ03FES")
-            price = float(price.json()["Time Series (1min)"][price.json().keys()[0]]["4. close"])
+            price = float(price.json()["Time Series (1min)"][list(price.json()["Time Series (1min)"].keys())[0]]["4. close"])
             gain_loss = float(amt) * price
-            await ctx.send(f"@{ctx.author.name} you sold {amt} shares of {stock} for ${gain_loss}")
+            await ctx.send(f"@{ctx.author.name} you sold {amt} shares of {stock}, at a price of ${price} per share, for ${gain_loss}")
             await rem_stock(ctx.author, stock, float(amt))
             await add_to_balance(ctx.author, gain_loss)
         else:
