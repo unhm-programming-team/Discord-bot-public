@@ -63,7 +63,8 @@ class FunCog(commands.Cog):
         amount_of_stock = await get_stocks(ctx.author)
         message = "You are currently Holding:```"
         for stock in amount_of_stock.keys():
-            message += f"{amount_of_stock[stock]} shares of {stock}\n"
+            if amount_of_stock[stock] != 0.0:
+                message += f"{amount_of_stock[stock]} shares of {stock}\n"
         message += "```"
         await ctx.send(message)
 
