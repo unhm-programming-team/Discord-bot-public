@@ -21,6 +21,42 @@ async def count_command(user, command):
         json.dump(loaded_data, file2)
 
 
+async def get_balance(user):
+    user = str(user.id)
+    with open('command_count.txt', 'r') as file:
+        line = str(file.readline())
+
+    loaded_data = json.loads(line)
+
+    if user not in loaded_data.keys():
+        loaded_data[user] = {}
+    if "balance" not in loaded_data[user].keys():
+        loaded_data[user]["balance"] = 1000
+    return loaded_data[user]["balance"]
+
+
+async def add_to_balance(user, balance):
+    user = str(user.id)
+    with open('command_count.txt', 'r') as file:
+        line = str(file.readline())
+
+    loaded_data = json.loads(line)
+
+    if user not in loaded_data.keys():
+        loaded_data[user] = {}
+    if "balance" not in loaded_data[user].keys():
+        loaded_data[user]["balance"] = 1000
+
+    loaded_data[user]["balance"] += balance
+    if 100 >= loaded_data[user]["balance"]:
+        loaded_data[user]["balance"] += 500
+
+    with open('command_count.txt', 'w+') as file2:
+        print(loaded_data)
+        file2.truncate()
+        json.dump(loaded_data, file2)
+
+
 async def get_count(user, command):
     user = str(user)
     with open('command_count.txt', 'r') as file:
