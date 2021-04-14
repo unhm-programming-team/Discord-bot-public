@@ -161,6 +161,8 @@ Please reply with "Agree" if you agree with these rules''')
         """
         Runs on member join, asks them various questions about their position in the club
         """
+        if member.guild.name != "UNHM Programming Club":
+            return 200
         times_registered = await get_count(member.id, "registration")
         if times_registered > 0:
             await member.send("Warning this will clear all your roles, do you want to proceed? (Y/N)")
