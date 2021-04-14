@@ -13,6 +13,7 @@ from discord.ext import commands  # required for method and cog decoration
 from our_packages.json_manager import count_command, get_count, easter_egg_animal_lover, get_balance, add_to_balance
 import requests
 import time
+import asyncio
 import discord
 
 
@@ -37,7 +38,7 @@ class FunCog(commands.Cog):
             price = float(price.json()["Global Quote"]["05. price"])
             num_of_stocks = money/price
             await ctx.send(f"{num_of_stocks} stocks of {stock} purchased for ${money}, selling in {duration} seconds")
-            time.sleep(duration)
+            await asyncio.sleep(duration)
             price = requests.get(f"https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol={stock}&apikey=B7FK59YY2XQ03FES")
             price = float(price.json()["Global Quote"]["05. price"])
             gain_loss = num_of_stocks * price
