@@ -37,22 +37,29 @@ class FunCog(commands.Cog):
             price = requests.get(f"https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol={stock}&apikey=B7FK59YY2XQ03FES")
             price = float(price.json()["Global Quote"]["05. price"])
             num_of_stocks = money/price
-            await ctx.send(f"{num_of_stocks} stocks of {stock} purchased for ${money}, selling in {duration} seconds")
+            await ctx.send(f"{num_of_stocks} stocks of {stock} purchased for ${money}, at a price of ${price} per stock,"
+                           f"selling in {duration} seconds")
             await asyncio.sleep(duration)
             price = requests.get(f"https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol={stock}&apikey=B7FK59YY2XQ03FES")
             price = float(price.json()["Global Quote"]["05. price"])
             gain_loss = num_of_stocks * price
             money = gain_loss - money
             if money >= 0:
-                await ctx.send(f"@{ctx.author.name} you made ${money} on your {stock} trade!")
+                await ctx.send(f"@{ctx.author.name} you made ${money} on your {stock} trade! Sold at ${price} per stock")
             if money < 0:
-                await ctx.send(f"@{ctx.author.name} you lost ${money * -1} on your {stock} trade!")
+                await ctx.send(f"@{ctx.author.name} you lost ${money * -1} on your {stock} trade! "
+                               f"Sold at ${price} per stock")
             await add_to_balance(ctx.author, money)
         else:
             await ctx.send(f"Your balance is too low! It is currently ${await get_balance(ctx.author)}")
 
     @commands.command(pass_context=True)
     async def balance(self, ctx):
+        """
+
+        :param ctx:
+        :return:
+        """
         await ctx.send(f"Your balance is currently ${await get_balance(ctx.author)}")
 
 
