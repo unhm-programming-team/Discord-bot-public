@@ -1,114 +1,119 @@
 #Discord Bot Commands
 
-* this document describes all current working commands
-* omit brackets from parameters, strings with spaces require quotes
+
+Guide on using the bot:
+Below are some of the currently implemented commands. (OUTDATED)
+
+if the command has brackets [] around it, ex: '[getXKCD|xkcd]', any of the words within the brackets can be used, the words are separated using '|'. Ex. !xkcd and !getXKCD run the same command.
+
+Some commands may accept input, parameters are shown after the inital !call to the command, seperated by spaces. To give the command input, you must provide all parameters unless otherwise noted. Exclude the arrows from the command call.
+If a command accepts multiple parameters, the parameters are seperated using a space. Ex. '!weather 1 2' where 1 is parameter <lat> and 2 is parameter <lon>.
+
+There are three different types of data commands accept currently. 
+
+Integers: simply a number with NO decimal in it, 
+
+strings: a string of characters ex `"This is a string of characters"`. If you want to use spaces in your string, you must surround the string with double quotes: "" 
+
+float: decimal number
+
+parameter input types are described in the description of the command.
 ## Vote Commands:
 
 #### Commands which provide voting capability
 
-!hostvote "vote subject"
 
-
-        """
+   !hostvote vote_subject
+   
+        vote_subject = string
         Sends a message to allow currently unofficial voting on subjects
-        :param vote_subject: string which contains voting subject
-        :return: message with cross and check emojis
-        """
-    * Hosts a vote, uses vote subject directly in vote message
-    * responds once with a check and cross emoji to enable users to easily vote
+
     
 ## Utility Commands:
 
 #### Various Commands which provide misc utility
-!idea [seed]
+!manual_reg
 
-        """
-        generates random game idea using karl's game idea generation functions
-        :param seed: optional, default -1, integer to seed random generation
-        :return: random game idea
-        """
+        Manually start registration for yourself in case of bot error, REMOVES ALL REGISTRATION ASSIGNED ROLLS
+
+
+!diceroll amount_of_dice amount_of_sides
+
+        Rolls an amount_of_dice die, each having amount_of_sides sides.
+        amount_of_dice = integer
+        amount_of_sides = integer
         
-        * returns a random game idea using karl miller random game idea generation functions
+!randrange low_end high_end
+
+        Returns a random integer between low_end and high_end
+        low_end, high_end = integers
+
+!idea
+
+        generates random game idea using karl's game idea generation functions
 
     
+!clear
 
+        Clears all messages in a channel.
+        manage messages permissions required!
+        
 !covid19
 
-        """
-        Gets current global covid19 statistics 
-        :return: current covid 19 statistics according to covid19api.com
-        """
-        
-        * returns statistics on covid 19 infections
+        Gets current global covid19 global statistics
+![weather|weather_at] lat lon
+        OR
+![weather|weather_at] zipcode
+ 
+        Returns weather at specific latitude and longitude or by US zipcode
+        lat, lon, zipcode = integers
 
-!weather_at [latitude] [longitude] or just [zipcode]
-        
-        aliases: !weather, !weatherat
-
-        """
-        Returns weather at specific latitude and longitude
-        :param lat: latitude or zip code of location
-        :param lon: longitude of location
-        :return: weather at lat,lon
-        """
-    * returns a message containing weather for a specific latitude 
-      and longitude or a specified zip code.
-    
-    * if a zip code is provided a longitude must not be provided  
-    
-    * returns the following conditions:
-        * Short weather description
-        * Temperature
-        * "feels like" temperature
-        * level of humidity
         
 ## Fun Commands:
 
 #### Commands which have useless, albeit fun functionality
 
+!paperbuy stock amt_of_money
+
+
+        Used for trading fake money on stocks!
+        stock = string, stock to buy
+        amt_of_money = integer
+
+!papersell stock amt_of_stock
+
+        Sell fake stocks!
+        stock = string, stock to sell
+        amt_of_stock = integer, amount of stock to sell
+
+!portfolio
+
+        Shows you all stocks you currently hold with the paper trading functionality.
+      
+!balance
+
+        Shows current server fake money balance.
+        
+
 !coinflip
 
-        """
         Flips a coin
-        :return: result of coin flip
-        """``
 
-!getXKCD comic_number
-
-        aliases: !xkcd
-
-        """
-        Gets an XKCD comic and returns info about it
-        ;param comic_number: the number of the xkcd comic
-        :return: XKCD comic link, title, alt-text, explanation, and image title
-        """
+!robohash message
         
-        * returns an XKCD comic and various info about it
+        Hashes msg into robot image
+        messsag = string
+        
+!getxkcd comic_num
 
+        Gets an XKCD comic comic_num and returns various info about it.
+
+        comic_num = integer
+        
 !dog
-
-        """
+        
         Returns a random image of a dog
-        :return: image of a dog
-        """
-        * simply provides the link to a random image of a dog
-      
+
 !cat
-
-        """
+        
         Returns an image of a cat
-        :return: image of cat
-        """
-        
-        * provides the link to a random image of a cat
-        
-
-!robohash "string"
-
-        """
-        Hashes string into robot image
-        :param content: string to hash
-        :return: image of a robot
-        """
-        
-        * uses string to generate an image of a robot

@@ -117,6 +117,7 @@ class UtilityCog(commands.Cog):
         # delete all messages
         for m in mgs:
             await m.delete()
+
     @commands.command(pass_context=True)
     async def covid19(self, ctx):
         """
@@ -135,6 +136,10 @@ class UtilityCog(commands.Cog):
             f"{confirmed:,} confirmed cases of covid19\n\n"
             f"{deaths:,} covid19 deaths\n\n"
             f"{recovered:,} people recovered from covid19.```")
+
+    @commands.command(pass_context=True)
+    async def help(self, ctx):
+        await ctx.send("https://github.com/unhm-programming-team/Discord-bot-public/blob/master/COMMANDS.md")
 
 
 # setup function required for cogs

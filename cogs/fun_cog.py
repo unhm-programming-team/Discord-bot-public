@@ -109,6 +109,7 @@ class FunCog(commands.Cog):
     async def robohash(self, ctx, msg_content):
         """
         !robohash <msg>
+
         Hashes msg into robot image
         msg = string
 
@@ -152,6 +153,7 @@ class FunCog(commands.Cog):
     async def dog(self, ctx):
         """
         !dog
+
         Returns a random image of a dog
         """
         res = getrequest("https://dog.ceo/api/breeds/image/random")  # load json response as dictionary
@@ -167,6 +169,7 @@ class FunCog(commands.Cog):
     async def cat(self, ctx):
         """
         !cat
+
         Returns an image of a cat
         """
         res = getrequest("https://api.thecatapi.com/v1/images/search?api_key=8b66f595-4a29-4254-ab12-ecfbdeb8b80f")
