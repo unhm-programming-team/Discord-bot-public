@@ -10,6 +10,8 @@ Repository for the UNHM programming club discord bot
 
 * repository can be found at /home/
 
+###PLEASE AVOID USING GIT ADD *, NEVER USE GIT ADD .
+
 ### To access the running instance of the bot
 
     sudo screen -x bot
