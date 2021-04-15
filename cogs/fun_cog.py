@@ -24,12 +24,10 @@ class FunCog(commands.Cog):
     @commands.command(pass_context=True)
     async def paperbuy(self,ctx,stock, money):
         """
+        !paperbuy <stock> <amt_of_money>
         Used for trading fake money on stocks!
-        :param ctx:
-        :param stock: string of stock symbol
-        :param money: how much money to invest
-        :param duration: integer, number of seconds to wait to sell
-        :return: gain/loss
+        stock = string, stock to buy
+        amt_of_money = integer
         """
         money = float(money)
         if await get_balance(ctx.author) >= money:
@@ -45,6 +43,13 @@ class FunCog(commands.Cog):
 
     @commands.command(pass_context=True)
     async def papersell(self,ctx,stock,amt):
+        """
+        !papersell <stock> <amt_of_stock>
+
+        Sell fake stocks!
+        stock = string, stock to sell
+        amt_of_stock = integer, amount of stock to sell
+        """
         amount_of_stock = await get_stocks(ctx.author)
         amount_of_stock = amount_of_stock[stock]
         if amount_of_stock >= float(amt):
@@ -60,6 +65,11 @@ class FunCog(commands.Cog):
 
     @commands.command(pass_context=True)
     async def portfolio(self,ctx):
+        """
+        !portfolio
+
+        Shows you all stocks you currently hold with the paper trading functionality.
+        """
         amount_of_stock = await get_stocks(ctx.author)
         message = "You are currently Holding:```"
         for stock in amount_of_stock.keys():
@@ -74,9 +84,9 @@ class FunCog(commands.Cog):
     @commands.command(pass_context=True)
     async def balance(self, ctx):
         """
+        !balance
 
-        :param ctx:
-        :return:
+        Shows current server fake money balance.
         """
         await ctx.send(f"Your balance is currently ${await get_balance(ctx.author)}")
 
@@ -85,8 +95,9 @@ class FunCog(commands.Cog):
     @commands.command(pass_context=True)
     async def coinflip(self, ctx):
         """
+        !coinflip
+
         Flips a coin
-        :return: result of coin flip
         """
         flip = random.randint(0,1)
         if flip == 0:
@@ -97,10 +108,9 @@ class FunCog(commands.Cog):
     @commands.command(pass_context=True)
     async def robohash(self, ctx, msg_content):
         """
-        Hashes string into robot image
-        :param content: string to hash
-        :param ctx: message context
-        :return: image of a robot
+        !robohash <msg>
+        Hashes msg into robot image
+        msg = string
 
         TODO: parse string to replace unsafe characters
         """
@@ -113,9 +123,11 @@ class FunCog(commands.Cog):
     @commands.command(pass_context=True, aliases=['xkcd'])
     async def getXKCD(self, ctx, comic_number):
         """
-        Gets an XKCD comic and returns info about it
-        ;param comic_number: the number of the xkcd comic
-        :return: XKCD comic link, title, alt-text, and image title
+        !getxkcd <comic_num>
+
+        Gets an XKCD comic comic_num and returns various info about it.
+
+        comic_num = integer
         """
         if -1 < int(comic_number) < xkcd.getLatestComicNum(): # check for valid XKCD comic
             # get info about XCKD comic
@@ -139,9 +151,8 @@ class FunCog(commands.Cog):
     @commands.command(pass_context=True)
     async def dog(self, ctx):
         """
+        !dog
         Returns a random image of a dog
-        :param ctx: message context
-        :return: image of a dog
         """
         res = getrequest("https://dog.ceo/api/breeds/image/random")  # load json response as dictionary
 
@@ -155,9 +166,8 @@ class FunCog(commands.Cog):
     @commands.command(pass_context=True)
     async def cat(self, ctx):
         """
+        !cat
         Returns an image of a cat
-        :param ctx: message context
-        :return: image of cat
         """
         res = getrequest("https://api.thecatapi.com/v1/images/search?api_key=8b66f595-4a29-4254-ab12-ecfbdeb8b80f")
         res = res[0]

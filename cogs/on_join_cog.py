@@ -232,7 +232,9 @@ Please reply with "Agree" if you agree with these rules''')
     @commands.command(pass_context=True)
     async def manual_reg(self, ctx):
         """
-        Manually start registration in case of bot error
+        !manual_reg
+
+        Manually start registration for yourself in case of bot error, REMOVES ALL REGISTRATION ASSIGNED ROLLS
         """
         user = ctx.message.author
         print(user)
@@ -241,6 +243,8 @@ Please reply with "Agree" if you agree with these rules''')
     @commands.command(pass_context=True)
     async def get_registered(self, ctx):
         """
+        !get_registered
+
         return all registered members from text file
         """
         with open('members.txt', 'r') as file:

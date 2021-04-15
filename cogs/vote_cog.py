@@ -16,10 +16,9 @@ class VoteCog(commands.Cog):
     @commands.command(pass_context=True)
     async def hostvote(self, ctx, vote_subject):
         """
+        !hostvote <vote_subject>
+        vote_subject = string
         Sends a message to allow currently unofficial voting on subjects
-        :param ctx: message context
-        :param vote_subject: string which contains voting subject
-        :return: message with cross and check emojis
         """
         cross_emoji = "❌"
         check_emoji = "✅"

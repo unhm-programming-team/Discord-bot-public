@@ -19,8 +19,10 @@ class UtilityCog(commands.Cog):
     @commands.command(pass_context=True)
     async def diceroll(self, ctx, amount, sides):
         """
-        gets a rnadom number in range
-        :return: result of coin flip
+        !diceroll <amount_of_dice> <amount_of_sides>
+        Rolls an amount_of_dice die, each having amount_of_sides sides.
+        amount_of_dice = integer
+        amount_of_sides = integer
         """
         msg = f'Rolled {amount} d{sides}s: ```'
         for x in range(int(amount)):
@@ -34,19 +36,19 @@ class UtilityCog(commands.Cog):
     @commands.command(pass_context=True)
     async def randrange(self, ctx, start, end):
         """
-        gets a rnadom number in range
-        :return: result of coin flip
+        !randrange <low_end> <high_end>
+        Returns a random integer between low_end and high_end
+        low_end, high_end = integers
         """
 
         flip = random.randint(int(start), int(end))
         await ctx.send(flip)
 
     @commands.command(pass_context=True)
-    async def idea(self,ctx, seed=-1):
+    async def idea(self,ctx):
         """
+        !idea
         generates random game idea using karl's game idea generation functions
-        :param seed:
-        :return: random game idea
         """
         response = requests.get("http://127.0.0.1:5000/randidea?key=DgGl3ju8ftRF494B7kQAInDl80bWqUbeG6hQBRgCI52MknkLhv61dVlpZflfjhHDC2Y9Nk3wcd7tDQVUK9usW34CZ1r7wCxf18PZ&seed=-1")
         idea = response.content.decode("utf-8")
@@ -55,11 +57,11 @@ class UtilityCog(commands.Cog):
     @commands.command(pass_context=True, aliases=["weather","weatherat"])
     async def weather_at(self, ctx, lat=None, lon=None):
         """
-        Returns weather at specific latitude and longitude
-        :param ctx: message context
-        :param lat: latitude of location OR zipcode, in case of zipcode lon must not be passed
-        :param lon: longitude of location
-        :return: weather at lat,lon
+        ![weather|weather_at] <lat> <lon>
+        OR
+        ![weather|weather_at] <zipcode>
+        Returns weather at specific latitude and longitude or by US zipcode
+        lat, lon, zipcode = integers
         """
         if not lon:  # in the case of only zip code provided
             response = requests.get(f"https://www.zipcodeapi.com/rest/3zsGNFbsiyugtCBBSMg3egFK5vfJXb4LCYiY7EGskMb9LhUS8xEzlvmDJJi6Ikc9/info.json/{lat}/degrees")
@@ -103,7 +105,9 @@ class UtilityCog(commands.Cog):
     @commands.has_permissions(manage_messages=True)
     async def clear(self, ctx):
         """
+        !clear
         Clears all messages in a channel.
+        manage messages permissions required!
         """
         # define empty list to accumulate messages in
         mgs = []
@@ -116,8 +120,8 @@ class UtilityCog(commands.Cog):
     @commands.command(pass_context=True)
     async def covid19(self, ctx):
         """
-        Gets current global covid19 statistics
-        :return: current covid 19 statistics according to covid19api.com
+        !covid19
+        Gets current global covid19 global statistics
         """
         response = requests.get("https://api.covid19api.com/world/total")
         print(response.status_code)
