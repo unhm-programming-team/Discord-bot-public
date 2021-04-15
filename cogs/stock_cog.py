@@ -23,13 +23,18 @@ class StockCog(commands.Cog):
         if extra_indicators:
             extra_ind = extra_indicators.split(", ")
             for indicator in extra_ind:
+                if indicator == "T3":
+                    indicator = "VWAP"
                 indicators.append(indicator)
 
         for indicator in indicators:
-            ind = requests.get(
-                f"https://www.alphavantage.co/query?function={indicator}&symbol={stock}&interval=weekly&time_period={period}&series_type=open&apikey=B7FK59YY2XQ03FES")
-            ind = ind.json()[f"Technical Analysis: {indicator}"][list(ind.json()[f"Technical Analysis: {indicator}"].keys())[0]][f"{indicator}"]
-            message += f"{indicator}: {ind}\n"
+            try:
+                ind = requests.get(
+                    f"https://www.alphavantage.co/query?function={indicator}&symbol={stock}&interval=weekly&time_period={period}&series_type=open&apikey=B7FK59YY2XQ03FES")
+                ind = ind.json()[f"Technical Analysis: {indicator}"][list(ind.json()[f"Technical Analysis: {indicator}"].keys())[0]][f"{indicator}"]
+                message += f"{indicator}: {ind}\n"
+            except KeyError:
+                message += f"Unable to grab {indicator} information."
         message += "```"
         await ctx.send(message)
 
