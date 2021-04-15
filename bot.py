@@ -28,7 +28,7 @@ if not testing:
 cog_list = ["fun_cog", "utility_cog", "vote_cog", "on_join_cog"]
 
 if testing:
-    client = commands.Bot(command_prefix="?", case_insensitive=case_insensitivity, intents=intents)  # sets the prefix used to call testing bot commands
+    client = commands.Bot(command_prefix="?", case_insensitive=case_insensitivity, intents=intents, help_command=None)  # sets the prefix used to call testing bot commands
 else:
     client = commands.Bot(command_prefix="!", case_insensitive=case_insensitivity, intents=intents, help_command=None)  # sets the prefix used to call bot commands
 
