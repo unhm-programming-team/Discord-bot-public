@@ -9,13 +9,16 @@ if the command has brackets [] around it, ex: '[getXKCD|xkcd]', any of the words
 Some commands may accept input, parameters are shown after the inital !call to the command, seperated by spaces. To give the command input, you must provide all parameters unless otherwise noted. Exclude the arrows from the command call.
 If a command accepts multiple parameters, the parameters are seperated using a space. Ex. '!weather 1 2' where 1 is parameter <lat> and 2 is parameter <lon>.
 
-There are three different types of data commands accept currently. 
+There are four different types of data commands accept currently. 
 
 Integers: simply a number with NO decimal in it, 
 
 strings: a string of characters ex `"This is a string of characters"`. If you want to use spaces in your string, you must surround the string with double quotes: "" 
 
 float: decimal number
+
+list: a list of items, must be passed as a string, elements being seperated by a command and a space. ex:
+"dog, cat, lizard"
 
 parameter input types are described in the description of the command.
 ## Vote Commands:
@@ -67,16 +70,18 @@ parameter input types are described in the description of the command.
  
         Returns weather at specific latitude and longitude or by US zipcode
         lat, lon, zipcode = integers
-
         
-## Fun Commands:
+## Stock Commands:
 
-#### Commands which have useless, albeit fun functionality
+#### Commands for paper trading and stock analysis
+!technicals stock time_period
 
-!value
+        returns technical indicator info about a stock
+        extra_indicators (optional): list, extra indicators to use besides SMA,EMA, and RSI, see https://www.alphavantage.co/documentation/
 
-        Shows the value of the stocks you are holding
-
+        time_period (optional): integer, the time period in days to evaluate indicators over, default 10, must be over 1
+        stock: string
+        
 !paperbuy stock amt_of_money
 
 
@@ -98,6 +103,19 @@ parameter input types are described in the description of the command.
 
         Shows current server fake money balance.
         
+!value
+
+        Shows the value of the stocks you are holding
+
+        
+## Fun Commands:
+
+#### Commands which have useless, albeit fun functionality
+
+!value
+
+        Shows the value of the stocks you are holding
+
 
 !coinflip
 
