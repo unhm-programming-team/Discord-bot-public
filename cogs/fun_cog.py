@@ -41,6 +41,23 @@ class FunCog(commands.Cog):
         else:
             await ctx.send(f"Your balance is too low! It is currently ${await get_balance(ctx.author)}")
 
+    @commands.command(pass_context=true)
+    async def value(self,ctx):
+        """
+        !value
+
+        Shows the value of the stocks you are holding
+        """
+        amount_of_stock = await get_stocks(ctx.author)
+        message = "You are currently Holding:```"
+        for stock in amount_of_stock.keys():
+            if amount_of_stock[stock] != 0.0:
+                price = requests.get(
+                    f"https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol={stock}&interval=1min&apikey=B7FK59YY2XQ03FES")
+                price = float(price.json()["Time Series (1min)"][list(price.json()["Time Series (1min)"].keys())[0]]["4. close"])
+                message += f"{stock} worth of {price * amount_of_stock[stock]}\n"
+        pass
+
     @commands.command(pass_context=True)
     async def papersell(self,ctx,stock,amt):
         """

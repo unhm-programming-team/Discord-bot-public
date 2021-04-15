@@ -73,6 +73,10 @@ parameter input types are described in the description of the command.
 
 #### Commands which have useless, albeit fun functionality
 
+!value
+
+        Shows the value of the stocks you are holding
+
 !paperbuy stock amt_of_money
 
 
