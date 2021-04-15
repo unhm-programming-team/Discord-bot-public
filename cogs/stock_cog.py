@@ -19,12 +19,11 @@ class StockCog(commands.Cog):
         stock: string
         """
         indicators = ["SMA", "EMA", "RSI"]
+        buy_hold_sell = ""
         message = f"Indicators for {stock}:```"
         if extra_indicators:
             extra_ind = extra_indicators.split(", ")
             for indicator in extra_ind:
-                if indicator == "T3":
-                    indicator = "VWAP"
                 indicators.append(indicator)
 
         for indicator in indicators:
@@ -32,10 +31,20 @@ class StockCog(commands.Cog):
                 ind = requests.get(
                     f"https://www.alphavantage.co/query?function={indicator}&symbol={stock}&interval=weekly&time_period={period}&series_type=open&apikey=B7FK59YY2XQ03FES")
                 ind = ind.json()[f"Technical Analysis: {indicator}"][list(ind.json()[f"Technical Analysis: {indicator}"].keys())[0]][f"{indicator}"]
-                message += f"{indicator}: {ind}\n"
+                if indicator == "RSI":
+                    if float(ind) >70:
+                        buy_hold_sell = "Sell"
+                    if 70 > float(ind) > 30:
+                        buy_hold_sell = "hold"
+                    if float(ind) < 30:
+                        buy_hold_sell = "sell"
+                    message += f"{indicator}: {ind}, based solely off RSI, this indicates a stock you should {buy_hold_sell}\n"
+                else:
+                    message += f"{indicator}: {ind}\n"
             except KeyError:
                 message += f"Unable to grab {indicator} information."
         message += "```"
+
         await ctx.send(message)
 
 
