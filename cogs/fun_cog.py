@@ -64,6 +64,8 @@ class FunCog(commands.Cog):
         else:
             price = requests.get(
                 f"https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol={stock}&interval=1min&apikey=B7FK59YY2XQ03FES")
+            price = float(
+                price.json()["Time Series (1min)"][list(price.json()["Time Series (1min)"].keys())[0]]["4. close"])
             await ctx.send(f"The price of {stock} is currently ${price}")
 
     @commands.command(pass_context=True)
