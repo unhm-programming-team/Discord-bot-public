@@ -16,6 +16,20 @@ class UtilityCog(commands.Cog):
     def __init__(self, client):
         self.client = client
 
+    @commands.command(pass_context=True)
+    async def diceroll(self, ctx, amount, sides):
+        """
+        gets a rnadom number in range
+        :return: result of coin flip
+        """
+        msg = f'Rolled {amount} d{sides}s: ```'
+        for x in range(int(amount)):
+            flip = random.randint(1, int(sides))
+            msg += f'{x+1}: {flip}\n'
+
+        msg += "```"
+        await ctx.send(msg)
+
 
     @commands.command(pass_context=True)
     async def randrange(self, ctx, start, end):
