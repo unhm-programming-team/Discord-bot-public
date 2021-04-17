@@ -7,17 +7,7 @@ class StockCog(commands.Cog):
     def __init__(self, client):
         self.client = client
 
-    @commands.command(pass_context=True)
-    async def technicals(self, ctx, stock, period=10, extra_indicators=None):
-        """
-        !technicals stock time_period
-
-        returns technical indicator info about a stock
-        extra_indicators (optional): list, extra indicators to use besides SMA,EMA, and RSI, see https://www.alphavantage.co/documentation/
-
-        time_period (optional): integer, the time period in days to evaluate indicators over, default 10, must be over 1
-        stock: string
-        """
+    async def evaluate(self, ctx, stock, period=10, extra_indicators=None):
         indicators = ["SMA", "EMA", "RSI"]
         buy_hold_sell = ""
         message = f"Indicators for {stock}:```"
@@ -27,12 +17,15 @@ class StockCog(commands.Cog):
                 indicators.append(indicator)
 
         for indicator in indicators:
+            ind = ""
             try:
                 ind = requests.get(
                     f"https://www.alphavantage.co/query?function={indicator}&symbol={stock}&interval=weekly&time_period={period}&series_type=open&apikey=B7FK59YY2XQ03FES")
-                ind = ind.json()[f"Technical Analysis: {indicator}"][list(ind.json()[f"Technical Analysis: {indicator}"].keys())[0]][f"{indicator}"]
+                ind = ind.json()[f"Technical Analysis: {indicator}"][
+                    list(ind.json()[f"Technical Analysis: {indicator}"].keys())[0]][f"{indicator}"]
+                print(f"{stock} {indicator} {ind}")
                 if indicator == "RSI":
-                    if float(ind) >70:
+                    if float(ind) > 70:
                         buy_hold_sell = "Sell"
                     if 70 > float(ind) > 30:
                         buy_hold_sell = "hold"
@@ -42,9 +35,54 @@ class StockCog(commands.Cog):
                 else:
                     message += f"{indicator}: {ind}\n"
             except KeyError:
-                message += f"Unable to grab {indicator} information."
+                print(ind.json())
+                message += f"Unable to grab {indicator} information.\n"
         message += "```"
+        return message
 
+    @commands.command(pass_context=True)
+    async def technicals(self, ctx, stock, period="10", extra_indicators=None):
+        """
+        !technicals stock time_period
+
+        returns technical indicator info about a stock
+        extra_indicators (optional): list, extra indicators to use besides SMA,EMA, and RSI, see https://www.alphavantage.co/documentation/
+
+        time_period (optional): integer, the time period in days to evaluate indicators over, default 10, must be over 1
+        stock: string
+        """
+        if period.isdigit():
+            period = int(period)
+            message = await self.evaluate(ctx, stock, period, extra_indicators)
+        else:
+            extra_indicators = period
+            period = 10
+            message = await self.evaluate(ctx, stock, period, extra_indicators)
+
+        await ctx.send(message)
+
+    @commands.command(pass_context=True)
+    async def evaluateportfolio(self, ctx, period="10", extra_indicators= None):
+        """
+        !evaluateportfolio period indicators
+
+        period: period to evaluate indicators over, default 10, must be above 1: integer
+        indicators: list of indicators to pass
+        """
+        message = "Here is the evaluation for your portfolio: \n"
+        if period.isdigit():
+            period = int(period)
+            amount_of_stock = await get_stocks(ctx.author)
+            for stock in amount_of_stock.keys():
+                if amount_of_stock[stock] != 0.0:
+                    message += await self.evaluate(ctx, stock, period, extra_indicators)
+        else:
+            extra_indicators = period
+            period = 10
+            amount_of_stock = await get_stocks(ctx.author)
+            for stock in amount_of_stock.keys():
+                if amount_of_stock[stock] != 0.0:
+                    message += await self.evaluate(ctx, stock, period, extra_indicators)
         await ctx.send(message)
 
 

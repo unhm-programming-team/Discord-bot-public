@@ -74,6 +74,11 @@ parameter input types are described in the description of the command.
 ## Stock Commands:
 
 #### Commands for paper trading and stock analysis
+!evaluateportfolio period indicators
+        
+        period: period to evaluate indicators over, default 10, must be above 1: integer
+        indicators: list of indicators to pass
+
 !technicals stock time_period
 
         returns technical indicator info about a stock
