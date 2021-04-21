@@ -6,18 +6,18 @@ Created: 3/20/2021
 Updated: 3/21/2021
 """
 
-import xkcd
-from our_packages.api_manager import getrequest
 import random
+import xkcd
 from discord.ext import commands  # required for method and cog decoration
-from our_packages.json_manager import count_command, get_count, easter_egg_animal_lover, get_balance, add_to_balance, get_stocks, add_stock, rem_stock
-import requests
-import time
-import asyncio
-import discord
+from our_packages.api_manager import getrequest
+from our_packages.json_manager import count_command, easter_egg_animal_lover
+
 
 
 class FunCog(commands.Cog):
+    """
+    Fun Commands Go here
+    """
     def __init__(self, client):
         self.client = client
 
@@ -46,13 +46,14 @@ class FunCog(commands.Cog):
         TODO: parse string to replace unsafe characters
         """
         # not sure how to test!
-        # might need to do more thorough url string replacing for dealing with other url unsafe characters
+        # might need to do more thorough url string replacing
+        # for dealing with other url unsafe characters
         url_string = msg_content.replace(' ', '%20')
         robot_img = f"https://robohash.org/{url_string}.png"
         await ctx.send(robot_img)
 
     @commands.command(pass_context=True, aliases=['xkcd'])
-    async def getXKCD(self, ctx, comic_number):
+    async def getxkcd(self, ctx, comic_number):
         """
         !getxkcd <comic_num>
 
@@ -75,7 +76,8 @@ class FunCog(commands.Cog):
                            f'Alternate text: {alt_text}\nImage file name: {comic_name} '
                            f'```')
         else:
-            await ctx.send(f'Invalid comic number. Please enter a number between 0 and {xkcd.getLatestComicNum()}')
+            await ctx.send(f'Invalid comic number. '
+                           f'Please enter a number between 0 and {xkcd.getLatestComicNum()}')
 
 
 
@@ -86,7 +88,8 @@ class FunCog(commands.Cog):
 
         Returns a random image of a dog
         """
-        res = getrequest("https://dog.ceo/api/breeds/image/random")  # load json response as dictionary
+        res = getrequest("https://dog.ceo/"
+                         "api/breeds/image/random")  # load json response as dictionary
 
         dog_img = res["message"]  # access element of res containing picture of dog
         await ctx.send(dog_img)
@@ -102,7 +105,8 @@ class FunCog(commands.Cog):
 
         Returns an image of a cat
         """
-        res = getrequest("https://api.thecatapi.com/v1/images/search?api_key=8b66f595-4a29-4254-ab12-ecfbdeb8b80f")
+        res = getrequest("https://api.thecatapi.com/v1/images/"
+                         "search?api_key=8b66f595-4a29-4254-ab12-ecfbdeb8b80f")
         res = res[0]
         cat_img = res["url"]
         await ctx.send(cat_img)
@@ -111,4 +115,8 @@ class FunCog(commands.Cog):
 
 
 def setup(client):
+    """
+    Set's up the cog, required fr cogs
+    :return:
+    """
     client.add_cog(FunCog(client))

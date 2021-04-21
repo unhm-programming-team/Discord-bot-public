@@ -1,7 +1,7 @@
 
 from discord.ext import commands
 import requests
-from our_packages.json_manager import count_command, get_count, easter_egg_animal_lover, get_balance, add_to_balance, get_stocks, add_stock, rem_stock
+from our_packages.json_manager import count_command, get_count, easter_egg_animal_lover, get_balance, add_to_balance, get_stocks, add_stock, rem_stock, add_crypto, rem_crypto, get_crypto
 
 class StockCog(commands.Cog):
     def __init__(self, client):
@@ -85,6 +85,54 @@ class StockCog(commands.Cog):
                     message += await self.evaluate(ctx, stock, period, extra_indicators)
         await ctx.send(message)
 
+    @commands.command(pass_context=True)
+    async def cryptobuy(self, ctx, crypto, money):
+        """
+        !paperbuy <stock> <amt_of_money>
+        Used for trading fake money on stocks!
+        stock = string, stock to buy
+        amt_of_money = integer
+        """
+        money = float(money)
+        if await get_balance(ctx.author) >= money:
+            price = requests.get(
+                f"https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency={crypto}&to_currency=USD&apikey=B7FK59YY2XQ03FES")
+            price = float(
+                price.json()["Realtime Currency Exchange Rate"]["9. Ask Price"])
+            num_of_stocks = money / price
+            await ctx.send(
+                f"{num_of_stocks} stocks of {crypto} purchased for ${money}, at a price of ${price} per coin.")
+
+            await add_crypto(ctx.author, crypto, num_of_stocks)
+            await add_to_balance(ctx.author, -1 * money)
+        else:
+            await ctx.send(f"Your balance is too low! It is currently ${await get_balance(ctx.author)}")
+
+    @commands.command(pass_context=True)
+    async def cryptosell(self, ctx, crypto, amt):
+        """
+        !papersell <stock> <amt_of_stock>
+
+        Sell fake stocks!
+        stock = string, stock to sell
+        amt_of_stock = integer, amount of stock to sell
+        """
+        amount_of_stock = await get_crypto(ctx.author)
+        amount_of_stock = amount_of_stock[crypto]
+        if amount_of_stock >= float(amt):
+            price = requests.get(
+                f"https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency={crypto}&to_currency=USD&apikey=B7FK59YY2XQ03FES")
+            price = float(
+                price.json()["Realtime Currency Exchange Rate"]["9. Ask Price"])
+            gain_loss = float(amt) * price
+            await ctx.send(
+                f"@{ctx.author.name} you sold {amt} shares of {crypto}, at a price of ${price} per share, for ${gain_loss}")
+            await rem_crypto(ctx.author, crypto, float(amt))
+            await add_to_balance(ctx.author, gain_loss)
+        else:
+            await ctx.send(
+                f"You are not currently holding that much stock! You have {amount_of_stock} stocks in {stock}")
+
 
     @commands.command(pass_context=True)
     async def paperbuy(self, ctx, stock, money):
@@ -142,10 +190,16 @@ class StockCog(commands.Cog):
         Shows you all stocks you currently hold with the paper trading functionality.
         """
         amount_of_stock = await get_stocks(ctx.author)
-        message = "You are currently Holding:```"
+        message = "You are currently Holding (STOCKS):```"
         for stock in amount_of_stock.keys():
             if amount_of_stock[stock] != 0.0:
                 message += f"{amount_of_stock[stock]} shares of {stock}\n"
+        message += "```"
+        message += "You are currently Holding (CRYPTO):```"
+        amount_of_crypto = await get_crypto(ctx.author)
+        for crypto in amount_of_crypto.keys():
+            if amount_of_crypto[crypto] != 0.0:
+                message += f"{amount_of_crypto[crypto]} coins of {crypto}\n"
         message += "```"
         await ctx.send(message)
 

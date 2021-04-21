@@ -22,6 +22,69 @@ async def count_command(user, command):
         json.dump(loaded_data, file2)
 
 
+async def get_crypto(user):
+    user = str(user.id)
+    with open('command_count.txt', 'r') as file:
+        line = str(file.readline())
+
+    loaded_data = json.loads(line)
+
+    if user not in loaded_data.keys():
+        loaded_data[user] = {}
+    if "crypto" not in loaded_data[user].keys():
+        loaded_data[user]["crypto"] = {}
+    stocks = loaded_data[user]["crypto"]
+
+    with open('command_count.txt', 'w+') as file2:
+        print(loaded_data)
+        file2.truncate()
+        json.dump(loaded_data, file2)
+
+    return stocks
+
+
+async def add_crypto(user, crypto, amt):
+    user = str(user.id)
+    with open('command_count.txt', 'r') as file:
+        line = str(file.readline())
+
+    loaded_data = json.loads(line)
+
+    if user not in loaded_data.keys():
+        loaded_data[user] = {}
+    if "crypto" not in loaded_data[user].keys():
+        loaded_data[user]["crypto"] = {}
+    if crypto not in loaded_data[user]["crypto"]:
+        loaded_data[user]["crypto"][crypto] = 0
+    loaded_data[user]["crypto"][crypto] += amt
+
+    with open('command_count.txt', 'w+') as file2:
+        print(loaded_data)
+        file2.truncate()
+        json.dump(loaded_data, file2)
+
+
+async def rem_crypto(user,crypto,amt):
+    user = str(user.id)
+    with open('command_count.txt', 'r') as file:
+        line = str(file.readline())
+
+    loaded_data = json.loads(line)
+
+    if user not in loaded_data.keys():
+        loaded_data[user] = {}
+    if "crypto" not in loaded_data[user].keys():
+        loaded_data[user]["crypto"] = {}
+
+    loaded_data[user]["crypto"][crypto] -= amt
+
+    with open('command_count.txt', 'w+') as file2:
+        print(loaded_data)
+        file2.truncate()
+        json.dump(loaded_data, file2)
+
+
+
 async def get_stocks(user):
     user = str(user.id)
     with open('command_count.txt', 'r') as file:
