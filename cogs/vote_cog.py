@@ -13,6 +13,25 @@ class VoteCog(commands.Cog):
     def __init__(self, client):
         self.client = client
 
+    @commands.Cog.listener()
+    async def on_member_join(self, payload):
+        """
+        Prevents double reacts
+        :param member:
+        :return:
+        """
+        channel = await self.client.fetch_channel(payload.channel_id)
+        message = await channel.fetch_message(payload.message_id)
+
+        # iterating through each reaction in the message
+        for r in message.reactions:
+
+            # checks the reactant isn't a bot and the emoji isn't the one they just reacted with
+            if payload.member in await r.users().flatten() and not payload.member.bot and str(r) != str(payload.emoji):
+                # removes the reaction
+                await message.remove_reaction(r.emoji, payload.member)
+
+
     @commands.command(pass_context=True)
     async def hostvote(self, ctx, vote_subject):
         """
