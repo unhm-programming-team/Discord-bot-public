@@ -25,7 +25,7 @@ if not TESTING:
 
 
 # list of cogs, used later to load cogs
-cog_list = ["fun_cog", "utility_cog", "vote_cog", "on_join_cog", "stock_cog"]
+cog_list = ["fun_cog", "utility_cog", "vote_cog", "on_join_cog", "stock_cog", "faces_cog"]
 
 if TESTING:
     client = commands.Bot(command_prefix="?",
