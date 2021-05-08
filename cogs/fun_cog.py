@@ -7,6 +7,7 @@ Updated: 3/21/2021
 """
 
 import random
+import requests
 import xkcd
 from discord.ext import commands  # required for method and cog decoration
 from our_packages.api_manager import getrequest
@@ -34,6 +35,18 @@ class FunCog(commands.Cog):
             await ctx.send("Heads!")
         else:
             await ctx.send("Tails!")
+
+    @commands.command(pass_context=True)
+    async def fact(selfs,ctx ):
+        """
+        !fact
+
+        Gets a random fact
+        """
+        response = requests.get("https://useless-facts.sameerkumar.website/api")
+        json_response = response.json()
+        await ctx.send(json_response['data'])
+
 
     @commands.command(pass_context=True)
     async def robohash(self, ctx, msg_content):
