@@ -32,7 +32,7 @@ class VoteCog(commands.Cog):
                 await message.remove_reaction(r.emoji, payload.member)
 
 
-    @commands.command(pass_context=True)
+    @commands.command(pass_context=True, aliases=['motion'])
     async def hostvote(self, ctx, vote_subject):
         """
         !hostvote <vote_subject>
