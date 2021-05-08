@@ -14,7 +14,7 @@ class VoteCog(commands.Cog):
         self.client = client
 
     @commands.Cog.listener()
-    async def on_member_join(self, payload):
+    async def on_raw_reaction_add(self, payload):
         """
         Prevents double reacts
         :param member:

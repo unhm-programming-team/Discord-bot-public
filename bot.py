@@ -14,23 +14,29 @@ from our_packages.key_manager import get_prod
 
 intents = discord.Intents.default()
 intents.members = True
-testing = False  # changes weather or not the bot runs on the testing token
-case_insensitivity = True  # changes weather or not the bot is insensitive to case
+TESTING = False  # changes weather or not the bot runs on the testing token
+CASE_INSENSITIVITY = True  # changes weather or not the bot is insensitive to case
 
 # defines the testing and production token
 
 testing_token = get_test()
-if not testing:
+if not TESTING:
     production_token = get_prod()
 
 
 # list of cogs, used later to load cogs
 cog_list = ["fun_cog", "utility_cog", "vote_cog", "on_join_cog", "stock_cog"]
 
-if testing:
-    client = commands.Bot(command_prefix="?", case_insensitive=case_insensitivity, intents=intents, help_command=None)  # sets the prefix used to call testing bot commands
+if TESTING:
+    client = commands.Bot(command_prefix="?",
+                          case_insensitive=CASE_INSENSITIVITY,
+                          intents=intents,
+                          help_command=None)  # sets the prefix used to call testing bot commands
 else:
-    client = commands.Bot(command_prefix="!", case_insensitive=case_insensitivity, intents=intents, help_command=None)  # sets the prefix used to call bot commands
+    client = commands.Bot(command_prefix="!",
+                          case_insensitive=CASE_INSENSITIVITY,
+                          intents=intents,
+                          help_command=None)  # sets the prefix used to call bot commands
 
 
 for cog_item in cog_list:  # iterated through cog_list and loads them
@@ -48,7 +54,7 @@ async def on_ready():
 
 
 # runs the bot using the bots token
-if testing:
+if TESTING:
     client.run(testing_token)  # runs the test bot
 else:
     client.run(production_token)  # runs the production bot
