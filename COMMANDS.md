@@ -144,3 +144,25 @@ parameter input types are described in the description of the command.
 !cat
         
         Returns an image of a cat
+
+## Image Commands:
+
+#### Commands which do stuff with images
+
+!get_face
+
+        Returns a mashed up image of a human face
+
+!quantize (img attachment) number
+
+        Attach an image to the message.
+
+        Number should be from 1-256
+
+        Bot will post a new image with colors reduced to the number specified
+
+!get_channel (img attachment)  channel
+
+        Channel should be 'r','g',or 'b'
+
+        Bot will post an image of the color channel specified from the attached image
