@@ -1,0 +1,409 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xml:lang="" lang="" version="-//W3C//DTD XHTML 1.1//EN" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+  <title>faces_cog &mdash; UNHM Programming Club Discord Bot Documentation 0.0.1 documentation</title>
+  
+
+  
+
+  
+
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'/>
+    <link rel="stylesheet" href="../_static/css/pdj.css" type="text/css" />
+
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="UNHM Programming Club Discord Bot Documentation 0.0.1 documentation" href="../index.html"/>
+        <link rel="up" title="Module code" href="index.html"/>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="cache-control" content="public" />
+    <meta name="robots" content="follow, all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Add jQuery library -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+  </head>
+
+  <body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="fa fa-home"> UNHM Programming Club Discord Bot Documentation </a>
+        <div role="search">
+	  <form id ="rtd-search-form" class="wy-form"
+		action="../search.html" method="get">
+	    <input type="text" name="q" placeholder="Search docs" />
+	    <input type="hidden" name="check_keywords" value="yes" />
+	    <input type="hidden" name="area" value="default" />
+	  </form>
+	</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	
+          
+          
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../faces-cog.html">Faces Cog</a></li>
+</ul>
+
+          
+        
+
+      </div>
+      &nbsp;
+    </nav>
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      <nav class="wy-nav-top" id="barra-mobile" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="#">Porão do Juca</a>
+      </nav>
+
+      <div class="wy-nav-content">
+	<div class="fundo-claro">
+	</div>
+	<div class="fundo-escuro">
+	</div>
+
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+	    
+	    <!-- <ul class="wy-breadcrumbs"> -->
+	    <!--   <li><a href="#">Docs</a> &raquo;</li> -->
+
+	    <!--   <li>Features</li> -->
+	    <!--   <li class="wy-breadcrumbs-aside"> -->
+
+	    <!-- 	<a href="_sources/index.txt" rel="nofollow"> View page source</a> -->
+
+	    <!--   </li> -->
+	    <!-- </ul> -->
+	    <!-- <hr/> -->
+	  </div>
+
+          <div role="main" class="">
+
+	    <div id="content" class="hfeed entry-container hentry">
+  <h1>Source code for faces_cog</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">File: faces_cog.py</span>
+<span class="sd">makes mashed up faces</span>
+<span class="sd">Contributors: Karl Miller</span>
+<span class="sd">Created: 5/8/2021</span>
+<span class="sd">Updated: 5/8/2021</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">requests</span><span class="o">,</span> <span class="nn">random</span><span class="o">,</span> <span class="nn">io</span><span class="o">,</span> <span class="nn">discord</span><span class="o">,</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">discord.ext</span> <span class="kn">import</span> <span class="n">commands</span>  <span class="c1"># required for method and cog decoration</span>
+<span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span><span class="p">,</span> <span class="n">ImageEnhance</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+
+<div class="viewcode-block" id="FacesCog"><a class="viewcode-back" href="../faces-cog.html#faces_cog.FacesCog">[docs]</a><span class="k">class</span> <span class="nc">FacesCog</span><span class="p">(</span><span class="n">commands</span><span class="o">.</span><span class="n">Cog</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Main purpose of this Cog is to generate mashed up faces.</span>
+
+<span class="sd">    It selects a random face from the source faces and uses that as its color basis.</span>
+
+<span class="sd">    Then it randomly selects images for each mask portion, and pastes them together to make a new face, recoloring</span>
+<span class="sd">     to match the color basis as it goes.</span>
+
+<span class="sd">    Finally, it sends the new mashup face to the Discord chat.</span>
+
+<span class="sd">    It also does a few image manipulation things on images uploaded to chat in a message.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">client</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">client</span> <span class="o">=</span> <span class="n">client</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">directory</span> <span class="o">=</span> <span class="s2">&quot;faces-assets&quot;</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        The directory where image assets are stored. Should /masks and /faces subdirectories</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tmp</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">directory</span><span class="si">}</span><span class="s2">/tmp.png&quot;</span>
+
+    <span class="nd">@commands</span><span class="o">.</span><span class="n">command</span><span class="p">(</span><span class="n">pass_context</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">get_face</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ctx</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Generates a new mashed-up face and sends it to the Discord chat.</span>
+<span class="sd">        :param ctx: Discord Context</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">fm</span> <span class="o">=</span> <span class="n">FaceMasher</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">directory</span><span class="si">}</span><span class="s2">/masks&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">directory</span><span class="si">}</span><span class="s2">/faces&quot;</span><span class="p">)</span>
+        <span class="n">mashup</span> <span class="o">=</span> <span class="n">fm</span><span class="o">.</span><span class="n">get_mashup</span><span class="p">()</span>
+        <span class="n">mashup</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tmp</span><span class="p">)</span>
+        <span class="k">await</span> <span class="n">ctx</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">file</span><span class="o">=</span><span class="n">discord</span><span class="o">.</span><span class="n">File</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tmp</span><span class="p">))</span>
+
+    <span class="nd">@commands</span><span class="o">.</span><span class="n">command</span><span class="p">(</span><span class="n">pass_context</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">quantize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ctx</span><span class="p">,</span> <span class="n">msg_content</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        &#39;Quantizes&#39; and image sent in the Discord chat. This reduces the colors in the image to the number specified.</span>
+
+<span class="sd">        I.e. !quantize 10 will reduce an image to 10 colors.</span>
+
+<span class="sd">        Max number is 256.</span>
+
+<span class="sd">        :param ctx: Message context</span>
+<span class="sd">        :param msg_content: Message content, should have an integer between 1 and 256.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">quant</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">msg_content</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+            <span class="k">await</span> <span class="n">ctx</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="s2">&quot;Invalid input - must be number&quot;</span><span class="p">)</span>
+            <span class="k">return</span>
+        <span class="k">if</span> <span class="n">quant</span> <span class="o">&gt;</span> <span class="mi">256</span> <span class="ow">or</span> <span class="n">quant</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">await</span> <span class="n">ctx</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="s2">&quot;Invalid input - must be between 0 and 256&quot;</span><span class="p">)</span>
+            <span class="k">return</span>
+        <span class="n">img</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_attached_images</span><span class="p">(</span><span class="n">ctx</span><span class="p">)</span>  <span class="c1"># gets images from context</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">img</span><span class="p">:</span>
+            <span class="k">return</span>
+        <span class="n">img</span> <span class="o">=</span> <span class="n">img</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">quantize</span><span class="p">(</span><span class="n">colors</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">msg_content</span><span class="p">))</span>
+        <span class="n">img</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tmp</span><span class="p">)</span>
+        <span class="k">await</span> <span class="n">ctx</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">file</span><span class="o">=</span><span class="n">discord</span><span class="o">.</span><span class="n">File</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tmp</span><span class="p">))</span>
+
+    <span class="nd">@commands</span><span class="o">.</span><span class="n">command</span><span class="p">(</span><span class="n">pass_context</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">get_channel</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ctx</span><span class="p">,</span> <span class="n">msg_content</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Gets an image color channel, R, G, or B</span>
+
+<span class="sd">        :param ctx: Discord Context</span>
+<span class="sd">        :param msg_content:</span>
+<span class="sd">        :type msg_content: str</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">images</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_attached_images</span><span class="p">(</span><span class="n">ctx</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">images</span><span class="p">:</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+            <span class="n">channel_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="s1">&#39;g&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">]</span>
+            <span class="n">choice</span> <span class="o">=</span> <span class="n">msg_content</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">choice</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">channel_names</span><span class="p">:</span>
+                <span class="n">msg</span> <span class="o">+=</span> <span class="s1">&#39;invalid channel, showing red&#39;</span>
+                <span class="n">channel_num</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">channel_num</span> <span class="o">=</span> <span class="n">channel_names</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">choice</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">img</span> <span class="ow">in</span> <span class="n">images</span><span class="p">:</span>
+                    <span class="n">chans</span> <span class="o">=</span> <span class="p">[]</span>
+                    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">channel_names</span><span class="p">)):</span>
+                        <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="n">channel_num</span><span class="p">:</span>
+                            <span class="n">selected</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">getchannel</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+                        <span class="k">else</span><span class="p">:</span>
+                            <span class="n">selected</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;L&quot;</span><span class="p">,</span> <span class="n">img</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+                        <span class="n">chans</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">selected</span><span class="p">)</span>
+                    <span class="n">out</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="s2">&quot;RGB&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">chans</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">chans</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">chans</span><span class="p">[</span><span class="mi">2</span><span class="p">]))</span>
+                    <span class="n">out</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">tmp</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+                    <span class="k">await</span> <span class="n">ctx</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">discord</span><span class="o">.</span><span class="n">File</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tmp</span><span class="p">))</span>
+
+<div class="viewcode-block" id="FacesCog.get_attached_images"><a class="viewcode-back" href="../faces-cog.html#faces_cog.FacesCog.get_attached_images">[docs]</a>    <span class="k">async</span> <span class="k">def</span> <span class="nf">get_attached_images</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ctx</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Gets a Images user has attached. Will print error message if Image needs to be attached.</span>
+
+<span class="sd">        Returns NONE if there is no image to be found.</span>
+
+<span class="sd">        Returns Array of PIL.Image if multiple images are found.</span>
+
+<span class="sd">        :param ctx: The Discord message context</span>
+<span class="sd">        :return: List of PIL.Image or None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">ctx</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">attachments</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">attachments</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">await</span> <span class="n">ctx</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="s2">&quot;Attach Image to function&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="kc">None</span>
+        <span class="n">images</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">attachments</span><span class="p">)):</span>
+            <span class="n">attachment_url</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">attachments</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">url</span>
+            <span class="n">file_request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attachment_url</span><span class="p">)</span>
+            <span class="n">bytes_io</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">BytesIO</span><span class="p">(</span><span class="n">file_request</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">directory</span><span class="si">}</span><span class="s1">/tmp.png&#39;</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+                <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">bytes_io</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+            <span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">directory</span><span class="si">}</span><span class="s1">/tmp.png&#39;</span><span class="p">)</span>
+            <span class="n">images</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">images</span></div></div>
+
+
+<div class="viewcode-block" id="setup"><a class="viewcode-back" href="../faces-cog.html#faces_cog.setup">[docs]</a><span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="n">client</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Set&#39;s up the cog, required fr cogs</span>
+<span class="sd">    :return:</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">client</span><span class="o">.</span><span class="n">add_cog</span><span class="p">(</span><span class="n">FacesCog</span><span class="p">(</span><span class="n">client</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="Mask"><a class="viewcode-back" href="../faces-cog.html#faces_cog.Mask">[docs]</a><span class="k">class</span> <span class="nc">Mask</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mask_img</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Holds a mask image. Crops out the masked portion of target image passed to it.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mask</span> <span class="o">=</span> <span class="n">mask_img</span>
+
+<div class="viewcode-block" id="Mask.get_cropped"><a class="viewcode-back" href="../faces-cog.html#faces_cog.Mask.get_cropped">[docs]</a>    <span class="k">def</span> <span class="nf">get_cropped</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target_img</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns a new image consisting of target_img cropped to the mask area.</span>
+
+<span class="sd">        :param target_img: Image to crop</span>
+<span class="sd">        :return: new Image</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">new</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;RGB&quot;</span><span class="p">,</span> <span class="n">target_img</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+        <span class="n">new</span><span class="o">.</span><span class="n">paste</span><span class="p">(</span><span class="n">target_img</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">mask</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">new</span></div></div>
+
+
+<div class="viewcode-block" id="FaceMasher"><a class="viewcode-back" href="../faces-cog.html#faces_cog.FaceMasher">[docs]</a><span class="k">class</span> <span class="nc">FaceMasher</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mask_directory</span><span class="p">,</span> <span class="n">face_directory</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Generates mashed up images using files in parameter directories.</span>
+
+<span class="sd">        :param mask_directory: relative directory string</span>
+<span class="sd">        :param face_directory: relative directory string</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">file_list</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">mask_directory</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">masks</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">file_list</span><span class="p">:</span>
+            <span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">mask_directory</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">filename</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">masks</span><span class="p">[</span><span class="n">filename</span><span class="p">]</span> <span class="o">=</span> <span class="n">Mask</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">source_images</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">file_list</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">face_directory</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">file_list</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">source_images</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">face_directory</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">filename</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">))</span>
+
+
+<div class="viewcode-block" id="FaceMasher.get_mashup"><a class="viewcode-back" href="../faces-cog.html#faces_cog.FaceMasher.get_mashup">[docs]</a>    <span class="k">def</span> <span class="nf">get_mashup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Gets a new mashup</span>
+
+<span class="sd">        :return: Pillow Image</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">color_source</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">source_images</span><span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">source_images</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)]</span>
+        <span class="n">tmp_sources</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">raw_img</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">source_images</span><span class="p">:</span>
+            <span class="n">tmp_sources</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">FaceMasher</span><span class="o">.</span><span class="n">match_bands</span><span class="p">(</span><span class="n">raw_img</span><span class="p">,</span> <span class="n">color_source</span><span class="p">))</span>
+        <span class="n">mashup</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;RGB&quot;</span><span class="p">,</span> <span class="n">color_source</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">masks</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="n">a_mask</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">masks</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+            <span class="n">rand_source</span> <span class="o">=</span> <span class="n">tmp_sources</span><span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">tmp_sources</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)]</span>
+            <span class="n">a_crop</span> <span class="o">=</span> <span class="n">a_mask</span><span class="o">.</span><span class="n">get_cropped</span><span class="p">(</span><span class="n">rand_source</span><span class="p">)</span>
+            <span class="n">mashup</span><span class="o">.</span><span class="n">paste</span><span class="p">(</span><span class="n">a_crop</span><span class="p">,</span> <span class="n">a_mask</span><span class="o">.</span><span class="n">mask</span><span class="p">)</span>
+        <span class="n">enhancer</span> <span class="o">=</span> <span class="n">ImageEnhance</span><span class="o">.</span><span class="n">Brightness</span><span class="p">(</span><span class="n">mashup</span><span class="p">)</span>
+        <span class="n">mashup</span> <span class="o">=</span> <span class="n">enhancer</span><span class="o">.</span><span class="n">enhance</span><span class="p">(</span><span class="mf">2.5</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">mashup</span></div>
+
+<div class="viewcode-block" id="FaceMasher.hist_norm"><a class="viewcode-back" href="../faces-cog.html#faces_cog.FaceMasher.hist_norm">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">hist_norm</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">template</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Matches two histograms</span>
+
+<span class="sd">        :param source: image to change</span>
+<span class="sd">        :param template: image to use as template colors</span>
+<span class="sd">        :return: numpy array that can be converted to an image</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># found on github</span>
+
+        <span class="n">olddtype</span> <span class="o">=</span> <span class="n">source</span><span class="o">.</span><span class="n">dtype</span>
+        <span class="n">oldshape</span> <span class="o">=</span> <span class="n">source</span><span class="o">.</span><span class="n">shape</span>
+        <span class="n">source</span> <span class="o">=</span> <span class="n">source</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
+        <span class="n">template</span> <span class="o">=</span> <span class="n">template</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
+
+        <span class="n">s_values</span><span class="p">,</span> <span class="n">bin_idx</span><span class="p">,</span> <span class="n">s_counts</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">return_inverse</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                                                <span class="n">return_counts</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">t_values</span><span class="p">,</span> <span class="n">t_counts</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">template</span><span class="p">,</span> <span class="n">return_counts</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">s_quantiles</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="n">s_counts</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>
+        <span class="n">s_quantiles</span> <span class="o">/=</span> <span class="n">s_quantiles</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">t_quantiles</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="n">t_counts</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>
+        <span class="n">t_quantiles</span> <span class="o">/=</span> <span class="n">t_quantiles</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">interp_t_values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="n">s_quantiles</span><span class="p">,</span> <span class="n">t_quantiles</span><span class="p">,</span> <span class="n">t_values</span><span class="p">)</span>
+        <span class="n">interp_t_values</span> <span class="o">=</span> <span class="n">interp_t_values</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">olddtype</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">interp_t_values</span><span class="p">[</span><span class="n">bin_idx</span><span class="p">]</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">oldshape</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="FaceMasher.match_bands"><a class="viewcode-back" href="../faces-cog.html#faces_cog.FaceMasher.match_bands">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">match_bands</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">template</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Splits image into bands and matches those bands to template</span>
+
+<span class="sd">        :param source: image to change</span>
+<span class="sd">        :param template: image to use as template colors</span>
+<span class="sd">        :return: Image</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">bands_source</span> <span class="o">=</span> <span class="n">source</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+        <span class="n">bands_template</span> <span class="o">=</span> <span class="n">template</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+        <span class="n">matched_bands</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">):</span>
+            <span class="n">src</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">bands_source</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
+            <span class="n">tmp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">bands_template</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
+            <span class="n">matched_array</span> <span class="o">=</span> <span class="n">FaceMasher</span><span class="o">.</span><span class="n">hist_norm</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">tmp</span><span class="p">)</span>
+            <span class="n">matched_bands</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Image</span><span class="o">.</span><span class="n">fromarray</span><span class="p">(</span><span class="n">matched_array</span><span class="p">))</span>
+        <span class="n">bands_final</span> <span class="o">=</span> <span class="p">(</span><span class="n">matched_bands</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">matched_bands</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">matched_bands</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+        <span class="n">merge</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="s2">&quot;RGB&quot;</span><span class="p">,</span> <span class="n">bands_final</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">merge</span></div></div>
+</pre></div>
+
+	    </div>
+            <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2021, Programming Club.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/jucacrispim/sphinx_pdj_theme">theme</a> provided by <a href="http://poraodojuca.net">Porão do Juca</a>.
+
+</footer>
+	</div>
+	</div>
+	  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js">
+
+    </script>
+    <script type="text/javascript" src="../_static/underscore.js">
+
+    </script>
+    <script type="text/javascript" src="../_static/doctools.js">
+
+    </script>
+
+  
+
+   <script type="text/javascript"
+           src="../_static/js/theme.js"></script>
+
+   <script type="text/javascript"
+           src="../_static/js/pdj.js"></script>
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+  </body>
+</html>

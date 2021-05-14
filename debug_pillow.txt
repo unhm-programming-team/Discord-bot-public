@@ -1,0 +1,1061 @@
+py:attribute
+	PIL.BmpImagePlugin.BmpImageFile.BITFIELDS reference/plugins.html#PIL.BmpImagePlugin.BmpImageFile.BITFIELDS
+	PIL.BmpImagePlugin.BmpImageFile.COMPRESSIONS reference/plugins.html#PIL.BmpImagePlugin.BmpImageFile.COMPRESSIONS
+	PIL.BmpImagePlugin.BmpImageFile.JPEG     reference/plugins.html#PIL.BmpImagePlugin.BmpImageFile.JPEG
+	PIL.BmpImagePlugin.BmpImageFile.PNG      reference/plugins.html#PIL.BmpImagePlugin.BmpImageFile.PNG
+	PIL.BmpImagePlugin.BmpImageFile.RAW      reference/plugins.html#PIL.BmpImagePlugin.BmpImageFile.RAW
+	PIL.BmpImagePlugin.BmpImageFile.RLE4     reference/plugins.html#PIL.BmpImagePlugin.BmpImageFile.RLE4
+	PIL.BmpImagePlugin.BmpImageFile.RLE8     reference/plugins.html#PIL.BmpImagePlugin.BmpImageFile.RLE8
+	PIL.BmpImagePlugin.BmpImageFile.format   reference/plugins.html#PIL.BmpImagePlugin.BmpImageFile.format
+	PIL.BmpImagePlugin.BmpImageFile.format_description reference/plugins.html#PIL.BmpImagePlugin.BmpImageFile.format_description
+	PIL.BmpImagePlugin.BmpImageFile.k        reference/plugins.html#PIL.BmpImagePlugin.BmpImageFile.k
+	PIL.BmpImagePlugin.BmpImageFile.v        reference/plugins.html#PIL.BmpImagePlugin.BmpImageFile.v
+	PIL.BmpImagePlugin.DibImageFile.format   reference/plugins.html#PIL.BmpImagePlugin.DibImageFile.format
+	PIL.BmpImagePlugin.DibImageFile.format_description reference/plugins.html#PIL.BmpImagePlugin.DibImageFile.format_description
+	PIL.BufrStubImagePlugin.BufrStubImageFile.format reference/plugins.html#PIL.BufrStubImagePlugin.BufrStubImageFile.format
+	PIL.BufrStubImagePlugin.BufrStubImageFile.format_description reference/plugins.html#PIL.BufrStubImagePlugin.BufrStubImageFile.format_description
+	PIL.CurImagePlugin.CurImageFile.format   reference/plugins.html#PIL.CurImagePlugin.CurImageFile.format
+	PIL.CurImagePlugin.CurImageFile.format_description reference/plugins.html#PIL.CurImagePlugin.CurImageFile.format_description
+	PIL.DcxImagePlugin.DcxImageFile.format   reference/plugins.html#PIL.DcxImagePlugin.DcxImageFile.format
+	PIL.DcxImagePlugin.DcxImageFile.format_description reference/plugins.html#PIL.DcxImagePlugin.DcxImageFile.format_description
+	PIL.EpsImagePlugin.EpsImageFile.format   reference/plugins.html#PIL.EpsImagePlugin.EpsImageFile.format
+	PIL.EpsImagePlugin.EpsImageFile.format_description reference/plugins.html#PIL.EpsImagePlugin.EpsImageFile.format_description
+	PIL.EpsImagePlugin.EpsImageFile.mode_map reference/plugins.html#PIL.EpsImagePlugin.EpsImageFile.mode_map
+	PIL.FitsStubImagePlugin.FITSStubImageFile.format reference/plugins.html#PIL.FitsStubImagePlugin.FITSStubImageFile.format
+	PIL.FitsStubImagePlugin.FITSStubImageFile.format_description reference/plugins.html#PIL.FitsStubImagePlugin.FITSStubImageFile.format_description
+	PIL.FliImagePlugin.FliImageFile.format   reference/plugins.html#PIL.FliImagePlugin.FliImageFile.format
+	PIL.FliImagePlugin.FliImageFile.format_description reference/plugins.html#PIL.FliImagePlugin.FliImageFile.format_description
+	PIL.FontFile.FontFile.bitmap             PIL.html#PIL.FontFile.FontFile.bitmap
+	PIL.FpxImagePlugin.FpxImageFile.format   reference/plugins.html#PIL.FpxImagePlugin.FpxImageFile.format
+	PIL.FpxImagePlugin.FpxImageFile.format_description reference/plugins.html#PIL.FpxImagePlugin.FpxImageFile.format_description
+	PIL.GbrImagePlugin.GbrImageFile.format   reference/plugins.html#PIL.GbrImagePlugin.GbrImageFile.format
+	PIL.GbrImagePlugin.GbrImageFile.format_description reference/plugins.html#PIL.GbrImagePlugin.GbrImageFile.format_description
+	PIL.GdImageFile.GdImageFile.format       PIL.html#PIL.GdImageFile.GdImageFile.format
+	PIL.GdImageFile.GdImageFile.format_description PIL.html#PIL.GdImageFile.GdImageFile.format_description
+	PIL.GifImagePlugin.GifImageFile.format   reference/plugins.html#PIL.GifImagePlugin.GifImageFile.format
+	PIL.GifImagePlugin.GifImageFile.format_description reference/plugins.html#PIL.GifImagePlugin.GifImageFile.format_description
+	PIL.GifImagePlugin.GifImageFile.global_palette reference/plugins.html#PIL.GifImagePlugin.GifImageFile.global_palette
+	PIL.GimpGradientFile.GradientFile.gradient PIL.html#PIL.GimpGradientFile.GradientFile.gradient
+	PIL.GimpPaletteFile.GimpPaletteFile.rawmode PIL.html#PIL.GimpPaletteFile.GimpPaletteFile.rawmode
+	PIL.GribStubImagePlugin.GribStubImageFile.format reference/plugins.html#PIL.GribStubImagePlugin.GribStubImageFile.format
+	PIL.GribStubImagePlugin.GribStubImageFile.format_description reference/plugins.html#PIL.GribStubImagePlugin.GribStubImageFile.format_description
+	PIL.Hdf5StubImagePlugin.HDF5StubImageFile.format reference/plugins.html#PIL.Hdf5StubImagePlugin.HDF5StubImageFile.format
+	PIL.Hdf5StubImagePlugin.HDF5StubImageFile.format_description reference/plugins.html#PIL.Hdf5StubImagePlugin.HDF5StubImageFile.format_description
+	PIL.IcnsImagePlugin.IcnsFile.SIZES       reference/plugins.html#PIL.IcnsImagePlugin.IcnsFile.SIZES
+	PIL.IcnsImagePlugin.IcnsImageFile.format reference/plugins.html#PIL.IcnsImagePlugin.IcnsImageFile.format
+	PIL.IcnsImagePlugin.IcnsImageFile.format_description reference/plugins.html#PIL.IcnsImagePlugin.IcnsImageFile.format_description
+	PIL.IcoImagePlugin.IcoImageFile.format   reference/plugins.html#PIL.IcoImagePlugin.IcoImageFile.format
+	PIL.IcoImagePlugin.IcoImageFile.format_description reference/plugins.html#PIL.IcoImagePlugin.IcoImageFile.format_description
+	PIL.ImImagePlugin.ImImageFile.format     reference/plugins.html#PIL.ImImagePlugin.ImImageFile.format
+	PIL.ImImagePlugin.ImImageFile.format_description reference/plugins.html#PIL.ImImagePlugin.ImImageFile.format_description
+	PIL.Image.Exif.endian                    reference/Image.html#PIL.Image.Exif.endian
+	PIL.Image.Image.filename                 reference/Image.html#PIL.Image.Image.filename
+	PIL.Image.Image.format                   reference/Image.html#PIL.Image.Image.format
+	PIL.Image.Image.height                   reference/Image.html#PIL.Image.Image.height
+	PIL.Image.Image.info                     reference/Image.html#PIL.Image.Image.info
+	PIL.Image.Image.is_animated              reference/Image.html#PIL.Image.Image.is_animated
+	PIL.Image.Image.mode                     reference/Image.html#PIL.Image.Image.mode
+	PIL.Image.Image.n_frames                 reference/Image.html#PIL.Image.Image.n_frames
+	PIL.Image.Image.palette                  reference/Image.html#PIL.Image.Image.palette
+	PIL.Image.Image.size                     reference/Image.html#PIL.Image.Image.size
+	PIL.Image.Image.width                    reference/Image.html#PIL.Image.Image.width
+	PIL.ImageCms.CmsProfile.attributes       reference/ImageCms.html#PIL.ImageCms.CmsProfile.attributes
+	PIL.ImageCms.CmsProfile.blue_colorant    reference/ImageCms.html#PIL.ImageCms.CmsProfile.blue_colorant
+	PIL.ImageCms.CmsProfile.blue_primary     reference/ImageCms.html#PIL.ImageCms.CmsProfile.blue_primary
+	PIL.ImageCms.CmsProfile.chromatic_adaption reference/ImageCms.html#PIL.ImageCms.CmsProfile.chromatic_adaption
+	PIL.ImageCms.CmsProfile.chromaticity     reference/ImageCms.html#PIL.ImageCms.CmsProfile.chromaticity
+	PIL.ImageCms.CmsProfile.clut             reference/ImageCms.html#PIL.ImageCms.CmsProfile.clut
+	PIL.ImageCms.CmsProfile.colorant_table   reference/ImageCms.html#PIL.ImageCms.CmsProfile.colorant_table
+	PIL.ImageCms.CmsProfile.colorant_table_out reference/ImageCms.html#PIL.ImageCms.CmsProfile.colorant_table_out
+	PIL.ImageCms.CmsProfile.colorimetric_intent reference/ImageCms.html#PIL.ImageCms.CmsProfile.colorimetric_intent
+	PIL.ImageCms.CmsProfile.connection_space reference/ImageCms.html#PIL.ImageCms.CmsProfile.connection_space
+	PIL.ImageCms.CmsProfile.copyright        reference/ImageCms.html#PIL.ImageCms.CmsProfile.copyright
+	PIL.ImageCms.CmsProfile.creation_date    reference/ImageCms.html#PIL.ImageCms.CmsProfile.creation_date
+	PIL.ImageCms.CmsProfile.device_class     reference/ImageCms.html#PIL.ImageCms.CmsProfile.device_class
+	PIL.ImageCms.CmsProfile.green_colorant   reference/ImageCms.html#PIL.ImageCms.CmsProfile.green_colorant
+	PIL.ImageCms.CmsProfile.green_primary    reference/ImageCms.html#PIL.ImageCms.CmsProfile.green_primary
+	PIL.ImageCms.CmsProfile.header_flags     reference/ImageCms.html#PIL.ImageCms.CmsProfile.header_flags
+	PIL.ImageCms.CmsProfile.header_manufacturer reference/ImageCms.html#PIL.ImageCms.CmsProfile.header_manufacturer
+	PIL.ImageCms.CmsProfile.header_model     reference/ImageCms.html#PIL.ImageCms.CmsProfile.header_model
+	PIL.ImageCms.CmsProfile.icc_version      reference/ImageCms.html#PIL.ImageCms.CmsProfile.icc_version
+	PIL.ImageCms.CmsProfile.intent_supported reference/ImageCms.html#PIL.ImageCms.CmsProfile.intent_supported
+	PIL.ImageCms.CmsProfile.is_matrix_shaper reference/ImageCms.html#PIL.ImageCms.CmsProfile.is_matrix_shaper
+	PIL.ImageCms.CmsProfile.luminance        reference/ImageCms.html#PIL.ImageCms.CmsProfile.luminance
+	PIL.ImageCms.CmsProfile.manufacturer     reference/ImageCms.html#PIL.ImageCms.CmsProfile.manufacturer
+	PIL.ImageCms.CmsProfile.media_black_point reference/ImageCms.html#PIL.ImageCms.CmsProfile.media_black_point
+	PIL.ImageCms.CmsProfile.media_white_point_temperature reference/ImageCms.html#PIL.ImageCms.CmsProfile.media_white_point_temperature
+	PIL.ImageCms.CmsProfile.model            reference/ImageCms.html#PIL.ImageCms.CmsProfile.model
+	PIL.ImageCms.CmsProfile.perceptual_rendering_intent_gamut reference/ImageCms.html#PIL.ImageCms.CmsProfile.perceptual_rendering_intent_gamut
+	PIL.ImageCms.CmsProfile.profile_description reference/ImageCms.html#PIL.ImageCms.CmsProfile.profile_description
+	PIL.ImageCms.CmsProfile.profile_id       reference/ImageCms.html#PIL.ImageCms.CmsProfile.profile_id
+	PIL.ImageCms.CmsProfile.red_colorant     reference/ImageCms.html#PIL.ImageCms.CmsProfile.red_colorant
+	PIL.ImageCms.CmsProfile.red_primary      reference/ImageCms.html#PIL.ImageCms.CmsProfile.red_primary
+	PIL.ImageCms.CmsProfile.rendering_intent reference/ImageCms.html#PIL.ImageCms.CmsProfile.rendering_intent
+	PIL.ImageCms.CmsProfile.saturation_rendering_intent_gamut reference/ImageCms.html#PIL.ImageCms.CmsProfile.saturation_rendering_intent_gamut
+	PIL.ImageCms.CmsProfile.screening_description reference/ImageCms.html#PIL.ImageCms.CmsProfile.screening_description
+	PIL.ImageCms.CmsProfile.target           reference/ImageCms.html#PIL.ImageCms.CmsProfile.target
+	PIL.ImageCms.CmsProfile.technology       reference/ImageCms.html#PIL.ImageCms.CmsProfile.technology
+	PIL.ImageCms.CmsProfile.version          reference/ImageCms.html#PIL.ImageCms.CmsProfile.version
+	PIL.ImageCms.CmsProfile.viewing_condition reference/ImageCms.html#PIL.ImageCms.CmsProfile.viewing_condition
+	PIL.ImageCms.CmsProfile.xcolor_space     reference/ImageCms.html#PIL.ImageCms.CmsProfile.xcolor_space
+	PIL.ImageFile.ImageFile.tile             reference/ImageFile.html#PIL.ImageFile.ImageFile.tile
+	PIL.ImageShow.Viewer.format              reference/ImageShow.html#PIL.ImageShow.Viewer.format
+	PIL.ImageShow.Viewer.options             reference/ImageShow.html#PIL.ImageShow.Viewer.options
+	PIL.ImageStat.Stat.count                 reference/ImageStat.html#PIL.ImageStat.Stat.count
+	PIL.ImageStat.Stat.extrema               reference/ImageStat.html#PIL.ImageStat.Stat.extrema
+	PIL.ImageStat.Stat.mean                  reference/ImageStat.html#PIL.ImageStat.Stat.mean
+	PIL.ImageStat.Stat.median                reference/ImageStat.html#PIL.ImageStat.Stat.median
+	PIL.ImageStat.Stat.rms                   reference/ImageStat.html#PIL.ImageStat.Stat.rms
+	PIL.ImageStat.Stat.stddev                reference/ImageStat.html#PIL.ImageStat.Stat.stddev
+	PIL.ImageStat.Stat.sum                   reference/ImageStat.html#PIL.ImageStat.Stat.sum
+	PIL.ImageStat.Stat.sum2                  reference/ImageStat.html#PIL.ImageStat.Stat.sum2
+	PIL.ImageStat.Stat.var                   reference/ImageStat.html#PIL.ImageStat.Stat.var
+	PIL.ImageTransform.AffineTransform.method PIL.html#PIL.ImageTransform.AffineTransform.method
+	PIL.ImageTransform.ExtentTransform.method PIL.html#PIL.ImageTransform.ExtentTransform.method
+	PIL.ImageTransform.MeshTransform.method  PIL.html#PIL.ImageTransform.MeshTransform.method
+	PIL.ImageTransform.QuadTransform.method  PIL.html#PIL.ImageTransform.QuadTransform.method
+	PIL.ImtImagePlugin.ImtImageFile.format   reference/plugins.html#PIL.ImtImagePlugin.ImtImageFile.format
+	PIL.ImtImagePlugin.ImtImageFile.format_description reference/plugins.html#PIL.ImtImagePlugin.ImtImageFile.format_description
+	PIL.IptcImagePlugin.IptcImageFile.format reference/plugins.html#PIL.IptcImagePlugin.IptcImageFile.format
+	PIL.IptcImagePlugin.IptcImageFile.format_description reference/plugins.html#PIL.IptcImagePlugin.IptcImageFile.format_description
+	PIL.Jpeg2KImagePlugin.Jpeg2KImageFile.format reference/plugins.html#PIL.Jpeg2KImagePlugin.Jpeg2KImageFile.format
+	PIL.Jpeg2KImagePlugin.Jpeg2KImageFile.format_description reference/plugins.html#PIL.Jpeg2KImagePlugin.Jpeg2KImageFile.format_description
+	PIL.JpegImagePlugin.JpegImageFile.format reference/plugins.html#PIL.JpegImagePlugin.JpegImageFile.format
+	PIL.JpegImagePlugin.JpegImageFile.format_description reference/plugins.html#PIL.JpegImagePlugin.JpegImageFile.format_description
+	PIL.McIdasImagePlugin.McIdasImageFile.format reference/plugins.html#PIL.McIdasImagePlugin.McIdasImageFile.format
+	PIL.McIdasImagePlugin.McIdasImageFile.format_description reference/plugins.html#PIL.McIdasImagePlugin.McIdasImageFile.format_description
+	PIL.MicImagePlugin.MicImageFile.format   reference/plugins.html#PIL.MicImagePlugin.MicImageFile.format
+	PIL.MicImagePlugin.MicImageFile.format_description reference/plugins.html#PIL.MicImagePlugin.MicImageFile.format_description
+	PIL.MpegImagePlugin.MpegImageFile.format reference/plugins.html#PIL.MpegImagePlugin.MpegImageFile.format
+	PIL.MpegImagePlugin.MpegImageFile.format_description reference/plugins.html#PIL.MpegImagePlugin.MpegImageFile.format_description
+	PIL.MspImagePlugin.MspImageFile.format   reference/plugins.html#PIL.MspImagePlugin.MspImageFile.format
+	PIL.MspImagePlugin.MspImageFile.format_description reference/plugins.html#PIL.MspImagePlugin.MspImageFile.format_description
+	PIL.PaletteFile.PaletteFile.rawmode      PIL.html#PIL.PaletteFile.PaletteFile.rawmode
+	PIL.PcdImagePlugin.PcdImageFile.format   reference/plugins.html#PIL.PcdImagePlugin.PcdImageFile.format
+	PIL.PcdImagePlugin.PcdImageFile.format_description reference/plugins.html#PIL.PcdImagePlugin.PcdImageFile.format_description
+	PIL.PcfFontFile.PcfFontFile.name         PIL.html#PIL.PcfFontFile.PcfFontFile.name
+	PIL.PcxImagePlugin.PcxImageFile.format   reference/plugins.html#PIL.PcxImagePlugin.PcxImageFile.format
+	PIL.PcxImagePlugin.PcxImageFile.format_description reference/plugins.html#PIL.PcxImagePlugin.PcxImageFile.format_description
+	PIL.PixarImagePlugin.PixarImageFile.format reference/plugins.html#PIL.PixarImagePlugin.PixarImageFile.format
+	PIL.PixarImagePlugin.PixarImageFile.format_description reference/plugins.html#PIL.PixarImagePlugin.PixarImageFile.format_description
+	PIL.PngImagePlugin.PngImageFile.format   reference/plugins.html#PIL.PngImagePlugin.PngImageFile.format
+	PIL.PngImagePlugin.PngImageFile.format_description reference/plugins.html#PIL.PngImagePlugin.PngImageFile.format_description
+	PIL.PpmImagePlugin.PpmImageFile.format   reference/plugins.html#PIL.PpmImagePlugin.PpmImageFile.format
+	PIL.PpmImagePlugin.PpmImageFile.format_description reference/plugins.html#PIL.PpmImagePlugin.PpmImageFile.format_description
+	PIL.PsdImagePlugin.PsdImageFile.format   reference/plugins.html#PIL.PsdImagePlugin.PsdImageFile.format
+	PIL.PsdImagePlugin.PsdImageFile.format_description reference/plugins.html#PIL.PsdImagePlugin.PsdImageFile.format_description
+	PIL.SgiImagePlugin.SgiImageFile.format   reference/plugins.html#PIL.SgiImagePlugin.SgiImageFile.format
+	PIL.SgiImagePlugin.SgiImageFile.format_description reference/plugins.html#PIL.SgiImagePlugin.SgiImageFile.format_description
+	PIL.SpiderImagePlugin.SpiderImageFile.format reference/plugins.html#PIL.SpiderImagePlugin.SpiderImageFile.format
+	PIL.SpiderImagePlugin.SpiderImageFile.format_description reference/plugins.html#PIL.SpiderImagePlugin.SpiderImageFile.format_description
+	PIL.SunImagePlugin.SunImageFile.format   reference/plugins.html#PIL.SunImagePlugin.SunImageFile.format
+	PIL.SunImagePlugin.SunImageFile.format_description reference/plugins.html#PIL.SunImagePlugin.SunImageFile.format_description
+	PIL.TgaImagePlugin.TgaImageFile.format   reference/plugins.html#PIL.TgaImagePlugin.TgaImageFile.format
+	PIL.TgaImagePlugin.TgaImageFile.format_description reference/plugins.html#PIL.TgaImagePlugin.TgaImageFile.format_description
+	PIL.TiffImagePlugin.AppendingTiffWriter.Tags reference/plugins.html#PIL.TiffImagePlugin.AppendingTiffWriter.Tags
+	PIL.TiffImagePlugin.AppendingTiffWriter.fieldSizes reference/plugins.html#PIL.TiffImagePlugin.AppendingTiffWriter.fieldSizes
+	PIL.TiffImagePlugin.ImageFileDirectory   reference/plugins.html#PIL.TiffImagePlugin.ImageFileDirectory
+	PIL.TiffImagePlugin.ImageFileDirectory_v1.tagtype reference/plugins.html#PIL.TiffImagePlugin.ImageFileDirectory_v1.tagtype
+	PIL.TiffImagePlugin.ImageFileDirectory_v2.tagtype reference/plugins.html#PIL.TiffImagePlugin.ImageFileDirectory_v2.tagtype
+	PIL.TiffImagePlugin.TiffImageFile.format reference/plugins.html#PIL.TiffImagePlugin.TiffImageFile.format
+	PIL.TiffImagePlugin.TiffImageFile.format_description reference/plugins.html#PIL.TiffImagePlugin.TiffImageFile.format_description
+	PIL.TiffImagePlugin.TiffImageFile.tag    reference/plugins.html#PIL.TiffImagePlugin.TiffImageFile.tag
+	PIL.TiffImagePlugin.TiffImageFile.tag_v2 reference/plugins.html#PIL.TiffImagePlugin.TiffImageFile.tag_v2
+	PIL.WebPImagePlugin.WebPImageFile.format reference/plugins.html#PIL.WebPImagePlugin.WebPImageFile.format
+	PIL.WebPImagePlugin.WebPImageFile.format_description reference/plugins.html#PIL.WebPImagePlugin.WebPImageFile.format_description
+	PIL.WmfImagePlugin.WmfStubImageFile.format reference/plugins.html#PIL.WmfImagePlugin.WmfStubImageFile.format
+	PIL.WmfImagePlugin.WmfStubImageFile.format_description reference/plugins.html#PIL.WmfImagePlugin.WmfStubImageFile.format_description
+	PIL.XVThumbImagePlugin.XVThumbImageFile.format reference/plugins.html#PIL.XVThumbImagePlugin.XVThumbImageFile.format
+	PIL.XVThumbImagePlugin.XVThumbImageFile.format_description reference/plugins.html#PIL.XVThumbImagePlugin.XVThumbImageFile.format_description
+	PIL.XbmImagePlugin.XbmImageFile.format   reference/plugins.html#PIL.XbmImagePlugin.XbmImageFile.format
+	PIL.XbmImagePlugin.XbmImageFile.format_description reference/plugins.html#PIL.XbmImagePlugin.XbmImageFile.format_description
+	PIL.XpmImagePlugin.XpmImageFile.format   reference/plugins.html#PIL.XpmImagePlugin.XpmImageFile.format
+	PIL.XpmImagePlugin.XpmImageFile.format_description reference/plugins.html#PIL.XpmImagePlugin.XpmImageFile.format_description
+py:class
+	PIL.BdfFontFile.BdfFontFile              PIL.html#PIL.BdfFontFile.BdfFontFile
+	PIL.BmpImagePlugin.BmpImageFile          reference/plugins.html#PIL.BmpImagePlugin.BmpImageFile
+	PIL.BmpImagePlugin.DibImageFile          reference/plugins.html#PIL.BmpImagePlugin.DibImageFile
+	PIL.BufrStubImagePlugin.BufrStubImageFile reference/plugins.html#PIL.BufrStubImagePlugin.BufrStubImageFile
+	PIL.ContainerIO.ContainerIO              PIL.html#PIL.ContainerIO.ContainerIO
+	PIL.CurImagePlugin.CurImageFile          reference/plugins.html#PIL.CurImagePlugin.CurImageFile
+	PIL.DcxImagePlugin.DcxImageFile          reference/plugins.html#PIL.DcxImagePlugin.DcxImageFile
+	PIL.EpsImagePlugin.EpsImageFile          reference/plugins.html#PIL.EpsImagePlugin.EpsImageFile
+	PIL.EpsImagePlugin.PSFile                reference/plugins.html#PIL.EpsImagePlugin.PSFile
+	PIL.FitsStubImagePlugin.FITSStubImageFile reference/plugins.html#PIL.FitsStubImagePlugin.FITSStubImageFile
+	PIL.FliImagePlugin.FliImageFile          reference/plugins.html#PIL.FliImagePlugin.FliImageFile
+	PIL.FontFile.FontFile                    PIL.html#PIL.FontFile.FontFile
+	PIL.FpxImagePlugin.FpxImageFile          reference/plugins.html#PIL.FpxImagePlugin.FpxImageFile
+	PIL.GbrImagePlugin.GbrImageFile          reference/plugins.html#PIL.GbrImagePlugin.GbrImageFile
+	PIL.GdImageFile.GdImageFile              PIL.html#PIL.GdImageFile.GdImageFile
+	PIL.GifImagePlugin.GifImageFile          reference/plugins.html#PIL.GifImagePlugin.GifImageFile
+	PIL.GimpGradientFile.GimpGradientFile    PIL.html#PIL.GimpGradientFile.GimpGradientFile
+	PIL.GimpGradientFile.GradientFile        PIL.html#PIL.GimpGradientFile.GradientFile
+	PIL.GimpPaletteFile.GimpPaletteFile      PIL.html#PIL.GimpPaletteFile.GimpPaletteFile
+	PIL.GribStubImagePlugin.GribStubImageFile reference/plugins.html#PIL.GribStubImagePlugin.GribStubImageFile
+	PIL.Hdf5StubImagePlugin.HDF5StubImageFile reference/plugins.html#PIL.Hdf5StubImagePlugin.HDF5StubImageFile
+	PIL.IcnsImagePlugin.IcnsFile             reference/plugins.html#PIL.IcnsImagePlugin.IcnsFile
+	PIL.IcnsImagePlugin.IcnsImageFile        reference/plugins.html#PIL.IcnsImagePlugin.IcnsImageFile
+	PIL.IcoImagePlugin.IcoFile               reference/plugins.html#PIL.IcoImagePlugin.IcoFile
+	PIL.IcoImagePlugin.IcoImageFile          reference/plugins.html#PIL.IcoImagePlugin.IcoImageFile
+	PIL.ImImagePlugin.ImImageFile            reference/plugins.html#PIL.ImImagePlugin.ImImageFile
+	PIL.Image.Exif                           reference/Image.html#PIL.Image.Exif
+	PIL.Image.Image                          reference/Image.html#PIL.Image.Image
+	PIL.Image.ImagePointHandler              reference/Image.html#PIL.Image.ImagePointHandler
+	PIL.Image.ImageTransformHandler          reference/Image.html#PIL.Image.ImageTransformHandler
+	PIL.ImageCms.CmsProfile                  reference/ImageCms.html#PIL.ImageCms.CmsProfile
+	PIL.ImageCms.ImageCmsTransform           reference/ImageCms.html#PIL.ImageCms.ImageCmsTransform
+	PIL.ImageDraw2.Brush                     PIL.html#PIL.ImageDraw2.Brush
+	PIL.ImageDraw2.Draw                      PIL.html#PIL.ImageDraw2.Draw
+	PIL.ImageDraw2.Font                      PIL.html#PIL.ImageDraw2.Font
+	PIL.ImageDraw2.Pen                       PIL.html#PIL.ImageDraw2.Pen
+	PIL.ImageEnhance.Brightness              reference/ImageEnhance.html#PIL.ImageEnhance.Brightness
+	PIL.ImageEnhance.Color                   reference/ImageEnhance.html#PIL.ImageEnhance.Color
+	PIL.ImageEnhance.Contrast                reference/ImageEnhance.html#PIL.ImageEnhance.Contrast
+	PIL.ImageEnhance.Sharpness               reference/ImageEnhance.html#PIL.ImageEnhance.Sharpness
+	PIL.ImageEnhance._Enhance                reference/ImageEnhance.html#PIL.ImageEnhance._Enhance
+	PIL.ImageFile.ImageFile                  reference/ImageFile.html#PIL.ImageFile.ImageFile
+	PIL.ImageFile.Parser                     reference/ImageFile.html#PIL.ImageFile.Parser
+	PIL.ImageFile.PyDecoder                  reference/ImageFile.html#PIL.ImageFile.PyDecoder
+	PIL.ImageFile.StubImageFile              reference/ImageFile.html#PIL.ImageFile.StubImageFile
+	PIL.ImageFilter.BoxBlur                  reference/ImageFilter.html#PIL.ImageFilter.BoxBlur
+	PIL.ImageFilter.Color3DLUT               reference/ImageFilter.html#PIL.ImageFilter.Color3DLUT
+	PIL.ImageFilter.Filter                   reference/ImageFilter.html#PIL.ImageFilter.Filter
+	PIL.ImageFilter.GaussianBlur             reference/ImageFilter.html#PIL.ImageFilter.GaussianBlur
+	PIL.ImageFilter.Kernel                   reference/ImageFilter.html#PIL.ImageFilter.Kernel
+	PIL.ImageFilter.MaxFilter                reference/ImageFilter.html#PIL.ImageFilter.MaxFilter
+	PIL.ImageFilter.MedianFilter             reference/ImageFilter.html#PIL.ImageFilter.MedianFilter
+	PIL.ImageFilter.MinFilter                reference/ImageFilter.html#PIL.ImageFilter.MinFilter
+	PIL.ImageFilter.ModeFilter               reference/ImageFilter.html#PIL.ImageFilter.ModeFilter
+	PIL.ImageFilter.MultibandFilter          reference/ImageFilter.html#PIL.ImageFilter.MultibandFilter
+	PIL.ImageFilter.RankFilter               reference/ImageFilter.html#PIL.ImageFilter.RankFilter
+	PIL.ImageFilter.UnsharpMask              reference/ImageFilter.html#PIL.ImageFilter.UnsharpMask
+	PIL.ImageFont.FreeTypeFont               reference/ImageFont.html#PIL.ImageFont.FreeTypeFont
+	PIL.ImageFont.ImageFont                  reference/ImageFont.html#PIL.ImageFont.ImageFont
+	PIL.ImageFont.TransposedFont             reference/ImageFont.html#PIL.ImageFont.TransposedFont
+	PIL.ImagePalette.ImagePalette            reference/ImagePalette.html#PIL.ImagePalette.ImagePalette
+	PIL.ImagePath.PIL.ImagePath.Path         reference/ImagePath.html#PIL.ImagePath.PIL.ImagePath.Path
+	PIL.ImageQt.ImageQt                      reference/ImageQt.html#PIL.ImageQt.ImageQt
+	PIL.ImageSequence.Iterator               reference/ImageSequence.html#PIL.ImageSequence.Iterator
+	PIL.ImageShow.IPythonViewer              reference/ImageShow.html#PIL.ImageShow.IPythonViewer
+	PIL.ImageShow.MacViewer                  reference/ImageShow.html#PIL.ImageShow.MacViewer
+	PIL.ImageShow.UnixViewer                 reference/ImageShow.html#PIL.ImageShow.UnixViewer
+	PIL.ImageShow.UnixViewer.DisplayViewer   reference/ImageShow.html#PIL.ImageShow.UnixViewer.DisplayViewer
+	PIL.ImageShow.UnixViewer.EogViewer       reference/ImageShow.html#PIL.ImageShow.UnixViewer.EogViewer
+	PIL.ImageShow.UnixViewer.GmDisplayViewer reference/ImageShow.html#PIL.ImageShow.UnixViewer.GmDisplayViewer
+	PIL.ImageShow.UnixViewer.XVViewer        reference/ImageShow.html#PIL.ImageShow.UnixViewer.XVViewer
+	PIL.ImageShow.Viewer                     reference/ImageShow.html#PIL.ImageShow.Viewer
+	PIL.ImageShow.WindowsViewer              reference/ImageShow.html#PIL.ImageShow.WindowsViewer
+	PIL.ImageStat.Stat                       reference/ImageStat.html#PIL.ImageStat.Stat
+	PIL.ImageTk.BitmapImage                  reference/ImageTk.html#PIL.ImageTk.BitmapImage
+	PIL.ImageTk.PhotoImage                   reference/ImageTk.html#PIL.ImageTk.PhotoImage
+	PIL.ImageTransform.AffineTransform       PIL.html#PIL.ImageTransform.AffineTransform
+	PIL.ImageTransform.ExtentTransform       PIL.html#PIL.ImageTransform.ExtentTransform
+	PIL.ImageTransform.MeshTransform         PIL.html#PIL.ImageTransform.MeshTransform
+	PIL.ImageTransform.QuadTransform         PIL.html#PIL.ImageTransform.QuadTransform
+	PIL.ImageTransform.Transform             PIL.html#PIL.ImageTransform.Transform
+	PIL.ImageWin.Dib                         reference/ImageWin.html#PIL.ImageWin.Dib
+	PIL.ImageWin.HDC                         reference/ImageWin.html#PIL.ImageWin.HDC
+	PIL.ImageWin.HWND                        reference/ImageWin.html#PIL.ImageWin.HWND
+	PIL.ImtImagePlugin.ImtImageFile          reference/plugins.html#PIL.ImtImagePlugin.ImtImageFile
+	PIL.IptcImagePlugin.IptcImageFile        reference/plugins.html#PIL.IptcImagePlugin.IptcImageFile
+	PIL.Jpeg2KImagePlugin.Jpeg2KImageFile    reference/plugins.html#PIL.Jpeg2KImagePlugin.Jpeg2KImageFile
+	PIL.JpegImagePlugin.JpegImageFile        reference/plugins.html#PIL.JpegImagePlugin.JpegImageFile
+	PIL.McIdasImagePlugin.McIdasImageFile    reference/plugins.html#PIL.McIdasImagePlugin.McIdasImageFile
+	PIL.MicImagePlugin.MicImageFile          reference/plugins.html#PIL.MicImagePlugin.MicImageFile
+	PIL.MpegImagePlugin.BitStream            reference/plugins.html#PIL.MpegImagePlugin.BitStream
+	PIL.MpegImagePlugin.MpegImageFile        reference/plugins.html#PIL.MpegImagePlugin.MpegImageFile
+	PIL.MspImagePlugin.MspDecoder            reference/plugins.html#PIL.MspImagePlugin.MspDecoder
+	PIL.MspImagePlugin.MspImageFile          reference/plugins.html#PIL.MspImagePlugin.MspImageFile
+	PIL.PSDraw.PSDraw                        reference/PSDraw.html#PIL.PSDraw.PSDraw
+	PIL.PaletteFile.PaletteFile              PIL.html#PIL.PaletteFile.PaletteFile
+	PIL.PcdImagePlugin.PcdImageFile          reference/plugins.html#PIL.PcdImagePlugin.PcdImageFile
+	PIL.PcfFontFile.PcfFontFile              PIL.html#PIL.PcfFontFile.PcfFontFile
+	PIL.PcxImagePlugin.PcxImageFile          reference/plugins.html#PIL.PcxImagePlugin.PcxImageFile
+	PIL.PixarImagePlugin.PixarImageFile      reference/plugins.html#PIL.PixarImagePlugin.PixarImageFile
+	PIL.PngImagePlugin.ChunkStream           reference/plugins.html#PIL.PngImagePlugin.ChunkStream
+	PIL.PngImagePlugin.PngImageFile          reference/plugins.html#PIL.PngImagePlugin.PngImageFile
+	PIL.PngImagePlugin.PngInfo               PIL.html#PIL.PngImagePlugin.PngInfo
+	PIL.PngImagePlugin.PngStream             reference/plugins.html#PIL.PngImagePlugin.PngStream
+	PIL.PngImagePlugin.iTXt                  PIL.html#PIL.PngImagePlugin.iTXt
+	PIL.PpmImagePlugin.PpmImageFile          reference/plugins.html#PIL.PpmImagePlugin.PpmImageFile
+	PIL.PsdImagePlugin.PsdImageFile          reference/plugins.html#PIL.PsdImagePlugin.PsdImageFile
+	PIL.PyAccess.PyAccess                    reference/PyAccess.html#PIL.PyAccess.PyAccess
+	PIL.SgiImagePlugin.SGI16Decoder          reference/plugins.html#PIL.SgiImagePlugin.SGI16Decoder
+	PIL.SgiImagePlugin.SgiImageFile          reference/plugins.html#PIL.SgiImagePlugin.SgiImageFile
+	PIL.SpiderImagePlugin.SpiderImageFile    reference/plugins.html#PIL.SpiderImagePlugin.SpiderImageFile
+	PIL.SunImagePlugin.SunImageFile          reference/plugins.html#PIL.SunImagePlugin.SunImageFile
+	PIL.TarIO.TarIO                          PIL.html#PIL.TarIO.TarIO
+	PIL.TgaImagePlugin.TgaImageFile          reference/plugins.html#PIL.TgaImagePlugin.TgaImageFile
+	PIL.TiffImagePlugin.AppendingTiffWriter  reference/plugins.html#PIL.TiffImagePlugin.AppendingTiffWriter
+	PIL.TiffImagePlugin.IFDRational          reference/plugins.html#PIL.TiffImagePlugin.IFDRational
+	PIL.TiffImagePlugin.ImageFileDirectory_v1 reference/plugins.html#PIL.TiffImagePlugin.ImageFileDirectory_v1
+	PIL.TiffImagePlugin.ImageFileDirectory_v2 reference/plugins.html#PIL.TiffImagePlugin.ImageFileDirectory_v2
+	PIL.TiffImagePlugin.TiffImageFile        reference/plugins.html#PIL.TiffImagePlugin.TiffImageFile
+	PIL.TiffTags.TagInfo                     reference/TiffTags.html#PIL.TiffTags.TagInfo
+	PIL.WebPImagePlugin.WebPImageFile        reference/plugins.html#PIL.WebPImagePlugin.WebPImageFile
+	PIL.WmfImagePlugin.WmfStubImageFile      reference/plugins.html#PIL.WmfImagePlugin.WmfStubImageFile
+	PIL.XVThumbImagePlugin.XVThumbImageFile  reference/plugins.html#PIL.XVThumbImagePlugin.XVThumbImageFile
+	PIL.XbmImagePlugin.XbmImageFile          reference/plugins.html#PIL.XbmImagePlugin.XbmImageFile
+	PIL.XpmImagePlugin.XpmImageFile          reference/plugins.html#PIL.XpmImagePlugin.XpmImageFile
+	PIL._util.deferred_error                 reference/internal_modules.html#PIL._util.deferred_error
+	PixelAccess                              reference/PixelAccess.html#PixelAccess
+py:data
+	PIL.ExifTags.GPSTAGS                     reference/ExifTags.html#PIL.ExifTags.GPSTAGS
+	PIL.ExifTags.TAGS                        reference/ExifTags.html#PIL.ExifTags.TAGS
+	PIL.GimpGradientFile.EPSILON             PIL.html#PIL.GimpGradientFile.EPSILON
+	PIL.GimpGradientFile.SEGMENTS            PIL.html#PIL.GimpGradientFile.SEGMENTS
+	PIL.Image.ADAPTIVE                       reference/Image.html#PIL.Image.ADAPTIVE
+	PIL.Image.AFFINE                         reference/Image.html#PIL.Image.AFFINE
+	PIL.Image.ANTIALIAS                      reference/Image.html#PIL.Image.ANTIALIAS
+	PIL.Image.BICUBIC                        handbook/concepts.html#PIL.Image.BICUBIC
+	PIL.Image.BILINEAR                       handbook/concepts.html#PIL.Image.BILINEAR
+	PIL.Image.BOX                            handbook/concepts.html#PIL.Image.BOX
+	PIL.Image.CUBIC                          reference/Image.html#PIL.Image.CUBIC
+	PIL.Image.EXTENT                         reference/Image.html#PIL.Image.EXTENT
+	PIL.Image.FASTOCTREE                     reference/Image.html#PIL.Image.FASTOCTREE
+	PIL.Image.FLIP_LEFT_RIGHT                reference/Image.html#PIL.Image.FLIP_LEFT_RIGHT
+	PIL.Image.FLIP_TOP_BOTTOM                reference/Image.html#PIL.Image.FLIP_TOP_BOTTOM
+	PIL.Image.FLOYDSTEINBERG                 reference/Image.html#PIL.Image.FLOYDSTEINBERG
+	PIL.Image.HAMMING                        handbook/concepts.html#PIL.Image.HAMMING
+	PIL.Image.LANCZOS                        handbook/concepts.html#PIL.Image.LANCZOS
+	PIL.Image.LIBIMAGEQUANT                  reference/Image.html#PIL.Image.LIBIMAGEQUANT
+	PIL.Image.LINEAR                         reference/Image.html#PIL.Image.LINEAR
+	PIL.Image.MAXCOVERAGE                    reference/Image.html#PIL.Image.MAXCOVERAGE
+	PIL.Image.MAX_IMAGE_PIXELS               reference/Image.html#PIL.Image.MAX_IMAGE_PIXELS
+	PIL.Image.MEDIANCUT                      reference/Image.html#PIL.Image.MEDIANCUT
+	PIL.Image.MESH                           reference/Image.html#PIL.Image.MESH
+	PIL.Image.NEAREST                        handbook/concepts.html#PIL.Image.NEAREST
+	PIL.Image.NONE                           reference/Image.html#PIL.Image.NONE
+	PIL.Image.PERSPECTIVE                    reference/Image.html#PIL.Image.PERSPECTIVE
+	PIL.Image.QUAD                           reference/Image.html#PIL.Image.QUAD
+	PIL.Image.ROTATE_180                     reference/Image.html#PIL.Image.ROTATE_180
+	PIL.Image.ROTATE_270                     reference/Image.html#PIL.Image.ROTATE_270
+	PIL.Image.ROTATE_90                      reference/Image.html#PIL.Image.ROTATE_90
+	PIL.Image.TRANSPOSE                      reference/Image.html#PIL.Image.TRANSPOSE
+	PIL.Image.TRANSVERSE                     reference/Image.html#PIL.Image.TRANSVERSE
+	PIL.Image.WEB                            reference/Image.html#PIL.Image.WEB
+	PIL.ImageFile.ERRORS                     reference/ImageFile.html#PIL.ImageFile.ERRORS
+	PIL.ImageFile.LOAD_TRUNCATED_IMAGES      reference/ImageFile.html#PIL.ImageFile.LOAD_TRUNCATED_IMAGES
+	PIL.ImageFont.PIL.ImageFont.LAYOUT_BASIC reference/ImageFont.html#PIL.ImageFont.PIL.ImageFont.LAYOUT_BASIC
+	PIL.ImageFont.PIL.ImageFont.LAYOUT_RAQM  reference/ImageFont.html#PIL.ImageFont.PIL.ImageFont.LAYOUT_RAQM
+	PIL.JpegPresets.presets                  reference/JpegPresets.html#PIL.JpegPresets.presets
+	PIL.PngImagePlugin.APNG_BLEND_OP_OVER    reference/plugins.html#PIL.PngImagePlugin.APNG_BLEND_OP_OVER
+	PIL.PngImagePlugin.APNG_BLEND_OP_SOURCE  reference/plugins.html#PIL.PngImagePlugin.APNG_BLEND_OP_SOURCE
+	PIL.PngImagePlugin.APNG_DISPOSE_OP_BACKGROUND reference/plugins.html#PIL.PngImagePlugin.APNG_DISPOSE_OP_BACKGROUND
+	PIL.PngImagePlugin.APNG_DISPOSE_OP_NONE  reference/plugins.html#PIL.PngImagePlugin.APNG_DISPOSE_OP_NONE
+	PIL.PngImagePlugin.APNG_DISPOSE_OP_PREVIOUS reference/plugins.html#PIL.PngImagePlugin.APNG_DISPOSE_OP_PREVIOUS
+	PIL.PngImagePlugin.MAX_TEXT_CHUNK        reference/plugins.html#PIL.PngImagePlugin.MAX_TEXT_CHUNK
+	PIL.PngImagePlugin.MAX_TEXT_MEMORY       reference/plugins.html#PIL.PngImagePlugin.MAX_TEXT_MEMORY
+	PIL.TiffTags.PIL.TiffTags.LIBTIFF_CORE   reference/TiffTags.html#PIL.TiffTags.PIL.TiffTags.LIBTIFF_CORE
+	PIL.TiffTags.PIL.TiffTags.TAGS           reference/TiffTags.html#PIL.TiffTags.PIL.TiffTags.TAGS
+	PIL.TiffTags.PIL.TiffTags.TAGS_V2        reference/TiffTags.html#PIL.TiffTags.PIL.TiffTags.TAGS_V2
+	PIL.TiffTags.PIL.TiffTags.TYPES          reference/TiffTags.html#PIL.TiffTags.PIL.TiffTags.TYPES
+	PIL._version.__version__                 reference/internal_modules.html#PIL._version.__version__
+py:exception
+	PIL.ImageCms.PyCMSError                  reference/ImageCms.html#PIL.ImageCms.PyCMSError
+	PIL.UnidentifiedImageError               PIL.html#PIL.UnidentifiedImageError
+py:function
+	PIL.BdfFontFile.bdf_char                 PIL.html#PIL.BdfFontFile.bdf_char
+	PIL.BufrStubImagePlugin.register_handler reference/plugins.html#PIL.BufrStubImagePlugin.register_handler
+	PIL.EpsImagePlugin.Ghostscript           reference/plugins.html#PIL.EpsImagePlugin.Ghostscript
+	PIL.EpsImagePlugin.has_ghostscript       reference/plugins.html#PIL.EpsImagePlugin.has_ghostscript
+	PIL.FitsStubImagePlugin.register_handler reference/plugins.html#PIL.FitsStubImagePlugin.register_handler
+	PIL.FontFile.puti16                      PIL.html#PIL.FontFile.puti16
+	PIL.GdImageFile.open                     PIL.html#PIL.GdImageFile.open
+	PIL.GifImagePlugin.get_interlace         reference/plugins.html#PIL.GifImagePlugin.get_interlace
+	PIL.GifImagePlugin.getdata               reference/plugins.html#PIL.GifImagePlugin.getdata
+	PIL.GifImagePlugin.getheader             reference/plugins.html#PIL.GifImagePlugin.getheader
+	PIL.GimpGradientFile.curved              PIL.html#PIL.GimpGradientFile.curved
+	PIL.GimpGradientFile.linear              PIL.html#PIL.GimpGradientFile.linear
+	PIL.GimpGradientFile.sine                PIL.html#PIL.GimpGradientFile.sine
+	PIL.GimpGradientFile.sphere_decreasing   PIL.html#PIL.GimpGradientFile.sphere_decreasing
+	PIL.GimpGradientFile.sphere_increasing   PIL.html#PIL.GimpGradientFile.sphere_increasing
+	PIL.GribStubImagePlugin.register_handler reference/plugins.html#PIL.GribStubImagePlugin.register_handler
+	PIL.Hdf5StubImagePlugin.register_handler reference/plugins.html#PIL.Hdf5StubImagePlugin.register_handler
+	PIL.IcnsImagePlugin.nextheader           reference/plugins.html#PIL.IcnsImagePlugin.nextheader
+	PIL.IcnsImagePlugin.read_32              reference/plugins.html#PIL.IcnsImagePlugin.read_32
+	PIL.IcnsImagePlugin.read_32t             reference/plugins.html#PIL.IcnsImagePlugin.read_32t
+	PIL.IcnsImagePlugin.read_mk              reference/plugins.html#PIL.IcnsImagePlugin.read_mk
+	PIL.IcnsImagePlugin.read_png_or_jpeg2000 reference/plugins.html#PIL.IcnsImagePlugin.read_png_or_jpeg2000
+	PIL.ImImagePlugin.number                 reference/plugins.html#PIL.ImImagePlugin.number
+	PIL.Image.alpha_composite                reference/Image.html#PIL.Image.alpha_composite
+	PIL.Image.blend                          reference/Image.html#PIL.Image.blend
+	PIL.Image.composite                      reference/Image.html#PIL.Image.composite
+	PIL.Image.effect_mandelbrot              reference/Image.html#PIL.Image.effect_mandelbrot
+	PIL.Image.effect_noise                   reference/Image.html#PIL.Image.effect_noise
+	PIL.Image.eval                           reference/Image.html#PIL.Image.eval
+	PIL.Image.fromarray                      reference/Image.html#PIL.Image.fromarray
+	PIL.Image.frombuffer                     reference/Image.html#PIL.Image.frombuffer
+	PIL.Image.frombytes                      reference/Image.html#PIL.Image.frombytes
+	PIL.Image.linear_gradient                reference/Image.html#PIL.Image.linear_gradient
+	PIL.Image.merge                          reference/Image.html#PIL.Image.merge
+	PIL.Image.new                            reference/Image.html#PIL.Image.new
+	PIL.Image.open                           reference/Image.html#PIL.Image.open
+	PIL.Image.radial_gradient                reference/Image.html#PIL.Image.radial_gradient
+	PIL.Image.register_decoder               reference/Image.html#PIL.Image.register_decoder
+	PIL.Image.register_encoder               reference/Image.html#PIL.Image.register_encoder
+	PIL.Image.register_extension             reference/Image.html#PIL.Image.register_extension
+	PIL.Image.register_extensions            reference/Image.html#PIL.Image.register_extensions
+	PIL.Image.register_mime                  reference/Image.html#PIL.Image.register_mime
+	PIL.Image.register_open                  reference/Image.html#PIL.Image.register_open
+	PIL.Image.register_save                  reference/Image.html#PIL.Image.register_save
+	PIL.Image.register_save_all              reference/Image.html#PIL.Image.register_save_all
+	PIL.Image.registered_extensions          reference/Image.html#PIL.Image.registered_extensions
+	PIL.ImageChops.add                       reference/ImageChops.html#PIL.ImageChops.add
+	PIL.ImageChops.add_modulo                reference/ImageChops.html#PIL.ImageChops.add_modulo
+	PIL.ImageChops.blend                     reference/ImageChops.html#PIL.ImageChops.blend
+	PIL.ImageChops.composite                 reference/ImageChops.html#PIL.ImageChops.composite
+	PIL.ImageChops.constant                  reference/ImageChops.html#PIL.ImageChops.constant
+	PIL.ImageChops.darker                    reference/ImageChops.html#PIL.ImageChops.darker
+	PIL.ImageChops.difference                reference/ImageChops.html#PIL.ImageChops.difference
+	PIL.ImageChops.duplicate                 reference/ImageChops.html#PIL.ImageChops.duplicate
+	PIL.ImageChops.hard_light                reference/ImageChops.html#PIL.ImageChops.hard_light
+	PIL.ImageChops.invert                    reference/ImageChops.html#PIL.ImageChops.invert
+	PIL.ImageChops.lighter                   reference/ImageChops.html#PIL.ImageChops.lighter
+	PIL.ImageChops.logical_and               reference/ImageChops.html#PIL.ImageChops.logical_and
+	PIL.ImageChops.logical_or                reference/ImageChops.html#PIL.ImageChops.logical_or
+	PIL.ImageChops.logical_xor               reference/ImageChops.html#PIL.ImageChops.logical_xor
+	PIL.ImageChops.multiply                  reference/ImageChops.html#PIL.ImageChops.multiply
+	PIL.ImageChops.offset                    reference/ImageChops.html#PIL.ImageChops.offset
+	PIL.ImageChops.overlay                   reference/ImageChops.html#PIL.ImageChops.overlay
+	PIL.ImageChops.screen                    reference/ImageChops.html#PIL.ImageChops.screen
+	PIL.ImageChops.soft_light                reference/ImageChops.html#PIL.ImageChops.soft_light
+	PIL.ImageChops.subtract                  reference/ImageChops.html#PIL.ImageChops.subtract
+	PIL.ImageChops.subtract_modulo           reference/ImageChops.html#PIL.ImageChops.subtract_modulo
+	PIL.ImageCms.applyTransform              reference/ImageCms.html#PIL.ImageCms.applyTransform
+	PIL.ImageCms.buildProofTransform         reference/ImageCms.html#PIL.ImageCms.buildProofTransform
+	PIL.ImageCms.buildProofTransformFromOpenProfiles reference/ImageCms.html#PIL.ImageCms.buildProofTransformFromOpenProfiles
+	PIL.ImageCms.buildTransform              reference/ImageCms.html#PIL.ImageCms.buildTransform
+	PIL.ImageCms.buildTransformFromOpenProfiles reference/ImageCms.html#PIL.ImageCms.buildTransformFromOpenProfiles
+	PIL.ImageCms.createProfile               reference/ImageCms.html#PIL.ImageCms.createProfile
+	PIL.ImageCms.getDefaultIntent            reference/ImageCms.html#PIL.ImageCms.getDefaultIntent
+	PIL.ImageCms.getOpenProfile              reference/ImageCms.html#PIL.ImageCms.getOpenProfile
+	PIL.ImageCms.getProfileCopyright         reference/ImageCms.html#PIL.ImageCms.getProfileCopyright
+	PIL.ImageCms.getProfileDescription       reference/ImageCms.html#PIL.ImageCms.getProfileDescription
+	PIL.ImageCms.getProfileInfo              reference/ImageCms.html#PIL.ImageCms.getProfileInfo
+	PIL.ImageCms.getProfileManufacturer      reference/ImageCms.html#PIL.ImageCms.getProfileManufacturer
+	PIL.ImageCms.getProfileModel             reference/ImageCms.html#PIL.ImageCms.getProfileModel
+	PIL.ImageCms.getProfileName              reference/ImageCms.html#PIL.ImageCms.getProfileName
+	PIL.ImageCms.get_display_profile         reference/ImageCms.html#PIL.ImageCms.get_display_profile
+	PIL.ImageCms.isIntentSupported           reference/ImageCms.html#PIL.ImageCms.isIntentSupported
+	PIL.ImageCms.profileToProfile            reference/ImageCms.html#PIL.ImageCms.profileToProfile
+	PIL.ImageCms.versions                    reference/ImageCms.html#PIL.ImageCms.versions
+	PIL.ImageFont.load                       reference/ImageFont.html#PIL.ImageFont.load
+	PIL.ImageFont.load_default               reference/ImageFont.html#PIL.ImageFont.load_default
+	PIL.ImageFont.load_path                  reference/ImageFont.html#PIL.ImageFont.load_path
+	PIL.ImageFont.truetype                   reference/ImageFont.html#PIL.ImageFont.truetype
+	PIL.ImageGrab.grab                       reference/ImageGrab.html#PIL.ImageGrab.grab
+	PIL.ImageGrab.grabclipboard              reference/ImageGrab.html#PIL.ImageGrab.grabclipboard
+	PIL.ImageMath.eval                       reference/ImageMath.html#PIL.ImageMath.eval
+	PIL.ImageOps.autocontrast                reference/ImageOps.html#PIL.ImageOps.autocontrast
+	PIL.ImageOps.colorize                    reference/ImageOps.html#PIL.ImageOps.colorize
+	PIL.ImageOps.crop                        reference/ImageOps.html#PIL.ImageOps.crop
+	PIL.ImageOps.deform                      reference/ImageOps.html#PIL.ImageOps.deform
+	PIL.ImageOps.equalize                    reference/ImageOps.html#PIL.ImageOps.equalize
+	PIL.ImageOps.exif_transpose              reference/ImageOps.html#PIL.ImageOps.exif_transpose
+	PIL.ImageOps.expand                      reference/ImageOps.html#PIL.ImageOps.expand
+	PIL.ImageOps.fit                         reference/ImageOps.html#PIL.ImageOps.fit
+	PIL.ImageOps.flip                        reference/ImageOps.html#PIL.ImageOps.flip
+	PIL.ImageOps.grayscale                   reference/ImageOps.html#PIL.ImageOps.grayscale
+	PIL.ImageOps.invert                      reference/ImageOps.html#PIL.ImageOps.invert
+	PIL.ImageOps.mirror                      reference/ImageOps.html#PIL.ImageOps.mirror
+	PIL.ImageOps.pad                         reference/ImageOps.html#PIL.ImageOps.pad
+	PIL.ImageOps.posterize                   reference/ImageOps.html#PIL.ImageOps.posterize
+	PIL.ImageOps.scale                       reference/ImageOps.html#PIL.ImageOps.scale
+	PIL.ImageOps.solarize                    reference/ImageOps.html#PIL.ImageOps.solarize
+	PIL.ImageShow.register                   reference/ImageShow.html#PIL.ImageShow.register
+	PIL.ImageShow.show                       reference/ImageShow.html#PIL.ImageShow.show
+	PIL.IptcImagePlugin.dump                 reference/plugins.html#PIL.IptcImagePlugin.dump
+	PIL.IptcImagePlugin.getiptcinfo          reference/plugins.html#PIL.IptcImagePlugin.getiptcinfo
+	PIL.IptcImagePlugin.i                    reference/plugins.html#PIL.IptcImagePlugin.i
+	PIL.JpegImagePlugin.APP                  reference/plugins.html#PIL.JpegImagePlugin.APP
+	PIL.JpegImagePlugin.COM                  reference/plugins.html#PIL.JpegImagePlugin.COM
+	PIL.JpegImagePlugin.DQT                  reference/plugins.html#PIL.JpegImagePlugin.DQT
+	PIL.JpegImagePlugin.SOF                  reference/plugins.html#PIL.JpegImagePlugin.SOF
+	PIL.JpegImagePlugin.Skip                 reference/plugins.html#PIL.JpegImagePlugin.Skip
+	PIL.JpegImagePlugin.convert_dict_qtables reference/plugins.html#PIL.JpegImagePlugin.convert_dict_qtables
+	PIL.JpegImagePlugin.get_sampling         reference/plugins.html#PIL.JpegImagePlugin.get_sampling
+	PIL.JpegImagePlugin.jpeg_factory         reference/plugins.html#PIL.JpegImagePlugin.jpeg_factory
+	PIL.PalmImagePlugin.build_prototype_image reference/plugins.html#PIL.PalmImagePlugin.build_prototype_image
+	PIL.PcfFontFile.sz                       PIL.html#PIL.PcfFontFile.sz
+	PIL.PngImagePlugin.getchunks             reference/plugins.html#PIL.PngImagePlugin.getchunks
+	PIL.PngImagePlugin.is_cid                reference/plugins.html#PIL.PngImagePlugin.is_cid
+	PIL.PngImagePlugin.putchunk              reference/plugins.html#PIL.PngImagePlugin.putchunk
+	PIL.SpiderImagePlugin.isInt              reference/plugins.html#PIL.SpiderImagePlugin.isInt
+	PIL.SpiderImagePlugin.isSpiderHeader     reference/plugins.html#PIL.SpiderImagePlugin.isSpiderHeader
+	PIL.SpiderImagePlugin.isSpiderImage      reference/plugins.html#PIL.SpiderImagePlugin.isSpiderImage
+	PIL.SpiderImagePlugin.loadImageSeries    reference/plugins.html#PIL.SpiderImagePlugin.loadImageSeries
+	PIL.SpiderImagePlugin.makeSpiderHeader   reference/plugins.html#PIL.SpiderImagePlugin.makeSpiderHeader
+	PIL.WalImageFile.open                    PIL.html#PIL.WalImageFile.open
+	PIL.WmfImagePlugin.register_handler      reference/plugins.html#PIL.WmfImagePlugin.register_handler
+	PIL._binary.i16be                        reference/internal_modules.html#PIL._binary.i16be
+	PIL._binary.i16le                        reference/internal_modules.html#PIL._binary.i16le
+	PIL._binary.i32be                        reference/internal_modules.html#PIL._binary.i32be
+	PIL._binary.i32le                        reference/internal_modules.html#PIL._binary.i32le
+	PIL._binary.i8                           reference/internal_modules.html#PIL._binary.i8
+	PIL._binary.o16be                        reference/internal_modules.html#PIL._binary.o16be
+	PIL._binary.o16le                        reference/internal_modules.html#PIL._binary.o16le
+	PIL._binary.o32be                        reference/internal_modules.html#PIL._binary.o32be
+	PIL._binary.o32le                        reference/internal_modules.html#PIL._binary.o32le
+	PIL._binary.o8                           reference/internal_modules.html#PIL._binary.o8
+	PIL._binary.si16le                       reference/internal_modules.html#PIL._binary.si16le
+	PIL._binary.si32le                       reference/internal_modules.html#PIL._binary.si32le
+	PIL._util.isDirectory                    reference/internal_modules.html#PIL._util.isDirectory
+	PIL._util.isPath                         reference/internal_modules.html#PIL._util.isPath
+	PIL.features.check                       reference/features.html#PIL.features.check
+	PIL.features.check_codec                 reference/features.html#PIL.features.check_codec
+	PIL.features.check_feature               reference/features.html#PIL.features.check_feature
+	PIL.features.check_module                reference/features.html#PIL.features.check_module
+	PIL.features.get_supported               reference/features.html#PIL.features.get_supported
+	PIL.features.get_supported_codecs        reference/features.html#PIL.features.get_supported_codecs
+	PIL.features.get_supported_features      reference/features.html#PIL.features.get_supported_features
+	PIL.features.get_supported_modules       reference/features.html#PIL.features.get_supported_modules
+	PIL.features.pilinfo                     reference/features.html#PIL.features.pilinfo
+	PIL.features.version                     reference/features.html#PIL.features.version
+	PIL.features.version_codec               reference/features.html#PIL.features.version_codec
+	PIL.features.version_feature             reference/features.html#PIL.features.version_feature
+	PIL.features.version_module              reference/features.html#PIL.features.version_module
+py:method
+	PIL.ContainerIO.ContainerIO.isatty       PIL.html#PIL.ContainerIO.ContainerIO.isatty
+	PIL.ContainerIO.ContainerIO.read         PIL.html#PIL.ContainerIO.ContainerIO.read
+	PIL.ContainerIO.ContainerIO.readline     PIL.html#PIL.ContainerIO.ContainerIO.readline
+	PIL.ContainerIO.ContainerIO.readlines    PIL.html#PIL.ContainerIO.ContainerIO.readlines
+	PIL.ContainerIO.ContainerIO.seek         PIL.html#PIL.ContainerIO.ContainerIO.seek
+	PIL.ContainerIO.ContainerIO.tell         PIL.html#PIL.ContainerIO.ContainerIO.tell
+	PIL.DcxImagePlugin.DcxImageFile.seek     reference/plugins.html#PIL.DcxImagePlugin.DcxImageFile.seek
+	PIL.DcxImagePlugin.DcxImageFile.tell     reference/plugins.html#PIL.DcxImagePlugin.DcxImageFile.tell
+	PIL.EpsImagePlugin.EpsImageFile.load     reference/plugins.html#PIL.EpsImagePlugin.EpsImageFile.load
+	PIL.EpsImagePlugin.EpsImageFile.load_seek reference/plugins.html#PIL.EpsImagePlugin.EpsImageFile.load_seek
+	PIL.EpsImagePlugin.PSFile.readline       reference/plugins.html#PIL.EpsImagePlugin.PSFile.readline
+	PIL.EpsImagePlugin.PSFile.seek           reference/plugins.html#PIL.EpsImagePlugin.PSFile.seek
+	PIL.FliImagePlugin.FliImageFile.seek     reference/plugins.html#PIL.FliImagePlugin.FliImageFile.seek
+	PIL.FliImagePlugin.FliImageFile.tell     reference/plugins.html#PIL.FliImagePlugin.FliImageFile.tell
+	PIL.FontFile.FontFile.compile            PIL.html#PIL.FontFile.FontFile.compile
+	PIL.FontFile.FontFile.save               PIL.html#PIL.FontFile.FontFile.save
+	PIL.FpxImagePlugin.FpxImageFile.load     reference/plugins.html#PIL.FpxImagePlugin.FpxImageFile.load
+	PIL.GbrImagePlugin.GbrImageFile.load     reference/plugins.html#PIL.GbrImagePlugin.GbrImageFile.load
+	PIL.GifImagePlugin.GifImageFile.data     reference/plugins.html#PIL.GifImagePlugin.GifImageFile.data
+	PIL.GifImagePlugin.GifImageFile.is_animated reference/plugins.html#PIL.GifImagePlugin.GifImageFile.is_animated
+	PIL.GifImagePlugin.GifImageFile.n_frames reference/plugins.html#PIL.GifImagePlugin.GifImageFile.n_frames
+	PIL.GifImagePlugin.GifImageFile.seek     reference/plugins.html#PIL.GifImagePlugin.GifImageFile.seek
+	PIL.GifImagePlugin.GifImageFile.tell     reference/plugins.html#PIL.GifImagePlugin.GifImageFile.tell
+	PIL.GimpGradientFile.GradientFile.getpalette PIL.html#PIL.GimpGradientFile.GradientFile.getpalette
+	PIL.GimpPaletteFile.GimpPaletteFile.getpalette PIL.html#PIL.GimpPaletteFile.GimpPaletteFile.getpalette
+	PIL.IcnsImagePlugin.IcnsFile.bestsize    reference/plugins.html#PIL.IcnsImagePlugin.IcnsFile.bestsize
+	PIL.IcnsImagePlugin.IcnsFile.dataforsize reference/plugins.html#PIL.IcnsImagePlugin.IcnsFile.dataforsize
+	PIL.IcnsImagePlugin.IcnsFile.getimage    reference/plugins.html#PIL.IcnsImagePlugin.IcnsFile.getimage
+	PIL.IcnsImagePlugin.IcnsFile.itersizes   reference/plugins.html#PIL.IcnsImagePlugin.IcnsFile.itersizes
+	PIL.IcnsImagePlugin.IcnsImageFile.load   reference/plugins.html#PIL.IcnsImagePlugin.IcnsImageFile.load
+	PIL.IcnsImagePlugin.IcnsImageFile.size   reference/plugins.html#PIL.IcnsImagePlugin.IcnsImageFile.size
+	PIL.IcoImagePlugin.IcoFile.frame         reference/plugins.html#PIL.IcoImagePlugin.IcoFile.frame
+	PIL.IcoImagePlugin.IcoFile.getentryindex reference/plugins.html#PIL.IcoImagePlugin.IcoFile.getentryindex
+	PIL.IcoImagePlugin.IcoFile.getimage      reference/plugins.html#PIL.IcoImagePlugin.IcoFile.getimage
+	PIL.IcoImagePlugin.IcoFile.sizes         reference/plugins.html#PIL.IcoImagePlugin.IcoFile.sizes
+	PIL.IcoImagePlugin.IcoImageFile.load     reference/plugins.html#PIL.IcoImagePlugin.IcoImageFile.load
+	PIL.IcoImagePlugin.IcoImageFile.load_seek reference/plugins.html#PIL.IcoImagePlugin.IcoImageFile.load_seek
+	PIL.IcoImagePlugin.IcoImageFile.size     reference/plugins.html#PIL.IcoImagePlugin.IcoImageFile.size
+	PIL.ImImagePlugin.ImImageFile.is_animated reference/plugins.html#PIL.ImImagePlugin.ImImageFile.is_animated
+	PIL.ImImagePlugin.ImImageFile.n_frames   reference/plugins.html#PIL.ImImagePlugin.ImImageFile.n_frames
+	PIL.ImImagePlugin.ImImageFile.seek       reference/plugins.html#PIL.ImImagePlugin.ImImageFile.seek
+	PIL.ImImagePlugin.ImImageFile.tell       reference/plugins.html#PIL.ImImagePlugin.ImImageFile.tell
+	PIL.Image.Exif.get_ifd                   reference/Image.html#PIL.Image.Exif.get_ifd
+	PIL.Image.Exif.load                      reference/Image.html#PIL.Image.Exif.load
+	PIL.Image.Exif.tobytes                   reference/Image.html#PIL.Image.Exif.tobytes
+	PIL.Image.Image.alpha_composite          reference/Image.html#PIL.Image.Image.alpha_composite
+	PIL.Image.Image.close                    reference/Image.html#PIL.Image.Image.close
+	PIL.Image.Image.convert                  reference/Image.html#PIL.Image.Image.convert
+	PIL.Image.Image.copy                     reference/Image.html#PIL.Image.Image.copy
+	PIL.Image.Image.crop                     reference/Image.html#PIL.Image.Image.crop
+	PIL.Image.Image.draft                    reference/Image.html#PIL.Image.Image.draft
+	PIL.Image.Image.effect_spread            reference/Image.html#PIL.Image.Image.effect_spread
+	PIL.Image.Image.entropy                  reference/Image.html#PIL.Image.Image.entropy
+	PIL.Image.Image.filter                   reference/Image.html#PIL.Image.Image.filter
+	PIL.Image.Image.frombytes                reference/Image.html#PIL.Image.Image.frombytes
+	PIL.Image.Image.getbands                 reference/Image.html#PIL.Image.Image.getbands
+	PIL.Image.Image.getbbox                  reference/Image.html#PIL.Image.Image.getbbox
+	PIL.Image.Image.getchannel               reference/Image.html#PIL.Image.Image.getchannel
+	PIL.Image.Image.getcolors                reference/Image.html#PIL.Image.Image.getcolors
+	PIL.Image.Image.getdata                  reference/Image.html#PIL.Image.Image.getdata
+	PIL.Image.Image.getexif                  reference/Image.html#PIL.Image.Image.getexif
+	PIL.Image.Image.getextrema               reference/Image.html#PIL.Image.Image.getextrema
+	PIL.Image.Image.getpalette               reference/Image.html#PIL.Image.Image.getpalette
+	PIL.Image.Image.getpixel                 reference/Image.html#PIL.Image.Image.getpixel
+	PIL.Image.Image.getprojection            reference/Image.html#PIL.Image.Image.getprojection
+	PIL.Image.Image.histogram                reference/Image.html#PIL.Image.Image.histogram
+	PIL.Image.Image.load                     reference/Image.html#PIL.Image.Image.load
+	PIL.Image.Image.paste                    reference/Image.html#PIL.Image.Image.paste
+	PIL.Image.Image.point                    reference/Image.html#PIL.Image.Image.point
+	PIL.Image.Image.putalpha                 reference/Image.html#PIL.Image.Image.putalpha
+	PIL.Image.Image.putdata                  reference/Image.html#PIL.Image.Image.putdata
+	PIL.Image.Image.putpalette               reference/Image.html#PIL.Image.Image.putpalette
+	PIL.Image.Image.putpixel                 reference/Image.html#PIL.Image.Image.putpixel
+	PIL.Image.Image.quantize                 reference/Image.html#PIL.Image.Image.quantize
+	PIL.Image.Image.reduce                   reference/Image.html#PIL.Image.Image.reduce
+	PIL.Image.Image.remap_palette            reference/Image.html#PIL.Image.Image.remap_palette
+	PIL.Image.Image.resize                   reference/Image.html#PIL.Image.Image.resize
+	PIL.Image.Image.rotate                   reference/Image.html#PIL.Image.Image.rotate
+	PIL.Image.Image.save                     reference/Image.html#PIL.Image.Image.save
+	PIL.Image.Image.seek                     reference/Image.html#PIL.Image.Image.seek
+	PIL.Image.Image.show                     reference/Image.html#PIL.Image.Image.show
+	PIL.Image.Image.split                    reference/Image.html#PIL.Image.Image.split
+	PIL.Image.Image.tell                     reference/Image.html#PIL.Image.Image.tell
+	PIL.Image.Image.thumbnail                reference/Image.html#PIL.Image.Image.thumbnail
+	PIL.Image.Image.tobitmap                 reference/Image.html#PIL.Image.Image.tobitmap
+	PIL.Image.Image.tobytes                  reference/Image.html#PIL.Image.Image.tobytes
+	PIL.Image.Image.transform                reference/Image.html#PIL.Image.Image.transform
+	PIL.Image.Image.transpose                reference/Image.html#PIL.Image.Image.transpose
+	PIL.Image.Image.verify                   reference/Image.html#PIL.Image.Image.verify
+	PIL.ImageCms.CmsProfile.is_intent_supported reference/ImageCms.html#PIL.ImageCms.CmsProfile.is_intent_supported
+	PIL.ImageColor.getcolor                  reference/ImageColor.html#PIL.ImageColor.getcolor
+	PIL.ImageColor.getrgb                    reference/ImageColor.html#PIL.ImageColor.getrgb
+	PIL.ImageDraw.Draw                       reference/ImageDraw.html#PIL.ImageDraw.Draw
+	PIL.ImageDraw.ImageDraw.arc              reference/ImageDraw.html#PIL.ImageDraw.ImageDraw.arc
+	PIL.ImageDraw.ImageDraw.bitmap           reference/ImageDraw.html#PIL.ImageDraw.ImageDraw.bitmap
+	PIL.ImageDraw.ImageDraw.chord            reference/ImageDraw.html#PIL.ImageDraw.ImageDraw.chord
+	PIL.ImageDraw.ImageDraw.ellipse          reference/ImageDraw.html#PIL.ImageDraw.ImageDraw.ellipse
+	PIL.ImageDraw.ImageDraw.getfont          reference/ImageDraw.html#PIL.ImageDraw.ImageDraw.getfont
+	PIL.ImageDraw.ImageDraw.line             reference/ImageDraw.html#PIL.ImageDraw.ImageDraw.line
+	PIL.ImageDraw.ImageDraw.multiline_text   reference/ImageDraw.html#PIL.ImageDraw.ImageDraw.multiline_text
+	PIL.ImageDraw.ImageDraw.multiline_textbbox reference/ImageDraw.html#PIL.ImageDraw.ImageDraw.multiline_textbbox
+	PIL.ImageDraw.ImageDraw.multiline_textsize reference/ImageDraw.html#PIL.ImageDraw.ImageDraw.multiline_textsize
+	PIL.ImageDraw.ImageDraw.pieslice         reference/ImageDraw.html#PIL.ImageDraw.ImageDraw.pieslice
+	PIL.ImageDraw.ImageDraw.point            reference/ImageDraw.html#PIL.ImageDraw.ImageDraw.point
+	PIL.ImageDraw.ImageDraw.polygon          reference/ImageDraw.html#PIL.ImageDraw.ImageDraw.polygon
+	PIL.ImageDraw.ImageDraw.rectangle        reference/ImageDraw.html#PIL.ImageDraw.ImageDraw.rectangle
+	PIL.ImageDraw.ImageDraw.regular_polygon  reference/ImageDraw.html#PIL.ImageDraw.ImageDraw.regular_polygon
+	PIL.ImageDraw.ImageDraw.rounded_rectangle reference/ImageDraw.html#PIL.ImageDraw.ImageDraw.rounded_rectangle
+	PIL.ImageDraw.ImageDraw.shape            reference/ImageDraw.html#PIL.ImageDraw.ImageDraw.shape
+	PIL.ImageDraw.ImageDraw.text             reference/ImageDraw.html#PIL.ImageDraw.ImageDraw.text
+	PIL.ImageDraw.ImageDraw.textbbox         reference/ImageDraw.html#PIL.ImageDraw.ImageDraw.textbbox
+	PIL.ImageDraw.ImageDraw.textlength       reference/ImageDraw.html#PIL.ImageDraw.ImageDraw.textlength
+	PIL.ImageDraw.ImageDraw.textsize         reference/ImageDraw.html#PIL.ImageDraw.ImageDraw.textsize
+	PIL.ImageDraw.floodfill                  reference/ImageDraw.html#PIL.ImageDraw.floodfill
+	PIL.ImageDraw.getdraw                    reference/ImageDraw.html#PIL.ImageDraw.getdraw
+	PIL.ImageDraw2.Draw.arc                  PIL.html#PIL.ImageDraw2.Draw.arc
+	PIL.ImageDraw2.Draw.chord                PIL.html#PIL.ImageDraw2.Draw.chord
+	PIL.ImageDraw2.Draw.ellipse              PIL.html#PIL.ImageDraw2.Draw.ellipse
+	PIL.ImageDraw2.Draw.flush                PIL.html#PIL.ImageDraw2.Draw.flush
+	PIL.ImageDraw2.Draw.line                 PIL.html#PIL.ImageDraw2.Draw.line
+	PIL.ImageDraw2.Draw.pieslice             PIL.html#PIL.ImageDraw2.Draw.pieslice
+	PIL.ImageDraw2.Draw.polygon              PIL.html#PIL.ImageDraw2.Draw.polygon
+	PIL.ImageDraw2.Draw.rectangle            PIL.html#PIL.ImageDraw2.Draw.rectangle
+	PIL.ImageDraw2.Draw.render               PIL.html#PIL.ImageDraw2.Draw.render
+	PIL.ImageDraw2.Draw.settransform         PIL.html#PIL.ImageDraw2.Draw.settransform
+	PIL.ImageDraw2.Draw.text                 PIL.html#PIL.ImageDraw2.Draw.text
+	PIL.ImageDraw2.Draw.textsize             PIL.html#PIL.ImageDraw2.Draw.textsize
+	PIL.ImageEnhance._Enhance.enhance        reference/ImageEnhance.html#PIL.ImageEnhance._Enhance.enhance
+	PIL.ImageFile.ImageFile.get_format_mimetype reference/ImageFile.html#PIL.ImageFile.ImageFile.get_format_mimetype
+	PIL.ImageFile.ImageFile.load             reference/ImageFile.html#PIL.ImageFile.ImageFile.load
+	PIL.ImageFile.ImageFile.load_end         reference/ImageFile.html#PIL.ImageFile.ImageFile.load_end
+	PIL.ImageFile.ImageFile.load_prepare     reference/ImageFile.html#PIL.ImageFile.ImageFile.load_prepare
+	PIL.ImageFile.ImageFile.verify           reference/ImageFile.html#PIL.ImageFile.ImageFile.verify
+	PIL.ImageFile.Parser.close               reference/ImageFile.html#PIL.ImageFile.Parser.close
+	PIL.ImageFile.Parser.feed                reference/ImageFile.html#PIL.ImageFile.Parser.feed
+	PIL.ImageFile.Parser.reset               reference/ImageFile.html#PIL.ImageFile.Parser.reset
+	PIL.ImageFile.PyDecoder.cleanup          reference/ImageFile.html#PIL.ImageFile.PyDecoder.cleanup
+	PIL.ImageFile.PyDecoder.decode           reference/ImageFile.html#PIL.ImageFile.PyDecoder.decode
+	PIL.ImageFile.PyDecoder.init             reference/ImageFile.html#PIL.ImageFile.PyDecoder.init
+	PIL.ImageFile.PyDecoder.set_as_raw       reference/ImageFile.html#PIL.ImageFile.PyDecoder.set_as_raw
+	PIL.ImageFile.PyDecoder.setfd            reference/ImageFile.html#PIL.ImageFile.PyDecoder.setfd
+	PIL.ImageFile.PyDecoder.setimage         reference/ImageFile.html#PIL.ImageFile.PyDecoder.setimage
+	PIL.ImageFile.StubImageFile.load         reference/ImageFile.html#PIL.ImageFile.StubImageFile.load
+	PIL.ImageFilter.Color3DLUT.generate      reference/ImageFilter.html#PIL.ImageFilter.Color3DLUT.generate
+	PIL.ImageFilter.Color3DLUT.transform     reference/ImageFilter.html#PIL.ImageFilter.Color3DLUT.transform
+	PIL.ImageFilter.Filter.filter            reference/ImageFilter.html#PIL.ImageFilter.Filter.filter
+	PIL.ImageFilter.MultibandFilter.filter   reference/ImageFilter.html#PIL.ImageFilter.MultibandFilter.filter
+	PIL.ImageFont.FreeTypeFont.font_variant  reference/ImageFont.html#PIL.ImageFont.FreeTypeFont.font_variant
+	PIL.ImageFont.FreeTypeFont.get_variation_axes reference/ImageFont.html#PIL.ImageFont.FreeTypeFont.get_variation_axes
+	PIL.ImageFont.FreeTypeFont.get_variation_names reference/ImageFont.html#PIL.ImageFont.FreeTypeFont.get_variation_names
+	PIL.ImageFont.FreeTypeFont.getbbox       reference/ImageFont.html#PIL.ImageFont.FreeTypeFont.getbbox
+	PIL.ImageFont.FreeTypeFont.getlength     reference/ImageFont.html#PIL.ImageFont.FreeTypeFont.getlength
+	PIL.ImageFont.FreeTypeFont.getmask       reference/ImageFont.html#PIL.ImageFont.FreeTypeFont.getmask
+	PIL.ImageFont.FreeTypeFont.getmask2      reference/ImageFont.html#PIL.ImageFont.FreeTypeFont.getmask2
+	PIL.ImageFont.FreeTypeFont.getmetrics    reference/ImageFont.html#PIL.ImageFont.FreeTypeFont.getmetrics
+	PIL.ImageFont.FreeTypeFont.getname       reference/ImageFont.html#PIL.ImageFont.FreeTypeFont.getname
+	PIL.ImageFont.FreeTypeFont.getoffset     reference/ImageFont.html#PIL.ImageFont.FreeTypeFont.getoffset
+	PIL.ImageFont.FreeTypeFont.getsize       reference/ImageFont.html#PIL.ImageFont.FreeTypeFont.getsize
+	PIL.ImageFont.FreeTypeFont.getsize_multiline reference/ImageFont.html#PIL.ImageFont.FreeTypeFont.getsize_multiline
+	PIL.ImageFont.FreeTypeFont.set_variation_by_axes reference/ImageFont.html#PIL.ImageFont.FreeTypeFont.set_variation_by_axes
+	PIL.ImageFont.FreeTypeFont.set_variation_by_name reference/ImageFont.html#PIL.ImageFont.FreeTypeFont.set_variation_by_name
+	PIL.ImageFont.ImageFont.getmask          reference/ImageFont.html#PIL.ImageFont.ImageFont.getmask
+	PIL.ImageFont.ImageFont.getsize          reference/ImageFont.html#PIL.ImageFont.ImageFont.getsize
+	PIL.ImagePalette.ImagePalette.getcolor   reference/ImagePalette.html#PIL.ImagePalette.ImagePalette.getcolor
+	PIL.ImagePalette.ImagePalette.getdata    reference/ImagePalette.html#PIL.ImagePalette.ImagePalette.getdata
+	PIL.ImagePalette.ImagePalette.save       reference/ImagePalette.html#PIL.ImagePalette.ImagePalette.save
+	PIL.ImagePalette.ImagePalette.tobytes    reference/ImagePalette.html#PIL.ImagePalette.ImagePalette.tobytes
+	PIL.ImagePalette.ImagePalette.tostring   reference/ImagePalette.html#PIL.ImagePalette.ImagePalette.tostring
+	PIL.ImagePath.PIL.ImagePath.Path.compact reference/ImagePath.html#PIL.ImagePath.PIL.ImagePath.Path.compact
+	PIL.ImagePath.PIL.ImagePath.Path.getbbox reference/ImagePath.html#PIL.ImagePath.PIL.ImagePath.Path.getbbox
+	PIL.ImagePath.PIL.ImagePath.Path.map     reference/ImagePath.html#PIL.ImagePath.PIL.ImagePath.Path.map
+	PIL.ImagePath.PIL.ImagePath.Path.tolist  reference/ImagePath.html#PIL.ImagePath.PIL.ImagePath.Path.tolist
+	PIL.ImagePath.PIL.ImagePath.Path.transform reference/ImagePath.html#PIL.ImagePath.PIL.ImagePath.Path.transform
+	PIL.ImageShow.Viewer.get_command         reference/ImageShow.html#PIL.ImageShow.Viewer.get_command
+	PIL.ImageShow.Viewer.get_format          reference/ImageShow.html#PIL.ImageShow.Viewer.get_format
+	PIL.ImageShow.Viewer.save_image          reference/ImageShow.html#PIL.ImageShow.Viewer.save_image
+	PIL.ImageShow.Viewer.show                reference/ImageShow.html#PIL.ImageShow.Viewer.show
+	PIL.ImageShow.Viewer.show_file           reference/ImageShow.html#PIL.ImageShow.Viewer.show_file
+	PIL.ImageShow.Viewer.show_image          reference/ImageShow.html#PIL.ImageShow.Viewer.show_image
+	PIL.ImageTk.BitmapImage.height           reference/ImageTk.html#PIL.ImageTk.BitmapImage.height
+	PIL.ImageTk.BitmapImage.width            reference/ImageTk.html#PIL.ImageTk.BitmapImage.width
+	PIL.ImageTk.PhotoImage.height            reference/ImageTk.html#PIL.ImageTk.PhotoImage.height
+	PIL.ImageTk.PhotoImage.paste             reference/ImageTk.html#PIL.ImageTk.PhotoImage.paste
+	PIL.ImageTk.PhotoImage.width             reference/ImageTk.html#PIL.ImageTk.PhotoImage.width
+	PIL.ImageTransform.Transform.getdata     PIL.html#PIL.ImageTransform.Transform.getdata
+	PIL.ImageTransform.Transform.transform   PIL.html#PIL.ImageTransform.Transform.transform
+	PIL.ImageWin.Dib.draw                    reference/ImageWin.html#PIL.ImageWin.Dib.draw
+	PIL.ImageWin.Dib.expose                  reference/ImageWin.html#PIL.ImageWin.Dib.expose
+	PIL.ImageWin.Dib.frombytes               reference/ImageWin.html#PIL.ImageWin.Dib.frombytes
+	PIL.ImageWin.Dib.paste                   reference/ImageWin.html#PIL.ImageWin.Dib.paste
+	PIL.ImageWin.Dib.query_palette           reference/ImageWin.html#PIL.ImageWin.Dib.query_palette
+	PIL.ImageWin.Dib.tobytes                 reference/ImageWin.html#PIL.ImageWin.Dib.tobytes
+	PIL.IptcImagePlugin.IptcImageFile.field  reference/plugins.html#PIL.IptcImagePlugin.IptcImageFile.field
+	PIL.IptcImagePlugin.IptcImageFile.getint reference/plugins.html#PIL.IptcImagePlugin.IptcImageFile.getint
+	PIL.IptcImagePlugin.IptcImageFile.load   reference/plugins.html#PIL.IptcImagePlugin.IptcImageFile.load
+	PIL.Jpeg2KImagePlugin.Jpeg2KImageFile.load reference/plugins.html#PIL.Jpeg2KImagePlugin.Jpeg2KImageFile.load
+	PIL.Jpeg2KImagePlugin.Jpeg2KImageFile.reduce reference/plugins.html#PIL.Jpeg2KImagePlugin.Jpeg2KImageFile.reduce
+	PIL.JpegImagePlugin.JpegImageFile.draft  reference/plugins.html#PIL.JpegImagePlugin.JpegImageFile.draft
+	PIL.JpegImagePlugin.JpegImageFile.getxmp reference/plugins.html#PIL.JpegImagePlugin.JpegImageFile.getxmp
+	PIL.JpegImagePlugin.JpegImageFile.load_djpeg reference/plugins.html#PIL.JpegImagePlugin.JpegImageFile.load_djpeg
+	PIL.JpegImagePlugin.JpegImageFile.load_read reference/plugins.html#PIL.JpegImagePlugin.JpegImageFile.load_read
+	PIL.MicImagePlugin.MicImageFile.seek     reference/plugins.html#PIL.MicImagePlugin.MicImageFile.seek
+	PIL.MicImagePlugin.MicImageFile.tell     reference/plugins.html#PIL.MicImagePlugin.MicImageFile.tell
+	PIL.MpegImagePlugin.BitStream.next       reference/plugins.html#PIL.MpegImagePlugin.BitStream.next
+	PIL.MpegImagePlugin.BitStream.peek       reference/plugins.html#PIL.MpegImagePlugin.BitStream.peek
+	PIL.MpegImagePlugin.BitStream.read       reference/plugins.html#PIL.MpegImagePlugin.BitStream.read
+	PIL.MpegImagePlugin.BitStream.skip       reference/plugins.html#PIL.MpegImagePlugin.BitStream.skip
+	PIL.MspImagePlugin.MspDecoder.decode     reference/plugins.html#PIL.MspImagePlugin.MspDecoder.decode
+	PIL.PSDraw.PSDraw.begin_document         reference/PSDraw.html#PIL.PSDraw.PSDraw.begin_document
+	PIL.PSDraw.PSDraw.end_document           reference/PSDraw.html#PIL.PSDraw.PSDraw.end_document
+	PIL.PSDraw.PSDraw.image                  reference/PSDraw.html#PIL.PSDraw.PSDraw.image
+	PIL.PSDraw.PSDraw.line                   reference/PSDraw.html#PIL.PSDraw.PSDraw.line
+	PIL.PSDraw.PSDraw.rectangle              reference/PSDraw.html#PIL.PSDraw.PSDraw.rectangle
+	PIL.PSDraw.PSDraw.setfont                reference/PSDraw.html#PIL.PSDraw.PSDraw.setfont
+	PIL.PSDraw.PSDraw.text                   reference/PSDraw.html#PIL.PSDraw.PSDraw.text
+	PIL.PaletteFile.PaletteFile.getpalette   PIL.html#PIL.PaletteFile.PaletteFile.getpalette
+	PIL.PcdImagePlugin.PcdImageFile.load_end reference/plugins.html#PIL.PcdImagePlugin.PcdImageFile.load_end
+	PIL.PngImagePlugin.ChunkStream.call      reference/plugins.html#PIL.PngImagePlugin.ChunkStream.call
+	PIL.PngImagePlugin.ChunkStream.close     reference/plugins.html#PIL.PngImagePlugin.ChunkStream.close
+	PIL.PngImagePlugin.ChunkStream.crc       reference/plugins.html#PIL.PngImagePlugin.ChunkStream.crc
+	PIL.PngImagePlugin.ChunkStream.crc_skip  reference/plugins.html#PIL.PngImagePlugin.ChunkStream.crc_skip
+	PIL.PngImagePlugin.ChunkStream.push      reference/plugins.html#PIL.PngImagePlugin.ChunkStream.push
+	PIL.PngImagePlugin.ChunkStream.read      reference/plugins.html#PIL.PngImagePlugin.ChunkStream.read
+	PIL.PngImagePlugin.ChunkStream.verify    reference/plugins.html#PIL.PngImagePlugin.ChunkStream.verify
+	PIL.PngImagePlugin.PngImageFile.getexif  reference/plugins.html#PIL.PngImagePlugin.PngImageFile.getexif
+	PIL.PngImagePlugin.PngImageFile.load_end reference/plugins.html#PIL.PngImagePlugin.PngImageFile.load_end
+	PIL.PngImagePlugin.PngImageFile.load_prepare reference/plugins.html#PIL.PngImagePlugin.PngImageFile.load_prepare
+	PIL.PngImagePlugin.PngImageFile.load_read reference/plugins.html#PIL.PngImagePlugin.PngImageFile.load_read
+	PIL.PngImagePlugin.PngImageFile.seek     reference/plugins.html#PIL.PngImagePlugin.PngImageFile.seek
+	PIL.PngImagePlugin.PngImageFile.tell     reference/plugins.html#PIL.PngImagePlugin.PngImageFile.tell
+	PIL.PngImagePlugin.PngImageFile.text     reference/plugins.html#PIL.PngImagePlugin.PngImageFile.text
+	PIL.PngImagePlugin.PngImageFile.verify   reference/plugins.html#PIL.PngImagePlugin.PngImageFile.verify
+	PIL.PngImagePlugin.PngInfo.add           PIL.html#PIL.PngImagePlugin.PngInfo.add
+	PIL.PngImagePlugin.PngInfo.add_itxt      PIL.html#PIL.PngImagePlugin.PngInfo.add_itxt
+	PIL.PngImagePlugin.PngInfo.add_text      PIL.html#PIL.PngImagePlugin.PngInfo.add_text
+	PIL.PngImagePlugin.PngStream.check_text_memory reference/plugins.html#PIL.PngImagePlugin.PngStream.check_text_memory
+	PIL.PngImagePlugin.PngStream.chunk_IDAT  reference/plugins.html#PIL.PngImagePlugin.PngStream.chunk_IDAT
+	PIL.PngImagePlugin.PngStream.chunk_IEND  reference/plugins.html#PIL.PngImagePlugin.PngStream.chunk_IEND
+	PIL.PngImagePlugin.PngStream.chunk_IHDR  reference/plugins.html#PIL.PngImagePlugin.PngStream.chunk_IHDR
+	PIL.PngImagePlugin.PngStream.chunk_PLTE  reference/plugins.html#PIL.PngImagePlugin.PngStream.chunk_PLTE
+	PIL.PngImagePlugin.PngStream.chunk_acTL  reference/plugins.html#PIL.PngImagePlugin.PngStream.chunk_acTL
+	PIL.PngImagePlugin.PngStream.chunk_cHRM  reference/plugins.html#PIL.PngImagePlugin.PngStream.chunk_cHRM
+	PIL.PngImagePlugin.PngStream.chunk_eXIf  reference/plugins.html#PIL.PngImagePlugin.PngStream.chunk_eXIf
+	PIL.PngImagePlugin.PngStream.chunk_fcTL  reference/plugins.html#PIL.PngImagePlugin.PngStream.chunk_fcTL
+	PIL.PngImagePlugin.PngStream.chunk_fdAT  reference/plugins.html#PIL.PngImagePlugin.PngStream.chunk_fdAT
+	PIL.PngImagePlugin.PngStream.chunk_gAMA  reference/plugins.html#PIL.PngImagePlugin.PngStream.chunk_gAMA
+	PIL.PngImagePlugin.PngStream.chunk_iCCP  reference/plugins.html#PIL.PngImagePlugin.PngStream.chunk_iCCP
+	PIL.PngImagePlugin.PngStream.chunk_iTXt  reference/plugins.html#PIL.PngImagePlugin.PngStream.chunk_iTXt
+	PIL.PngImagePlugin.PngStream.chunk_pHYs  reference/plugins.html#PIL.PngImagePlugin.PngStream.chunk_pHYs
+	PIL.PngImagePlugin.PngStream.chunk_sRGB  reference/plugins.html#PIL.PngImagePlugin.PngStream.chunk_sRGB
+	PIL.PngImagePlugin.PngStream.chunk_tEXt  reference/plugins.html#PIL.PngImagePlugin.PngStream.chunk_tEXt
+	PIL.PngImagePlugin.PngStream.chunk_tRNS  reference/plugins.html#PIL.PngImagePlugin.PngStream.chunk_tRNS
+	PIL.PngImagePlugin.PngStream.chunk_zTXt  reference/plugins.html#PIL.PngImagePlugin.PngStream.chunk_zTXt
+	PIL.PngImagePlugin.PngStream.rewind      reference/plugins.html#PIL.PngImagePlugin.PngStream.rewind
+	PIL.PngImagePlugin.PngStream.save_rewind reference/plugins.html#PIL.PngImagePlugin.PngStream.save_rewind
+	PIL.PngImagePlugin.iTXt.__new__          PIL.html#PIL.PngImagePlugin.iTXt.__new__
+	PIL.PsdImagePlugin.PsdImageFile.load_prepare reference/plugins.html#PIL.PsdImagePlugin.PsdImageFile.load_prepare
+	PIL.PsdImagePlugin.PsdImageFile.seek     reference/plugins.html#PIL.PsdImagePlugin.PsdImageFile.seek
+	PIL.PsdImagePlugin.PsdImageFile.tell     reference/plugins.html#PIL.PsdImagePlugin.PsdImageFile.tell
+	PIL.PyAccess.PyAccess.getpixel           reference/PyAccess.html#PIL.PyAccess.PyAccess.getpixel
+	PIL.PyAccess.PyAccess.putpixel           reference/PyAccess.html#PIL.PyAccess.PyAccess.putpixel
+	PIL.SgiImagePlugin.SGI16Decoder.decode   reference/plugins.html#PIL.SgiImagePlugin.SGI16Decoder.decode
+	PIL.SpiderImagePlugin.SpiderImageFile.convert2byte reference/plugins.html#PIL.SpiderImagePlugin.SpiderImageFile.convert2byte
+	PIL.SpiderImagePlugin.SpiderImageFile.is_animated reference/plugins.html#PIL.SpiderImagePlugin.SpiderImageFile.is_animated
+	PIL.SpiderImagePlugin.SpiderImageFile.n_frames reference/plugins.html#PIL.SpiderImagePlugin.SpiderImageFile.n_frames
+	PIL.SpiderImagePlugin.SpiderImageFile.seek reference/plugins.html#PIL.SpiderImagePlugin.SpiderImageFile.seek
+	PIL.SpiderImagePlugin.SpiderImageFile.tell reference/plugins.html#PIL.SpiderImagePlugin.SpiderImageFile.tell
+	PIL.SpiderImagePlugin.SpiderImageFile.tkPhotoImage reference/plugins.html#PIL.SpiderImagePlugin.SpiderImageFile.tkPhotoImage
+	PIL.TarIO.TarIO.close                    PIL.html#PIL.TarIO.TarIO.close
+	PIL.TiffImagePlugin.AppendingTiffWriter.close reference/plugins.html#PIL.TiffImagePlugin.AppendingTiffWriter.close
+	PIL.TiffImagePlugin.AppendingTiffWriter.finalize reference/plugins.html#PIL.TiffImagePlugin.AppendingTiffWriter.finalize
+	PIL.TiffImagePlugin.AppendingTiffWriter.fixIFD reference/plugins.html#PIL.TiffImagePlugin.AppendingTiffWriter.fixIFD
+	PIL.TiffImagePlugin.AppendingTiffWriter.fixOffsets reference/plugins.html#PIL.TiffImagePlugin.AppendingTiffWriter.fixOffsets
+	PIL.TiffImagePlugin.AppendingTiffWriter.goToEnd reference/plugins.html#PIL.TiffImagePlugin.AppendingTiffWriter.goToEnd
+	PIL.TiffImagePlugin.AppendingTiffWriter.newFrame reference/plugins.html#PIL.TiffImagePlugin.AppendingTiffWriter.newFrame
+	PIL.TiffImagePlugin.AppendingTiffWriter.readLong reference/plugins.html#PIL.TiffImagePlugin.AppendingTiffWriter.readLong
+	PIL.TiffImagePlugin.AppendingTiffWriter.readShort reference/plugins.html#PIL.TiffImagePlugin.AppendingTiffWriter.readShort
+	PIL.TiffImagePlugin.AppendingTiffWriter.rewriteLastLong reference/plugins.html#PIL.TiffImagePlugin.AppendingTiffWriter.rewriteLastLong
+	PIL.TiffImagePlugin.AppendingTiffWriter.rewriteLastShort reference/plugins.html#PIL.TiffImagePlugin.AppendingTiffWriter.rewriteLastShort
+	PIL.TiffImagePlugin.AppendingTiffWriter.rewriteLastShortToLong reference/plugins.html#PIL.TiffImagePlugin.AppendingTiffWriter.rewriteLastShortToLong
+	PIL.TiffImagePlugin.AppendingTiffWriter.seek reference/plugins.html#PIL.TiffImagePlugin.AppendingTiffWriter.seek
+	PIL.TiffImagePlugin.AppendingTiffWriter.setEndian reference/plugins.html#PIL.TiffImagePlugin.AppendingTiffWriter.setEndian
+	PIL.TiffImagePlugin.AppendingTiffWriter.setup reference/plugins.html#PIL.TiffImagePlugin.AppendingTiffWriter.setup
+	PIL.TiffImagePlugin.AppendingTiffWriter.skipIFDs reference/plugins.html#PIL.TiffImagePlugin.AppendingTiffWriter.skipIFDs
+	PIL.TiffImagePlugin.AppendingTiffWriter.tell reference/plugins.html#PIL.TiffImagePlugin.AppendingTiffWriter.tell
+	PIL.TiffImagePlugin.AppendingTiffWriter.write reference/plugins.html#PIL.TiffImagePlugin.AppendingTiffWriter.write
+	PIL.TiffImagePlugin.AppendingTiffWriter.writeLong reference/plugins.html#PIL.TiffImagePlugin.AppendingTiffWriter.writeLong
+	PIL.TiffImagePlugin.AppendingTiffWriter.writeShort reference/plugins.html#PIL.TiffImagePlugin.AppendingTiffWriter.writeShort
+	PIL.TiffImagePlugin.IFDRational.denominator reference/plugins.html#PIL.TiffImagePlugin.IFDRational.denominator
+	PIL.TiffImagePlugin.IFDRational.limit_rational reference/plugins.html#PIL.TiffImagePlugin.IFDRational.limit_rational
+	PIL.TiffImagePlugin.IFDRational.numerator reference/plugins.html#PIL.TiffImagePlugin.IFDRational.numerator
+	PIL.TiffImagePlugin.ImageFileDirectory_v1.from_v2 reference/plugins.html#PIL.TiffImagePlugin.ImageFileDirectory_v1.from_v2
+	PIL.TiffImagePlugin.ImageFileDirectory_v1.tagdata reference/plugins.html#PIL.TiffImagePlugin.ImageFileDirectory_v1.tagdata
+	PIL.TiffImagePlugin.ImageFileDirectory_v1.tags reference/plugins.html#PIL.TiffImagePlugin.ImageFileDirectory_v1.tags
+	PIL.TiffImagePlugin.ImageFileDirectory_v1.to_v2 reference/plugins.html#PIL.TiffImagePlugin.ImageFileDirectory_v1.to_v2
+	PIL.TiffImagePlugin.ImageFileDirectory_v2.legacy_api reference/plugins.html#PIL.TiffImagePlugin.ImageFileDirectory_v2.legacy_api
+	PIL.TiffImagePlugin.ImageFileDirectory_v2.load reference/plugins.html#PIL.TiffImagePlugin.ImageFileDirectory_v2.load
+	PIL.TiffImagePlugin.ImageFileDirectory_v2.load_byte reference/plugins.html#PIL.TiffImagePlugin.ImageFileDirectory_v2.load_byte
+	PIL.TiffImagePlugin.ImageFileDirectory_v2.load_double reference/plugins.html#PIL.TiffImagePlugin.ImageFileDirectory_v2.load_double
+	PIL.TiffImagePlugin.ImageFileDirectory_v2.load_float reference/plugins.html#PIL.TiffImagePlugin.ImageFileDirectory_v2.load_float
+	PIL.TiffImagePlugin.ImageFileDirectory_v2.load_long reference/plugins.html#PIL.TiffImagePlugin.ImageFileDirectory_v2.load_long
+	PIL.TiffImagePlugin.ImageFileDirectory_v2.load_rational reference/plugins.html#PIL.TiffImagePlugin.ImageFileDirectory_v2.load_rational
+	PIL.TiffImagePlugin.ImageFileDirectory_v2.load_short reference/plugins.html#PIL.TiffImagePlugin.ImageFileDirectory_v2.load_short
+	PIL.TiffImagePlugin.ImageFileDirectory_v2.load_signed_byte reference/plugins.html#PIL.TiffImagePlugin.ImageFileDirectory_v2.load_signed_byte
+	PIL.TiffImagePlugin.ImageFileDirectory_v2.load_signed_long reference/plugins.html#PIL.TiffImagePlugin.ImageFileDirectory_v2.load_signed_long
+	PIL.TiffImagePlugin.ImageFileDirectory_v2.load_signed_rational reference/plugins.html#PIL.TiffImagePlugin.ImageFileDirectory_v2.load_signed_rational
+	PIL.TiffImagePlugin.ImageFileDirectory_v2.load_signed_short reference/plugins.html#PIL.TiffImagePlugin.ImageFileDirectory_v2.load_signed_short
+	PIL.TiffImagePlugin.ImageFileDirectory_v2.load_string reference/plugins.html#PIL.TiffImagePlugin.ImageFileDirectory_v2.load_string
+	PIL.TiffImagePlugin.ImageFileDirectory_v2.load_undefined reference/plugins.html#PIL.TiffImagePlugin.ImageFileDirectory_v2.load_undefined
+	PIL.TiffImagePlugin.ImageFileDirectory_v2.named reference/plugins.html#PIL.TiffImagePlugin.ImageFileDirectory_v2.named
+	PIL.TiffImagePlugin.ImageFileDirectory_v2.offset reference/plugins.html#PIL.TiffImagePlugin.ImageFileDirectory_v2.offset
+	PIL.TiffImagePlugin.ImageFileDirectory_v2.prefix reference/plugins.html#PIL.TiffImagePlugin.ImageFileDirectory_v2.prefix
+	PIL.TiffImagePlugin.ImageFileDirectory_v2.reset reference/plugins.html#PIL.TiffImagePlugin.ImageFileDirectory_v2.reset
+	PIL.TiffImagePlugin.ImageFileDirectory_v2.save reference/plugins.html#PIL.TiffImagePlugin.ImageFileDirectory_v2.save
+	PIL.TiffImagePlugin.ImageFileDirectory_v2.tobytes reference/plugins.html#PIL.TiffImagePlugin.ImageFileDirectory_v2.tobytes
+	PIL.TiffImagePlugin.ImageFileDirectory_v2.write_byte reference/plugins.html#PIL.TiffImagePlugin.ImageFileDirectory_v2.write_byte
+	PIL.TiffImagePlugin.ImageFileDirectory_v2.write_double reference/plugins.html#PIL.TiffImagePlugin.ImageFileDirectory_v2.write_double
+	PIL.TiffImagePlugin.ImageFileDirectory_v2.write_float reference/plugins.html#PIL.TiffImagePlugin.ImageFileDirectory_v2.write_float
+	PIL.TiffImagePlugin.ImageFileDirectory_v2.write_long reference/plugins.html#PIL.TiffImagePlugin.ImageFileDirectory_v2.write_long
+	PIL.TiffImagePlugin.ImageFileDirectory_v2.write_rational reference/plugins.html#PIL.TiffImagePlugin.ImageFileDirectory_v2.write_rational
+	PIL.TiffImagePlugin.ImageFileDirectory_v2.write_short reference/plugins.html#PIL.TiffImagePlugin.ImageFileDirectory_v2.write_short
+	PIL.TiffImagePlugin.ImageFileDirectory_v2.write_signed_byte reference/plugins.html#PIL.TiffImagePlugin.ImageFileDirectory_v2.write_signed_byte
+	PIL.TiffImagePlugin.ImageFileDirectory_v2.write_signed_long reference/plugins.html#PIL.TiffImagePlugin.ImageFileDirectory_v2.write_signed_long
+	PIL.TiffImagePlugin.ImageFileDirectory_v2.write_signed_rational reference/plugins.html#PIL.TiffImagePlugin.ImageFileDirectory_v2.write_signed_rational
+	PIL.TiffImagePlugin.ImageFileDirectory_v2.write_signed_short reference/plugins.html#PIL.TiffImagePlugin.ImageFileDirectory_v2.write_signed_short
+	PIL.TiffImagePlugin.ImageFileDirectory_v2.write_string reference/plugins.html#PIL.TiffImagePlugin.ImageFileDirectory_v2.write_string
+	PIL.TiffImagePlugin.ImageFileDirectory_v2.write_undefined reference/plugins.html#PIL.TiffImagePlugin.ImageFileDirectory_v2.write_undefined
+	PIL.TiffImagePlugin.TiffImageFile.load   reference/plugins.html#PIL.TiffImagePlugin.TiffImageFile.load
+	PIL.TiffImagePlugin.TiffImageFile.load_end reference/plugins.html#PIL.TiffImagePlugin.TiffImageFile.load_end
+	PIL.TiffImagePlugin.TiffImageFile.n_frames reference/plugins.html#PIL.TiffImagePlugin.TiffImageFile.n_frames
+	PIL.TiffImagePlugin.TiffImageFile.seek   reference/plugins.html#PIL.TiffImagePlugin.TiffImageFile.seek
+	PIL.TiffImagePlugin.TiffImageFile.tell   reference/plugins.html#PIL.TiffImagePlugin.TiffImageFile.tell
+	PIL.TiffTags.TagInfo.__init__            reference/TiffTags.html#PIL.TiffTags.TagInfo.__init__
+	PIL.TiffTags.TagInfo.cvt_enum            reference/TiffTags.html#PIL.TiffTags.TagInfo.cvt_enum
+	PIL.TiffTags.lookup                      reference/TiffTags.html#PIL.TiffTags.lookup
+	PIL.WebPImagePlugin.WebPImageFile.load   reference/plugins.html#PIL.WebPImagePlugin.WebPImageFile.load
+	PIL.WebPImagePlugin.WebPImageFile.seek   reference/plugins.html#PIL.WebPImagePlugin.WebPImageFile.seek
+	PIL.WebPImagePlugin.WebPImageFile.tell   reference/plugins.html#PIL.WebPImagePlugin.WebPImageFile.tell
+	PIL.WmfImagePlugin.WmfStubImageFile.load reference/plugins.html#PIL.WmfImagePlugin.WmfStubImageFile.load
+	PIL.XpmImagePlugin.XpmImageFile.load_read reference/plugins.html#PIL.XpmImagePlugin.XpmImageFile.load_read
+py:module
+	PIL                                      PIL.html#module-PIL
+	PIL.BdfFontFile                          PIL.html#module-PIL.BdfFontFile
+	PIL.BmpImagePlugin                       reference/plugins.html#module-PIL.BmpImagePlugin
+	PIL.BufrStubImagePlugin                  reference/plugins.html#module-PIL.BufrStubImagePlugin
+	PIL.ContainerIO                          PIL.html#module-PIL.ContainerIO
+	PIL.CurImagePlugin                       reference/plugins.html#module-PIL.CurImagePlugin
+	PIL.DcxImagePlugin                       reference/plugins.html#module-PIL.DcxImagePlugin
+	PIL.EpsImagePlugin                       reference/plugins.html#module-PIL.EpsImagePlugin
+	PIL.ExifTags                             reference/ExifTags.html#module-PIL.ExifTags
+	PIL.FitsStubImagePlugin                  reference/plugins.html#module-PIL.FitsStubImagePlugin
+	PIL.FliImagePlugin                       reference/plugins.html#module-PIL.FliImagePlugin
+	PIL.FontFile                             PIL.html#module-PIL.FontFile
+	PIL.FpxImagePlugin                       reference/plugins.html#module-PIL.FpxImagePlugin
+	PIL.GbrImagePlugin                       reference/plugins.html#module-PIL.GbrImagePlugin
+	PIL.GdImageFile                          PIL.html#module-PIL.GdImageFile
+	PIL.GifImagePlugin                       reference/plugins.html#module-PIL.GifImagePlugin
+	PIL.GimpGradientFile                     PIL.html#module-PIL.GimpGradientFile
+	PIL.GimpPaletteFile                      PIL.html#module-PIL.GimpPaletteFile
+	PIL.GribStubImagePlugin                  reference/plugins.html#module-PIL.GribStubImagePlugin
+	PIL.Hdf5StubImagePlugin                  reference/plugins.html#module-PIL.Hdf5StubImagePlugin
+	PIL.IcnsImagePlugin                      reference/plugins.html#module-PIL.IcnsImagePlugin
+	PIL.IcoImagePlugin                       reference/plugins.html#module-PIL.IcoImagePlugin
+	PIL.ImImagePlugin                        reference/plugins.html#module-PIL.ImImagePlugin
+	PIL.Image                                reference/Image.html#module-PIL.Image
+	PIL.Image.core                           reference/internal_modules.html#module-PIL.Image.core
+	PIL.ImageChops                           reference/ImageChops.html#module-PIL.ImageChops
+	PIL.ImageCms                             reference/ImageCms.html#module-PIL.ImageCms
+	PIL.ImageColor                           reference/ImageColor.html#module-PIL.ImageColor
+	PIL.ImageDraw                            reference/ImageDraw.html#module-PIL.ImageDraw
+	PIL.ImageDraw2                           PIL.html#module-PIL.ImageDraw2
+	PIL.ImageEnhance                         reference/ImageEnhance.html#module-PIL.ImageEnhance
+	PIL.ImageFile                            reference/ImageFile.html#module-PIL.ImageFile
+	PIL.ImageFilter                          reference/ImageFilter.html#module-PIL.ImageFilter
+	PIL.ImageFont                            reference/ImageFont.html#module-PIL.ImageFont
+	PIL.ImageGrab                            reference/ImageGrab.html#module-PIL.ImageGrab
+	PIL.ImageMath                            reference/ImageMath.html#module-PIL.ImageMath
+	PIL.ImageMorph                           reference/ImageMorph.html#module-PIL.ImageMorph
+	PIL.ImageOps                             reference/ImageOps.html#module-PIL.ImageOps
+	PIL.ImagePalette                         reference/ImagePalette.html#module-PIL.ImagePalette
+	PIL.ImagePath                            reference/ImagePath.html#module-PIL.ImagePath
+	PIL.ImageQt                              reference/ImageQt.html#module-PIL.ImageQt
+	PIL.ImageSequence                        reference/ImageSequence.html#module-PIL.ImageSequence
+	PIL.ImageShow                            reference/ImageShow.html#module-PIL.ImageShow
+	PIL.ImageStat                            reference/ImageStat.html#module-PIL.ImageStat
+	PIL.ImageTk                              reference/ImageTk.html#module-PIL.ImageTk
+	PIL.ImageTransform                       PIL.html#module-PIL.ImageTransform
+	PIL.ImageWin                             reference/ImageWin.html#module-PIL.ImageWin
+	PIL.ImtImagePlugin                       reference/plugins.html#module-PIL.ImtImagePlugin
+	PIL.IptcImagePlugin                      reference/plugins.html#module-PIL.IptcImagePlugin
+	PIL.Jpeg2KImagePlugin                    reference/plugins.html#module-PIL.Jpeg2KImagePlugin
+	PIL.JpegImagePlugin                      reference/plugins.html#module-PIL.JpegImagePlugin
+	PIL.JpegPresets                          reference/JpegPresets.html#module-PIL.JpegPresets
+	PIL.McIdasImagePlugin                    reference/plugins.html#module-PIL.McIdasImagePlugin
+	PIL.MicImagePlugin                       reference/plugins.html#module-PIL.MicImagePlugin
+	PIL.MpegImagePlugin                      reference/plugins.html#module-PIL.MpegImagePlugin
+	PIL.MspImagePlugin                       reference/plugins.html#module-PIL.MspImagePlugin
+	PIL.PSDraw                               reference/PSDraw.html#module-PIL.PSDraw
+	PIL.PaletteFile                          PIL.html#module-PIL.PaletteFile
+	PIL.PalmImagePlugin                      reference/plugins.html#module-PIL.PalmImagePlugin
+	PIL.PcdImagePlugin                       reference/plugins.html#module-PIL.PcdImagePlugin
+	PIL.PcfFontFile                          PIL.html#module-PIL.PcfFontFile
+	PIL.PcxImagePlugin                       reference/plugins.html#module-PIL.PcxImagePlugin
+	PIL.PdfImagePlugin                       reference/plugins.html#module-PIL.PdfImagePlugin
+	PIL.PixarImagePlugin                     reference/plugins.html#module-PIL.PixarImagePlugin
+	PIL.PngImagePlugin                       reference/plugins.html#module-PIL.PngImagePlugin
+	PIL.PpmImagePlugin                       reference/plugins.html#module-PIL.PpmImagePlugin
+	PIL.PsdImagePlugin                       reference/plugins.html#module-PIL.PsdImagePlugin
+	PIL.PyAccess                             reference/PyAccess.html#module-PIL.PyAccess
+	PIL.SgiImagePlugin                       reference/plugins.html#module-PIL.SgiImagePlugin
+	PIL.SpiderImagePlugin                    reference/plugins.html#module-PIL.SpiderImagePlugin
+	PIL.SunImagePlugin                       reference/plugins.html#module-PIL.SunImagePlugin
+	PIL.TarIO                                PIL.html#module-PIL.TarIO
+	PIL.TgaImagePlugin                       reference/plugins.html#module-PIL.TgaImagePlugin
+	PIL.TiffImagePlugin                      reference/plugins.html#module-PIL.TiffImagePlugin
+	PIL.TiffTags                             reference/TiffTags.html#module-PIL.TiffTags
+	PIL.WalImageFile                         PIL.html#module-PIL.WalImageFile
+	PIL.WebPImagePlugin                      reference/plugins.html#module-PIL.WebPImagePlugin
+	PIL.WmfImagePlugin                       reference/plugins.html#module-PIL.WmfImagePlugin
+	PIL.XVThumbImagePlugin                   reference/plugins.html#module-PIL.XVThumbImagePlugin
+	PIL.XbmImagePlugin                       reference/plugins.html#module-PIL.XbmImagePlugin
+	PIL.XpmImagePlugin                       reference/plugins.html#module-PIL.XpmImagePlugin
+	PIL._binary                              reference/internal_modules.html#module-PIL._binary
+	PIL._imaging                             reference/internal_modules.html#module-PIL._imaging
+	PIL._tkinter_finder                      reference/internal_modules.html#module-PIL._tkinter_finder
+	PIL._util                                reference/internal_modules.html#module-PIL._util
+	PIL._version                             reference/internal_modules.html#module-PIL._version
+	PIL.features                             reference/features.html#module-PIL.features
+std:doc
+	PIL                                      PIL Package (autodoc of remaining modules): PIL.html
+	about                                    About                                   : about.html
+	deprecations                             Deprecations and removals               : deprecations.html
+	handbook/appendices                      Appendices                              : handbook/appendices.html
+	handbook/concepts                        Concepts                                : handbook/concepts.html
+	handbook/image-file-formats              Image file formats                      : handbook/image-file-formats.html
+	handbook/index                           Handbook                                : handbook/index.html
+	handbook/overview                        Overview                                : handbook/overview.html
+	handbook/text-anchors                    Text anchors                            : handbook/text-anchors.html
+	handbook/tutorial                        Tutorial                                : handbook/tutorial.html
+	handbook/writing-your-own-file-decoder   Writing Your Own Image Plugin           : handbook/writing-your-own-file-decoder.html
+	index                                    Pillow                                  : index.html
+	installation                             Installation                            : installation.html
+	porting                                  Porting                                 : porting.html
+	reference/ExifTags                       ExifTags Module                         : reference/ExifTags.html
+	reference/Image                          Image Module                            : reference/Image.html
+	reference/ImageChops                     ImageChops (“Channel Operations”) Module: reference/ImageChops.html
+	reference/ImageCms                       ImageCms Module                         : reference/ImageCms.html
+	reference/ImageColor                     ImageColor Module                       : reference/ImageColor.html
+	reference/ImageDraw                      ImageDraw Module                        : reference/ImageDraw.html
+	reference/ImageEnhance                   ImageEnhance Module                     : reference/ImageEnhance.html
+	reference/ImageFile                      ImageFile Module                        : reference/ImageFile.html
+	reference/ImageFilter                    ImageFilter Module                      : reference/ImageFilter.html
+	reference/ImageFont                      ImageFont Module                        : reference/ImageFont.html
+	reference/ImageGrab                      ImageGrab Module                        : reference/ImageGrab.html
+	reference/ImageMath                      ImageMath Module                        : reference/ImageMath.html
+	reference/ImageMorph                     ImageMorph Module                       : reference/ImageMorph.html
+	reference/ImageOps                       ImageOps Module                         : reference/ImageOps.html
+	reference/ImagePalette                   ImagePalette Module                     : reference/ImagePalette.html
+	reference/ImagePath                      ImagePath Module                        : reference/ImagePath.html
+	reference/ImageQt                        ImageQt Module                          : reference/ImageQt.html
+	reference/ImageSequence                  ImageSequence Module                    : reference/ImageSequence.html
+	reference/ImageShow                      ImageShow Module                        : reference/ImageShow.html
+	reference/ImageStat                      ImageStat Module                        : reference/ImageStat.html
+	reference/ImageTk                        ImageTk Module                          : reference/ImageTk.html
+	reference/ImageWin                       ImageWin Module (Windows-only)          : reference/ImageWin.html
+	reference/JpegPresets                    JpegPresets Module                      : reference/JpegPresets.html
+	reference/PSDraw                         PSDraw Module                           : reference/PSDraw.html
+	reference/PixelAccess                    PixelAccess Class                       : reference/PixelAccess.html
+	reference/PyAccess                       PyAccess Module                         : reference/PyAccess.html
+	reference/TiffTags                       TiffTags Module                         : reference/TiffTags.html
+	reference/block_allocator                Block Allocator                         : reference/block_allocator.html
+	reference/c_extension_debugging          C Extension debugging on Linux, with gbd/valgrind.: reference/c_extension_debugging.html
+	reference/features                       features Module                         : reference/features.html
+	reference/index                          Reference                               : reference/index.html
+	reference/internal_design                Internal Reference Docs                 : reference/internal_design.html
+	reference/internal_modules               Internal Modules                        : reference/internal_modules.html
+	reference/limits                         Limits                                  : reference/limits.html
+	reference/open_files                     File Handling in Pillow                 : reference/open_files.html
+	reference/plugins                        Plugin reference                        : reference/plugins.html
+	releasenotes/2.7.0                       2.7.0                                   : releasenotes/2.7.0.html
+	releasenotes/2.8.0                       2.8.0                                   : releasenotes/2.8.0.html
+	releasenotes/3.0.0                       3.0.0                                   : releasenotes/3.0.0.html
+	releasenotes/3.1.0                       3.1.0                                   : releasenotes/3.1.0.html
+	releasenotes/3.1.1                       3.1.1                                   : releasenotes/3.1.1.html
+	releasenotes/3.1.2                       3.1.2                                   : releasenotes/3.1.2.html
+	releasenotes/3.2.0                       3.2.0                                   : releasenotes/3.2.0.html
+	releasenotes/3.3.0                       3.3.0                                   : releasenotes/3.3.0.html
+	releasenotes/3.3.2                       3.3.2                                   : releasenotes/3.3.2.html
+	releasenotes/3.4.0                       3.4.0                                   : releasenotes/3.4.0.html
+	releasenotes/4.0.0                       4.0.0                                   : releasenotes/4.0.0.html
+	releasenotes/4.1.0                       4.1.0                                   : releasenotes/4.1.0.html
+	releasenotes/4.1.1                       4.1.1                                   : releasenotes/4.1.1.html
+	releasenotes/4.2.0                       4.2.0                                   : releasenotes/4.2.0.html
+	releasenotes/4.2.1                       4.2.1                                   : releasenotes/4.2.1.html
+	releasenotes/4.3.0                       4.3.0                                   : releasenotes/4.3.0.html
+	releasenotes/5.0.0                       5.0.0                                   : releasenotes/5.0.0.html
+	releasenotes/5.1.0                       5.1.0                                   : releasenotes/5.1.0.html
+	releasenotes/5.2.0                       5.2.0                                   : releasenotes/5.2.0.html
+	releasenotes/5.3.0                       5.3.0                                   : releasenotes/5.3.0.html
+	releasenotes/5.4.0                       5.4.0                                   : releasenotes/5.4.0.html
+	releasenotes/5.4.1                       5.4.1                                   : releasenotes/5.4.1.html
+	releasenotes/6.0.0                       6.0.0                                   : releasenotes/6.0.0.html
+	releasenotes/6.1.0                       6.1.0                                   : releasenotes/6.1.0.html
+	releasenotes/6.2.0                       6.2.0                                   : releasenotes/6.2.0.html
+	releasenotes/6.2.1                       6.2.1                                   : releasenotes/6.2.1.html
+	releasenotes/6.2.2                       6.2.2                                   : releasenotes/6.2.2.html
+	releasenotes/7.0.0                       7.0.0                                   : releasenotes/7.0.0.html
+	releasenotes/7.1.0                       7.1.0                                   : releasenotes/7.1.0.html
+	releasenotes/7.1.1                       7.1.1                                   : releasenotes/7.1.1.html
+	releasenotes/7.1.2                       7.1.2                                   : releasenotes/7.1.2.html
+	releasenotes/7.2.0                       7.2.0                                   : releasenotes/7.2.0.html
+	releasenotes/8.0.0                       8.0.0                                   : releasenotes/8.0.0.html
+	releasenotes/8.0.1                       8.0.1                                   : releasenotes/8.0.1.html
+	releasenotes/8.1.0                       8.1.0                                   : releasenotes/8.1.0.html
+	releasenotes/8.1.1                       8.1.1                                   : releasenotes/8.1.1.html
+	releasenotes/8.1.2                       8.1.2                                   : releasenotes/8.1.2.html
+	releasenotes/8.2.0                       8.2.0                                   : releasenotes/8.2.0.html
+	releasenotes/index                       Release Notes                           : releasenotes/index.html
+	releasenotes/versioning                  Versioning                              : releasenotes/versioning.html
+std:label
+	apng-saving                              Saving                                  : handbook/image-file-formats.html#apng-saving
+	apng-sequences                           APNG sequences                          : handbook/image-file-formats.html#apng-sequences
+	color-names                              Color Names                             : reference/ImageColor.html#color-names
+	color-transforms                         Color transforms                        : handbook/tutorial.html#color-transforms
+	concept-bands                            Bands                                   : handbook/concepts.html#concept-bands
+	concept-filters                          Filters                                 : handbook/concepts.html#concept-filters
+	concept-modes                            Modes                                   : handbook/concepts.html#concept-modes
+	coordinate-system                        Coordinate System                       : handbook/concepts.html#coordinate-system
+	deprecations                             Deprecations and removals               : deprecations.html#deprecations
+	external-libraries                       External Libraries                      : installation.html#external-libraries
+	file-decoders                            Writing Your Own File Decoder in C      : handbook/writing-your-own-file-decoder.html#file-decoders
+	file-decoders-py                         Writing Your Own File Decoder in Python : handbook/writing-your-own-file-decoder.html#file-decoders-py
+	file-handling                            File Handling in Pillow                 : reference/open_files.html#file-handling
+	genindex                                 Index                                   : genindex.html
+	image-file-formats                       Image file formats                      : handbook/image-file-formats.html#image-file-formats
+	image-plugins                            Writing Your Own Image Plugin           : handbook/writing-your-own-file-decoder.html#image-plugins
+	modindex                                 Module Index                            : py-modindex.html
+	pixelaccess                              PixelAccess Class                       : reference/PixelAccess.html#pixelaccess
+	png-text                                 handbook/image-file-formats.html#png-text
+	py-modindex                              Python Module Index                     : py-modindex.html
+	search                                   Search Page                             : search.html
+	text-anchors                             Text anchors                            : handbook/text-anchors.html#text-anchors
+	versioning                               Versioning                              : releasenotes/versioning.html#versioning

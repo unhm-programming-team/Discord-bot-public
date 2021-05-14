@@ -4,13 +4,9 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="R User Library" level="project" />
-    <orderEntry type="library" name="R Skeletons" level="application" />
-    <orderEntry type="module" module-name="dungeonbot" />
-    <orderEntry type="module" module-name="DiscordWebhook tutorial" />
-    <orderEntry type="module" module-name="idea-generator" />
   </component>
-  <component name="TestRunnerService">
-    <option name="PROJECT_TEST_RUNNER" value="Unittests" />
+  <component name="PyDocumentationSettings">
+    <option name="format" value="PLAIN" />
+    <option name="myDocStringFormat" value="Plain" />
   </component>
 </module>
