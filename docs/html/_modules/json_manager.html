@@ -1,0 +1,406 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xml:lang="" lang="" version="-//W3C//DTD XHTML 1.1//EN" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+  <title>json_manager &mdash; UNHM Programming Club Discord Bot Documentation 0.0.1 documentation</title>
+  
+
+  
+
+  
+
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'/>
+    <link rel="stylesheet" href="../_static/css/pdj.css" type="text/css" />
+
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="UNHM Programming Club Discord Bot Documentation 0.0.1 documentation" href="../index.html"/>
+        <link rel="up" title="Module code" href="index.html"/>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="cache-control" content="public" />
+    <meta name="robots" content="follow, all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Add jQuery library -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+  </head>
+
+  <body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="fa fa-home"> UNHM Programming Club Discord Bot Documentation </a>
+        <div role="search">
+	  <form id ="rtd-search-form" class="wy-form"
+		action="../search.html" method="get">
+	    <input type="text" name="q" placeholder="Search docs" />
+	    <input type="hidden" name="check_keywords" value="yes" />
+	    <input type="hidden" name="area" value="default" />
+	  </form>
+	</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	
+          
+          
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cogs.html">Cogs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../faces_cog.html">Faces Cog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fun_cog.html">Fun Cog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../on_join_cog.html">On Join Cog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../stock_cog.html">Stock Cog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../utility_cog.html">Utility Cog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vote_cog.html">Vote Cog</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../our_packages.html">Packages</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api_manager.html">Api Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../json_manager.html">Json Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../key_manager.html">Key Manager</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+
+      </div>
+      &nbsp;
+    </nav>
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      <nav class="wy-nav-top" id="barra-mobile" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="#">Porão do Juca</a>
+      </nav>
+
+      <div class="wy-nav-content">
+	<div class="fundo-claro">
+	</div>
+	<div class="fundo-escuro">
+	</div>
+
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+	    
+	    <!-- <ul class="wy-breadcrumbs"> -->
+	    <!--   <li><a href="#">Docs</a> &raquo;</li> -->
+
+	    <!--   <li>Features</li> -->
+	    <!--   <li class="wy-breadcrumbs-aside"> -->
+
+	    <!-- 	<a href="_sources/index.txt" rel="nofollow"> View page source</a> -->
+
+	    <!--   </li> -->
+	    <!-- </ul> -->
+	    <!-- <hr/> -->
+	  </div>
+
+          <div role="main" class="">
+
+	    <div id="content" class="hfeed entry-container hentry">
+  <h1>Source code for json_manager</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">discord</span>
+
+<span class="c1">## this spaghetti really needs some docstrings</span>
+
+<div class="viewcode-block" id="count_command"><a class="viewcode-back" href="../json_manager.html#json_manager.count_command">[docs]</a><span class="k">async</span> <span class="k">def</span> <span class="nf">count_command</span><span class="p">(</span><span class="n">user</span><span class="p">,</span> <span class="n">command</span><span class="p">):</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">user</span><span class="p">)</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;command_count.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="n">line</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">file</span><span class="o">.</span><span class="n">readline</span><span class="p">())</span>
+
+    <span class="n">loaded_data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">user</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">loaded_data</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+        <span class="n">loaded_data</span><span class="p">[</span><span class="n">user</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">if</span> <span class="n">command</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">loaded_data</span><span class="p">[</span><span class="n">user</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+        <span class="n">loaded_data</span><span class="p">[</span><span class="n">user</span><span class="p">][</span><span class="n">command</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">loaded_data</span><span class="p">[</span><span class="n">user</span><span class="p">][</span><span class="n">command</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;command_count.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;w+&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file2</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">loaded_data</span><span class="p">)</span>
+        <span class="n">file2</span><span class="o">.</span><span class="n">truncate</span><span class="p">()</span>
+        <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">loaded_data</span><span class="p">,</span> <span class="n">file2</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="get_crypto"><a class="viewcode-back" href="../json_manager.html#json_manager.get_crypto">[docs]</a><span class="k">async</span> <span class="k">def</span> <span class="nf">get_crypto</span><span class="p">(</span><span class="n">user</span><span class="p">):</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">user</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;command_count.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="n">line</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">file</span><span class="o">.</span><span class="n">readline</span><span class="p">())</span>
+
+    <span class="n">loaded_data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">user</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">loaded_data</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+        <span class="n">loaded_data</span><span class="p">[</span><span class="n">user</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">if</span> <span class="s2">&quot;crypto&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">loaded_data</span><span class="p">[</span><span class="n">user</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+        <span class="n">loaded_data</span><span class="p">[</span><span class="n">user</span><span class="p">][</span><span class="s2">&quot;crypto&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">stocks</span> <span class="o">=</span> <span class="n">loaded_data</span><span class="p">[</span><span class="n">user</span><span class="p">][</span><span class="s2">&quot;crypto&quot;</span><span class="p">]</span>
+
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;command_count.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;w+&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file2</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">loaded_data</span><span class="p">)</span>
+        <span class="n">file2</span><span class="o">.</span><span class="n">truncate</span><span class="p">()</span>
+        <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">loaded_data</span><span class="p">,</span> <span class="n">file2</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">stocks</span></div>
+
+
+<div class="viewcode-block" id="add_crypto"><a class="viewcode-back" href="../json_manager.html#json_manager.add_crypto">[docs]</a><span class="k">async</span> <span class="k">def</span> <span class="nf">add_crypto</span><span class="p">(</span><span class="n">user</span><span class="p">,</span> <span class="n">crypto</span><span class="p">,</span> <span class="n">amt</span><span class="p">):</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">user</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;command_count.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="n">line</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">file</span><span class="o">.</span><span class="n">readline</span><span class="p">())</span>
+
+    <span class="n">loaded_data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">user</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">loaded_data</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+        <span class="n">loaded_data</span><span class="p">[</span><span class="n">user</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">if</span> <span class="s2">&quot;crypto&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">loaded_data</span><span class="p">[</span><span class="n">user</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+        <span class="n">loaded_data</span><span class="p">[</span><span class="n">user</span><span class="p">][</span><span class="s2">&quot;crypto&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">if</span> <span class="n">crypto</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">loaded_data</span><span class="p">[</span><span class="n">user</span><span class="p">][</span><span class="s2">&quot;crypto&quot;</span><span class="p">]:</span>
+        <span class="n">loaded_data</span><span class="p">[</span><span class="n">user</span><span class="p">][</span><span class="s2">&quot;crypto&quot;</span><span class="p">][</span><span class="n">crypto</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">loaded_data</span><span class="p">[</span><span class="n">user</span><span class="p">][</span><span class="s2">&quot;crypto&quot;</span><span class="p">][</span><span class="n">crypto</span><span class="p">]</span> <span class="o">+=</span> <span class="n">amt</span>
+
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;command_count.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;w+&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file2</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">loaded_data</span><span class="p">)</span>
+        <span class="n">file2</span><span class="o">.</span><span class="n">truncate</span><span class="p">()</span>
+        <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">loaded_data</span><span class="p">,</span> <span class="n">file2</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="rem_crypto"><a class="viewcode-back" href="../json_manager.html#json_manager.rem_crypto">[docs]</a><span class="k">async</span> <span class="k">def</span> <span class="nf">rem_crypto</span><span class="p">(</span><span class="n">user</span><span class="p">,</span><span class="n">crypto</span><span class="p">,</span><span class="n">amt</span><span class="p">):</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">user</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;command_count.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="n">line</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">file</span><span class="o">.</span><span class="n">readline</span><span class="p">())</span>
+
+    <span class="n">loaded_data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">user</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">loaded_data</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+        <span class="n">loaded_data</span><span class="p">[</span><span class="n">user</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">if</span> <span class="s2">&quot;crypto&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">loaded_data</span><span class="p">[</span><span class="n">user</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+        <span class="n">loaded_data</span><span class="p">[</span><span class="n">user</span><span class="p">][</span><span class="s2">&quot;crypto&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+
+    <span class="n">loaded_data</span><span class="p">[</span><span class="n">user</span><span class="p">][</span><span class="s2">&quot;crypto&quot;</span><span class="p">][</span><span class="n">crypto</span><span class="p">]</span> <span class="o">-=</span> <span class="n">amt</span>
+
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;command_count.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;w+&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file2</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">loaded_data</span><span class="p">)</span>
+        <span class="n">file2</span><span class="o">.</span><span class="n">truncate</span><span class="p">()</span>
+        <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">loaded_data</span><span class="p">,</span> <span class="n">file2</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="get_stocks"><a class="viewcode-back" href="../json_manager.html#json_manager.get_stocks">[docs]</a><span class="k">async</span> <span class="k">def</span> <span class="nf">get_stocks</span><span class="p">(</span><span class="n">user</span><span class="p">):</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">user</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;command_count.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="n">line</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">file</span><span class="o">.</span><span class="n">readline</span><span class="p">())</span>
+
+    <span class="n">loaded_data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">user</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">loaded_data</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+        <span class="n">loaded_data</span><span class="p">[</span><span class="n">user</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">if</span> <span class="s2">&quot;stocks&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">loaded_data</span><span class="p">[</span><span class="n">user</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+        <span class="n">loaded_data</span><span class="p">[</span><span class="n">user</span><span class="p">][</span><span class="s2">&quot;stocks&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">stocks</span> <span class="o">=</span> <span class="n">loaded_data</span><span class="p">[</span><span class="n">user</span><span class="p">][</span><span class="s2">&quot;stocks&quot;</span><span class="p">]</span>
+
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;command_count.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;w+&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file2</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">loaded_data</span><span class="p">)</span>
+        <span class="n">file2</span><span class="o">.</span><span class="n">truncate</span><span class="p">()</span>
+        <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">loaded_data</span><span class="p">,</span> <span class="n">file2</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">stocks</span></div>
+
+<div class="viewcode-block" id="add_stock"><a class="viewcode-back" href="../json_manager.html#json_manager.add_stock">[docs]</a><span class="k">async</span> <span class="k">def</span> <span class="nf">add_stock</span><span class="p">(</span><span class="n">user</span><span class="p">,</span> <span class="n">stock</span><span class="p">,</span> <span class="n">amt</span><span class="p">):</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">user</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;command_count.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="n">line</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">file</span><span class="o">.</span><span class="n">readline</span><span class="p">())</span>
+
+    <span class="n">loaded_data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">user</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">loaded_data</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+        <span class="n">loaded_data</span><span class="p">[</span><span class="n">user</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">if</span> <span class="s2">&quot;stocks&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">loaded_data</span><span class="p">[</span><span class="n">user</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+        <span class="n">loaded_data</span><span class="p">[</span><span class="n">user</span><span class="p">][</span><span class="s2">&quot;stocks&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">if</span> <span class="n">stock</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">loaded_data</span><span class="p">[</span><span class="n">user</span><span class="p">][</span><span class="s2">&quot;stocks&quot;</span><span class="p">]:</span>
+        <span class="n">loaded_data</span><span class="p">[</span><span class="n">user</span><span class="p">][</span><span class="s2">&quot;stocks&quot;</span><span class="p">][</span><span class="n">stock</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">loaded_data</span><span class="p">[</span><span class="n">user</span><span class="p">][</span><span class="s2">&quot;stocks&quot;</span><span class="p">][</span><span class="n">stock</span><span class="p">]</span> <span class="o">+=</span> <span class="n">amt</span>
+
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;command_count.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;w+&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file2</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">loaded_data</span><span class="p">)</span>
+        <span class="n">file2</span><span class="o">.</span><span class="n">truncate</span><span class="p">()</span>
+        <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">loaded_data</span><span class="p">,</span> <span class="n">file2</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="rem_stock"><a class="viewcode-back" href="../json_manager.html#json_manager.rem_stock">[docs]</a><span class="k">async</span> <span class="k">def</span> <span class="nf">rem_stock</span><span class="p">(</span><span class="n">user</span><span class="p">,</span><span class="n">stock</span><span class="p">,</span><span class="n">amt</span><span class="p">):</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">user</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;command_count.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="n">line</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">file</span><span class="o">.</span><span class="n">readline</span><span class="p">())</span>
+
+    <span class="n">loaded_data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">user</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">loaded_data</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+        <span class="n">loaded_data</span><span class="p">[</span><span class="n">user</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">if</span> <span class="s2">&quot;stocks&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">loaded_data</span><span class="p">[</span><span class="n">user</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+        <span class="n">loaded_data</span><span class="p">[</span><span class="n">user</span><span class="p">][</span><span class="s2">&quot;stocks&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+
+    <span class="n">loaded_data</span><span class="p">[</span><span class="n">user</span><span class="p">][</span><span class="s2">&quot;stocks&quot;</span><span class="p">][</span><span class="n">stock</span><span class="p">]</span> <span class="o">-=</span> <span class="n">amt</span>
+
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;command_count.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;w+&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file2</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">loaded_data</span><span class="p">)</span>
+        <span class="n">file2</span><span class="o">.</span><span class="n">truncate</span><span class="p">()</span>
+        <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">loaded_data</span><span class="p">,</span> <span class="n">file2</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="get_balance"><a class="viewcode-back" href="../json_manager.html#json_manager.get_balance">[docs]</a><span class="k">async</span> <span class="k">def</span> <span class="nf">get_balance</span><span class="p">(</span><span class="n">user</span><span class="p">):</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">user</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;command_count.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="n">line</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">file</span><span class="o">.</span><span class="n">readline</span><span class="p">())</span>
+
+    <span class="n">loaded_data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">user</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">loaded_data</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+        <span class="n">loaded_data</span><span class="p">[</span><span class="n">user</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">if</span> <span class="s2">&quot;balance&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">loaded_data</span><span class="p">[</span><span class="n">user</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+        <span class="n">loaded_data</span><span class="p">[</span><span class="n">user</span><span class="p">][</span><span class="s2">&quot;balance&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1000</span>
+
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;command_count.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;w+&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file2</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">loaded_data</span><span class="p">)</span>
+        <span class="n">file2</span><span class="o">.</span><span class="n">truncate</span><span class="p">()</span>
+        <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">loaded_data</span><span class="p">,</span> <span class="n">file2</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">loaded_data</span><span class="p">[</span><span class="n">user</span><span class="p">][</span><span class="s2">&quot;balance&quot;</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="check_stocks"><a class="viewcode-back" href="../json_manager.html#json_manager.check_stocks">[docs]</a><span class="k">async</span> <span class="k">def</span> <span class="nf">check_stocks</span><span class="p">(</span><span class="n">user</span><span class="p">):</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;command_count.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="n">line</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">file</span><span class="o">.</span><span class="n">readline</span><span class="p">())</span>
+
+    <span class="n">loaded_data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">user</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">loaded_data</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+        <span class="n">loaded_data</span><span class="p">[</span><span class="n">user</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">if</span> <span class="s2">&quot;stocks&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">loaded_data</span><span class="p">[</span><span class="n">user</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+        <span class="n">loaded_data</span><span class="p">[</span><span class="n">user</span><span class="p">][</span><span class="s2">&quot;stocks&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="n">amt_of_stock</span> <span class="o">=</span> <span class="mf">0.0</span>
+    <span class="k">for</span> <span class="n">stock</span> <span class="ow">in</span> <span class="n">loaded_data</span><span class="p">[</span><span class="n">user</span><span class="p">][</span><span class="s2">&quot;stocks&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+        <span class="n">amt_of_stock</span> <span class="o">+=</span> <span class="n">loaded_data</span><span class="p">[</span><span class="n">user</span><span class="p">][</span><span class="s2">&quot;stocks&quot;</span><span class="p">][</span><span class="n">stock</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">amt_of_stock</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">True</span></div>
+
+
+<div class="viewcode-block" id="add_to_balance"><a class="viewcode-back" href="../json_manager.html#json_manager.add_to_balance">[docs]</a><span class="k">async</span> <span class="k">def</span> <span class="nf">add_to_balance</span><span class="p">(</span><span class="n">user</span><span class="p">,</span> <span class="n">balance</span><span class="p">):</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">user</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;command_count.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="n">line</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">file</span><span class="o">.</span><span class="n">readline</span><span class="p">())</span>
+
+    <span class="n">loaded_data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">user</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">loaded_data</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+        <span class="n">loaded_data</span><span class="p">[</span><span class="n">user</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">if</span> <span class="s2">&quot;balance&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">loaded_data</span><span class="p">[</span><span class="n">user</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+        <span class="n">loaded_data</span><span class="p">[</span><span class="n">user</span><span class="p">][</span><span class="s2">&quot;balance&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1000</span>
+
+    <span class="n">loaded_data</span><span class="p">[</span><span class="n">user</span><span class="p">][</span><span class="s2">&quot;balance&quot;</span><span class="p">]</span> <span class="o">+=</span> <span class="n">balance</span>
+    <span class="k">if</span> <span class="mi">100</span> <span class="o">&gt;=</span> <span class="n">loaded_data</span><span class="p">[</span><span class="n">user</span><span class="p">][</span><span class="s2">&quot;balance&quot;</span><span class="p">]:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="k">await</span> <span class="n">check_stocks</span><span class="p">(</span><span class="n">user</span><span class="p">):</span>
+            <span class="n">loaded_data</span><span class="p">[</span><span class="n">user</span><span class="p">][</span><span class="s2">&quot;balance&quot;</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">500</span>
+
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;command_count.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;w+&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file2</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">loaded_data</span><span class="p">)</span>
+        <span class="n">file2</span><span class="o">.</span><span class="n">truncate</span><span class="p">()</span>
+        <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">loaded_data</span><span class="p">,</span> <span class="n">file2</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="get_count"><a class="viewcode-back" href="../json_manager.html#json_manager.get_count">[docs]</a><span class="k">async</span> <span class="k">def</span> <span class="nf">get_count</span><span class="p">(</span><span class="n">user</span><span class="p">,</span> <span class="n">command</span><span class="p">):</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">user</span><span class="p">)</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;command_count.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="n">line</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">file</span><span class="o">.</span><span class="n">readline</span><span class="p">())</span>
+
+    <span class="n">loaded_data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">user</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">loaded_data</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+        <span class="n">loaded_data</span><span class="p">[</span><span class="n">user</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">if</span> <span class="n">command</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">loaded_data</span><span class="p">[</span><span class="n">user</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">loaded_data</span><span class="p">[</span><span class="n">user</span><span class="p">][</span><span class="n">command</span><span class="p">])</span></div>
+
+
+<div class="viewcode-block" id="easter_egg_animal_lover"><a class="viewcode-back" href="../json_manager.html#json_manager.easter_egg_animal_lover">[docs]</a><span class="k">async</span> <span class="k">def</span> <span class="nf">easter_egg_animal_lover</span><span class="p">(</span><span class="n">user</span><span class="p">):</span>
+    <span class="n">animal_call_count</span> <span class="o">=</span> <span class="k">await</span> <span class="n">get_count</span><span class="p">(</span><span class="n">user</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="s2">&quot;dog&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="k">await</span> <span class="n">get_count</span><span class="p">(</span><span class="n">user</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="s2">&quot;cat&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">animal_call_count</span> <span class="o">&gt;=</span> <span class="mi">50</span><span class="p">:</span>
+        <span class="n">role</span> <span class="o">=</span> <span class="n">discord</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">user</span><span class="o">.</span><span class="n">guild</span><span class="o">.</span><span class="n">roles</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Animal Lover&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">role</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">user</span><span class="o">.</span><span class="n">roles</span><span class="p">:</span>
+            <span class="k">await</span> <span class="n">user</span><span class="o">.</span><span class="n">add_roles</span><span class="p">(</span><span class="n">role</span><span class="p">)</span></div>
+</pre></div>
+
+	    </div>
+            <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2021, Programming Club.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/jucacrispim/sphinx_pdj_theme">theme</a> provided by <a href="http://poraodojuca.net">Porão do Juca</a>.
+
+</footer>
+	</div>
+	</div>
+	  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js">
+
+    </script>
+    <script type="text/javascript" src="../_static/underscore.js">
+
+    </script>
+    <script type="text/javascript" src="../_static/doctools.js">
+
+    </script>
+
+  
+
+   <script type="text/javascript"
+           src="../_static/js/theme.js"></script>
+
+   <script type="text/javascript"
+           src="../_static/js/pdj.js"></script>
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+  </body>
+</html>

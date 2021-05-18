@@ -1,0 +1,227 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xml:lang="" lang="" version="-//W3C//DTD XHTML 1.1//EN" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+  <title>vote_cog &mdash; UNHM Programming Club Discord Bot Documentation 0.0.1 documentation</title>
+  
+
+  
+
+  
+
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'/>
+    <link rel="stylesheet" href="../_static/css/pdj.css" type="text/css" />
+
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="UNHM Programming Club Discord Bot Documentation 0.0.1 documentation" href="../index.html"/>
+        <link rel="up" title="Module code" href="index.html"/>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="cache-control" content="public" />
+    <meta name="robots" content="follow, all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Add jQuery library -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+  </head>
+
+  <body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="fa fa-home"> UNHM Programming Club Discord Bot Documentation </a>
+        <div role="search">
+	  <form id ="rtd-search-form" class="wy-form"
+		action="../search.html" method="get">
+	    <input type="text" name="q" placeholder="Search docs" />
+	    <input type="hidden" name="check_keywords" value="yes" />
+	    <input type="hidden" name="area" value="default" />
+	  </form>
+	</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	
+          
+          
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cogs.html">Cogs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../faces_cog.html">Faces Cog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fun_cog.html">Fun Cog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../on_join_cog.html">On Join Cog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../stock_cog.html">Stock Cog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../utility_cog.html">Utility Cog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vote_cog.html">Vote Cog</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+
+      </div>
+      &nbsp;
+    </nav>
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      <nav class="wy-nav-top" id="barra-mobile" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="#">Porão do Juca</a>
+      </nav>
+
+      <div class="wy-nav-content">
+	<div class="fundo-claro">
+	</div>
+	<div class="fundo-escuro">
+	</div>
+
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+	    
+	    <!-- <ul class="wy-breadcrumbs"> -->
+	    <!--   <li><a href="#">Docs</a> &raquo;</li> -->
+
+	    <!--   <li>Features</li> -->
+	    <!--   <li class="wy-breadcrumbs-aside"> -->
+
+	    <!-- 	<a href="_sources/index.txt" rel="nofollow"> View page source</a> -->
+
+	    <!--   </li> -->
+	    <!-- </ul> -->
+	    <!-- <hr/> -->
+	  </div>
+
+          <div role="main" class="">
+
+	    <div id="content" class="hfeed entry-container hentry">
+  <h1>Source code for vote_cog</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">File: vote_cog.py</span>
+<span class="sd">defines vote commands in a cog class</span>
+<span class="sd">Contributors: Bryan Robbins, Karl Miller</span>
+<span class="sd">Created: 3/21/2021</span>
+<span class="sd">Updated: 3/21/2021</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">discord.ext</span> <span class="kn">import</span> <span class="n">commands</span>
+
+
+<div class="viewcode-block" id="VoteCog"><a class="viewcode-back" href="../vote_cog.html#vote_cog.VoteCog">[docs]</a><span class="k">class</span> <span class="nc">VoteCog</span><span class="p">(</span><span class="n">commands</span><span class="o">.</span><span class="n">Cog</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">client</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">client</span> <span class="o">=</span> <span class="n">client</span>
+
+<div class="viewcode-block" id="VoteCog.on_raw_reaction_add"><a class="viewcode-back" href="../vote_cog.html#vote_cog.VoteCog.on_raw_reaction_add">[docs]</a>    <span class="nd">@commands</span><span class="o">.</span><span class="n">Cog</span><span class="o">.</span><span class="n">listener</span><span class="p">()</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">on_raw_reaction_add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">payload</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Prevents double reacts</span>
+<span class="sd">        :param member:</span>
+<span class="sd">        :return:</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">channel</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">fetch_channel</span><span class="p">(</span><span class="n">payload</span><span class="o">.</span><span class="n">channel_id</span><span class="p">)</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="k">await</span> <span class="n">channel</span><span class="o">.</span><span class="n">fetch_message</span><span class="p">(</span><span class="n">payload</span><span class="o">.</span><span class="n">message_id</span><span class="p">)</span>
+
+        <span class="c1"># iterating through each reaction in the message</span>
+        <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">message</span><span class="o">.</span><span class="n">reactions</span><span class="p">:</span>
+
+            <span class="c1"># checks the reactant isn&#39;t a bot and the emoji isn&#39;t the one they just reacted with</span>
+            <span class="k">if</span> <span class="n">payload</span><span class="o">.</span><span class="n">member</span> <span class="ow">in</span> <span class="k">await</span> <span class="n">r</span><span class="o">.</span><span class="n">users</span><span class="p">()</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">payload</span><span class="o">.</span><span class="n">member</span><span class="o">.</span><span class="n">bot</span> <span class="ow">and</span> <span class="nb">str</span><span class="p">(</span><span class="n">r</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">str</span><span class="p">(</span><span class="n">payload</span><span class="o">.</span><span class="n">emoji</span><span class="p">):</span>
+                <span class="c1"># removes the reaction</span>
+                <span class="k">await</span> <span class="n">message</span><span class="o">.</span><span class="n">remove_reaction</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">emoji</span><span class="p">,</span> <span class="n">payload</span><span class="o">.</span><span class="n">member</span><span class="p">)</span></div>
+
+
+    <span class="nd">@commands</span><span class="o">.</span><span class="n">command</span><span class="p">(</span><span class="n">pass_context</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">aliases</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;motion&#39;</span><span class="p">])</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">hostvote</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ctx</span><span class="p">,</span> <span class="n">vote_subject</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        !hostvote &lt;vote_subject&gt;</span>
+<span class="sd">        vote_subject = string</span>
+<span class="sd">        Sends a message to allow currently unofficial voting on subjects</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">cross_emoji</span> <span class="o">=</span> <span class="s2">&quot;❌&quot;</span>
+        <span class="n">check_emoji</span> <span class="o">=</span> <span class="s2">&quot;✅&quot;</span>
+
+        <span class="n">vote_msg</span> <span class="o">=</span> <span class="k">await</span> <span class="n">ctx</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ctx</span><span class="o">.</span><span class="n">author</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> is hosting a vote!```&quot;</span>
+                                  <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">vote_subject</span><span class="si">}</span><span class="s2">&quot;</span>
+                                  <span class="sa">f</span><span class="s2">&quot;```</span><span class="se">\n</span><span class="s2">&quot;</span>
+                                  <span class="sa">f</span><span class="s2">&quot;Please click one of the reactions below to submit your vote!&quot;</span><span class="p">)</span>
+        <span class="k">await</span> <span class="n">vote_msg</span><span class="o">.</span><span class="n">add_reaction</span><span class="p">(</span><span class="n">check_emoji</span><span class="p">)</span>  <span class="c1"># add check mark reaction</span>
+        <span class="k">await</span> <span class="n">vote_msg</span><span class="o">.</span><span class="n">add_reaction</span><span class="p">(</span><span class="n">cross_emoji</span><span class="p">)</span>  <span class="c1"># add cross reaction</span></div>
+
+
+<span class="c1"># setup function required for cogs</span>
+<div class="viewcode-block" id="setup"><a class="viewcode-back" href="../vote_cog.html#vote_cog.setup">[docs]</a><span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="n">client</span><span class="p">):</span>
+    <span class="n">client</span><span class="o">.</span><span class="n">add_cog</span><span class="p">(</span><span class="n">VoteCog</span><span class="p">(</span><span class="n">client</span><span class="p">))</span></div>
+</pre></div>
+
+	    </div>
+            <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2021, Programming Club.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/jucacrispim/sphinx_pdj_theme">theme</a> provided by <a href="http://poraodojuca.net">Porão do Juca</a>.
+
+</footer>
+	</div>
+	</div>
+	  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js">
+
+    </script>
+    <script type="text/javascript" src="../_static/underscore.js">
+
+    </script>
+    <script type="text/javascript" src="../_static/doctools.js">
+
+    </script>
+
+  
+
+   <script type="text/javascript"
+           src="../_static/js/theme.js"></script>
+
+   <script type="text/javascript"
+           src="../_static/js/pdj.js"></script>
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+  </body>
+</html>

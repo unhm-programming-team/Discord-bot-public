@@ -1,48 +1,67 @@
-# Discord-bot
-Repository for the UNHM programming club discord bot
+# Discord-bot documentation
 
-### Google Cloud Address
-34.68.101.38
+Repository which will the documentation for the bot, as a static webpage in the `/docs` directory and served by GitHub Pages.
 
-* please contact bryan for first time login info (the best place to reach me is by text at: 603-260-2566)
-* once logged in use the following to change your password:
-    * `sudo passwd [USER]`
+# Building docs
 
-* repository can be found at /home/
+Need sphinx installed: `pip3 install sphinx`
+Need custom theme installed `pip3 install sphinx_pdj_theme`
 
-###PLEASE AVOID USING GIT ADD *, NEVER USE GIT ADD .
+May need graphviz installed in future iterations: [Graphviz](https://graphviz.org/)
 
-### To access the running instance of the bot
+Sphinx will need all the python files from the head branch to autogenerate files. Where it looks for autodocumented files is defined at the head of `sphinx-documentation/source/conf.py`
 
-    sudo screen -x bot
+Run `make.bat html` in `sphinx-documentation/source`
 
-### Adding new modules (E.g. numpy)
-    
-    * add the name of the module to the text file pip_update
-    * if multiple modules are added seperate them via newline
+Copy `sphinx-documentation/build` to `docs`
 
-### Testing Prerequisites:
-     
-    1. There is a file named "keys.txt" that must be downloaded and placed in the folder you are holding the testing bot in
-       it can be found pinned in the "bot testing" channel in the discord or by contacting Bryan.
-       The file has been included in the .gitignore so Github will automaticly ignore this file
-       when pushing as including it would create a security vulnerability. 
+# Editing docs
 
-### Current Code Testing Procedures:
-    
-        * please check that the testing bot is currently offline before beginning
-    1. change the variable 'testing' in bot.py to True
-        * this changed the token to use the testing bot on the server
-        * as well it changes the bot prefix to '?'
-    2. run the bot.py script with the changes you're testing on
-       your local machine
-    3. once changes are confirmed working change 'testing' to False   
-        * push your changes to the github page
-    4. push to github (server will autodeploy update)
-    
-* see the discord.py api wrapper documentation:
-    * `https://discordpy.readthedocs.io/en/latest/index.html`
-    
-    
-### TODO:
+Doc build files are located in `sphinx-documentation/source`
 
+Output files are in `sphinx-documentation/build`
+
+Docs are restructured text (rst). Info available here:
+
+Sphinx documentation available here: [Sphinx](https://www.sphinx-doc.org/en/master/index.html)
+
+Graphviz documentation available here.
+
+# Documenting your code
+
+Code can be documented by placing docstrings after the definition of a function, member, or class.
+
+e.g, for a class 
+```
+class MyClass:
+"""
+This is a docstring.
+
+This is what the class does.
+"""
+    def init(self, a_number):
+	"""
+	This is the init of the class.
+	
+	:param a_number: Number for class creation
+	:type a_number: int
+	"""
+        self.my_number = a_number * 2
+        """
+        working number of class
+		
+        :type: int 
+        """
+		
+    def get_modified(self, a_param):
+	"""
+	Gets a number modified based on class attributes.
+	
+	:param a_param: input num 
+	:type a_param: int 
+	:returns: The parameter multiplied by self.my_number 
+	:rtype: int
+	"""
+        return a_param * self.my_number
+```
+	
