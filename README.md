@@ -1,6 +1,16 @@
 # Discord-bot
 Repository for the UNHM programming club discord bot
 
+
+# Container
+
+This repo is for the containerizing of the Discord bot
+
+Docker commands:
+
+`docker build -t mycon --file Containerfile .`
+`docker run mycon`
+
 ### Google Cloud Address
 34.68.101.38
 
