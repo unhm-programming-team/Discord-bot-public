@@ -42,6 +42,7 @@ class VoteCog(commands.Cog):
         cross_emoji = "❌"
         check_emoji = "✅"
 
+        await ctx.message.delete()
         vote_msg = await ctx.send(f"{ctx.author.name} is hosting a vote!```"
                                   f"{vote_subject}"
                                   f"```\n"

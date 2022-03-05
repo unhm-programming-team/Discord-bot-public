@@ -1,9 +1,9 @@
 """
 File: bot.py
 Runs the bot and defines a couple functions
-Contributors: Bryan Robbins, Karl Miller
+Contributors: Bryan Robbins, Karl Miller, Tony Pion
 Created: 3/20/2021
-Updated: 3/21/2021
+Updated: 3/04/2022
 """
 
 from discord.ext import commands
